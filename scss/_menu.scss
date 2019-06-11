@@ -1,0 +1,164 @@
+.menu {
+  background: $white;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  position: relative;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+  z-index: 433;
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+  .logo {
+    padding: 36px 26px;
+    border-right: 1px solid #ebf3fb;
+    height: 106px;
+    img {
+      max-width: 248px;
+    }
+  }
+  .menu-panel {
+    li {
+      padding: 33px 26px;
+      border-top: 1px solid #ebf3fb;
+      position: relative;
+      white-space: nowrap;
+      &:nth-child(7) {
+        border-bottom: 1px solid #ebf3fb;
+      }
+      &.logout {
+        margin-top: 235px;
+      }
+      &.active {
+        a {
+          color: $blue2;
+          &:before {
+            filter: brightness(.6);
+          }
+        }
+        &:after {
+          content: '';
+          height: 46px;
+          width: 4px;
+          background: #4fa5f7;
+          border-radius: 2px 0 0 2px;
+          position: absolute;
+          right: 0;
+          top: calc((100% - 46px) / 2);
+        }
+      }
+      a {
+        padding: 15px 46px;
+        position: relative;
+        color: $blue;
+        &:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: calc((100% - 26px) / 2);
+          width: 26px;
+          height: 26px;
+          transition: filter .2s;
+        }
+        &.account-menu-link:before {
+          background: url(../images/account-menu.svg) no-repeat;
+        }
+        &.make-deposit-menu-link:before {
+          background: url(../images/make-deposit-menu.svg) no-repeat;
+        }
+        &.withdrawal-menu-link:before {
+          background: url(../images/withdrawal-menu.svg) no-repeat;
+        }
+        &.transaction-menu-link:before {
+          background: url(../images/transaction-menu.svg) no-repeat;
+        }
+        &.referral-menu-link:before {
+          background: url(../images/referral-menu.svg) no-repeat;
+        }
+        &.bounty-menu-link:before {
+          background: url(../images/bounty-menu.svg) no-repeat;
+        }
+        &.setting-menu-link:before {
+          background: url(../images/settings-menu.svg) no-repeat;
+        }
+        &.logout-menu-link:before {
+          background: url(../images/logout-menu.svg) no-repeat;
+        }
+        &:hover {
+          color: $blue2;
+          &:before {
+            filter: brightness(.6);
+          }
+        }
+      }
+    }
+  }
+}
+.zmdi-caret-right-circle {
+  display: none;
+  color: $blue3;
+}
+@media #{$lg} {
+  .menu {
+    .logo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 116px;
+      padding: 32px 26px;
+    }
+    .menu-panel {
+      li {
+        padding: 20px;
+        a {
+          padding: 15px 20px 15px 30px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media #{$md} {
+  .menu {
+    transform: translateX(-110%);
+    box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.1);
+    display: block;
+    position: fixed;
+    height: 100%;
+    top: 85px;
+    width: 250px;
+    max-height: 1005px;
+    z-index:348;
+    transition: all.3s ease;
+    &.active {
+      transform: translateX(0);
+    }
+    &.fixed {
+      top: 0;
+    }
+    .menu-panel {
+      li:last-child {
+        margin-top: 0;
+      }
+    }
+  }
+  .zmdi-caret-right-circle {
+    z-index: 344;
+    display: block;
+    position: fixed;
+    top: calc((100% - 48px) / 2);
+    transition: transform .3s;
+    &.active {
+      transform: translateX(350px) rotate(180deg);
+    }
+  }
+}
+@media #{$xs} {
+  .zmdi-caret-right-circle {
+    &.active {
+      transform: translateX(260px) rotate(180deg);
+    }
+  }
+}

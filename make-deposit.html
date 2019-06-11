@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="font/material-design-iconic-font/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Make Deposit</title>
+</head>
+<body>
+<div class="wrapper">
+    <div class="row no-gutters align-items-start">
+        <div class="col-2 no-gutters pr-0">
+            <nav class="menu">
+                <div class="logo md-hide">
+                    <a href="#">
+                        <img src="images/logo.svg" alt="Logo">
+                    </a>
+                </div>
+                <ul class="menu-panel">
+                    <li><a href="#" class="account-menu-link">Account</a></li>
+                    <li class="active"><a href="#" class="make-deposit-menu-link">Make deposit</a></li>
+                    <li><a href="#" class="withdrawal-menu-link">Withdrawal</a></li>
+                    <li><a href="#" class="transaction-menu-link">Transaction history</a></li>
+                    <li><a href="#" class="referral-menu-link">Referral program</a></li>
+                    <li><a href="#" class="bounty-menu-link">Bounty</a></li>
+                    <li><a href="#" class="setting-menu-link">Settings</a></li>
+                    <li class="logout"><a href="#" class="logout-menu-link">Log Out</a></li>
+                </ul>
+            </nav>
+            <i class="zmdi zmdi-caret-right-circle zmdi-hc-3x btn-toggle-nav"></i>
+        </div>
+        <div class="col-lg-10 col-12 no-gutters pl-0">
+            <header>
+                <div class="user">
+                    <div class="logo md-show">
+                        <a href="#">
+                            <img src="images/logo.svg" alt="Logo">
+                        </a>
+                    </div>
+                    <div class="nickname">
+                        <img src="images/uset-icon-standart.png" alt="User">
+                        <div class="block">
+                            <a href="#" class="name">Nickname</A>
+                            <a href="#" class="copy-link">copy link <i class="zmdi zmdi-link"></i></a>
+                        </div>
+                        <div class="tooltip-link">
+                            <p class="link-user">http://cryptoinnova.com/?profile=nickname</p>
+                        </div>
+                    </div>
+                    <div class="fdc-lg row-md sm-hide">
+                        <div class="status">
+                            <p>Status:</p>
+                            <p class="user-status">Active user</p>
+                        </div>
+                        <div class="rank">
+                            <p>Rank:</p>
+                            <div class="upgrade-block">
+                                <p class="user-rank">Basic client</p>
+                                <a href="#" class="btn-upgrade">upgrade</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="balance md-hide">
+                    <p>Your balance:</p>
+                    <div class="choose-balance">
+                        <i class="zmdi zmdi-chevron-down"></i>
+                        <p class="currency btc">0.000000 BTC</p>
+                        <div class="dropdown-balance">
+                            <p class="currency btc active">0.000000 btc</p>
+                            <p class="currency eth">0.000000 eth</p>
+                            <p class="currency pm">0.000000 pm</p>
+                            <p class="currency btch">0.000000 btch</p>
+                            <p class="currency ltc">0.000000 ltc</p>
+                            <p class="currency xmr">0.000000 xmr</p>
+                            <p class="currency zec">0.000000 zec</p>
+                            <p class="currency eos">0.000000 eos</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons md-hide">
+                    <a href="#" class="btn-styles select">Make Deposit</a>
+                    <a href="#" class="btn-styles">Withdrawal</a>
+                </div>
+                <div class="social-telegram md-hide">
+                    <a href="#"><img src="images/telegram-icon.svg" alt="Telegram">@cryptoinnova</a>
+                    <a href="#"><img src="images/telegram-icon.svg" alt="Telegram">@cryptoinnova2</a>
+                </div>
+                <div class="choose-language">
+                    <div class="language"><img src="images/eng-icon.svg" alt="Eng">En</div>
+                    <i class="zmdi zmdi-chevron-down"></i>
+                    <div class="dropdown-language">
+                        <div class="language soon"><img src="images/vi-lang-icon.svg" alt="Eng">Vi</div>
+                        <div class="language soon"><img src="images/es-lang-icon.svg" alt="Eng">Es</div>
+                        <div class="language soon"><img src="images/pl-lang-icon.svg" alt="Eng">Pl</div>
+                        <div class="language soon"><img src="images/ja-lang-icon.svg" alt="Eng">Ja</div>
+                        <div class="language soon"><img src="images/zh-lang-icon.svg" alt="Eng">Zh</div>
+                    </div>
+                </div>
+                <!--BURGER TOGGLE MENU-->
+                <div class="mobile-menu-toggle md-show">
+                    <svg class="ham hamRotate ham-burger" viewBox="0 0 100 100" width="60"
+                         onclick="this.classList.toggle('active')">
+                        <path
+                                class="line top"
+                                d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"/>
+                        <path
+                                class="line middle"
+                                d="m 30,50 h 40"/>
+                        <path
+                                class="line bottom"
+                                d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"/>
+                    </svg>
+                </div>
+                <div class="dropdown-header">
+                    <div class="content-dropdown">
+                        <div class="balance">
+                            <p>Your balance:</p>
+                            <div class="choose-balance">
+                                <i class="zmdi zmdi-chevron-down"></i>
+                                <p class="currency btc">0.000000 BTC</p>
+                                <div class="dropdown-balance">
+                                    <p class="currency btc active">0.000000 btc</p>
+                                    <p class="currency eth">0.000000 eth</p>
+                                    <p class="currency pm">0.000000 pm</p>
+                                    <p class="currency btch">0.000000 btch</p>
+                                    <p class="currency ltc">0.000000 ltc</p>
+                                    <p class="currency xmr">0.000000 xmr</p>
+                                    <p class="currency zec">0.000000 zec</p>
+                                    <p class="currency eos">0.000000 eos</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user sm-show">
+                            <div class="status sm-show">
+                                <p>Status:</p>
+                                <p class="user-status">Active user</p>
+                            </div>
+                            <div class="rank sm-show">
+                                <p>Rank:</p>
+                                <div class="upgrade-block">
+                                    <a href="#" class="btn-upgrade">upgrade</a>
+                                    <p class="user-rank">Basic client</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="social-telegram">
+                            <a href="#">@cryptoinnova<img src="images/telegram-icon.svg" alt="Telegram"></a>
+                            <a href="#">@cryptoinnova2<img src="images/telegram-icon.svg" alt="Telegram"></a>
+                        </div>
+                        <div class="buttons">
+                            <a href="#" class="btn-styles select">Make Deposit</a>
+                            <a href="#" class="btn-styles">Withdrawal</a>
+                        </div>
+                    </div>
+                </div>
+                <!--END BURGER-->
+            </header>
+
+            <!--MAKE DEPOSIT-->
+            <main class="make-deposit">
+                <div class="container">
+                    <h2>Make deposit</h2>
+                    <div class="subtitle">
+                        1. Choose an investment plan
+                    </div>
+                    <div class="investment-plans row">
+                        <div class="col-sm-6 col-xl-3 mt-4 mt-md-0">
+                            <div class="one-plan">
+                                <p class="name medium">Rail Freight</p>
+                                <img src="images/rail-freight-icon.svg" alt="Rail Freight" class="img-investment-plans">
+                                <p class="tac description">In terms of transit time and freight rates, rail freight is a
+                                    compromise solution between
+                                    sea freight and air freight.</p>
+                                <ul class="specification">
+                                    <li>
+                                        <p class="categories">Amount:</p>
+                                        <p class="designation">$30 - $3000</p>
+                                    </li>
+                                    <li>
+                                        <p class="categories medium">Profit:</p>
+                                        <p class="designation medium">995% per year</p>
+                                    </li>
+                                    <li>
+                                        <p class="categories">Principal included:</p>
+                                        <p class="designation">Yes</p>
+                                    </li>
+                                    <li>
+                                        <p class="categories">Deposit insurance:</p>
+                                        <p class="designation">Yes</p>
+                                    </li>
+                                    <li>
+                                        <p class="categories">Investment period:</p>
+                                        <p class="designation">unlimited</p>
+                                    </li>
+                                    <li>
+                                        <p class="categories">Accruals:</p>
+                                        <p class="designation">every 3 days</p>
+                                    </li>
+                                    <li>
+                                        <p class="categories">Daily interest:</p>
+                                        <p class="designation">3%</p>
+                                    </li>
+                                    <li>
+                                        <p class="categories">Instant withdrawal</p>
+                                        <p class="designation"></p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-xl-3 mt-4 mt-md-0">
+                            <div class="one-plan">
+                                <p class="name medium">Sea Freight</p>
+                                <img src="images/sea-freight-icon.svg" alt="Rail Freight" class="img-investment-plans">
+                                <p class="tac description">Sea freight is among the most widely used modes of
+                                    transportation.</p>
+                                <ul class="specification">
+                                    <li>
+                                        <p class="categories">Amount:</p>
+                                        <p class="designation">$30 - $3000</p>
+                                    </li>
+                                    <li class="profit">
+                                        <p class="categories">Profit:</p>
+                                        <p class="designation">60%</p>
+                                    </li>
+                                    <li>
+                                        <p class="categories">Principal included:</p>
+                                        <p class="designation">Yes</p>
+                                    </li>
+                                    <li>
+                                        <p class="categories">Deposit insurance:</p>
+                                        <p class="designation">Yes</p>
+                                    </li>
+                                    <li>
+                                        <p class="categories">Investment period:</p>
+                                        <p class="designation">0</p>
+                                    </li>
+                                    <li>
+                                        <p class="categories">Accruals:</p>
+                                        <p class="designation">calendar days</p>
+                                    </li>
+                                    <li>
+                                        <p class="categories">Daily interest:</p>
+                                        <p class="designation">1.5%</p>
+                                    </li>
+                                    <li>
+                                        <p class="categories">Instant withdrawal</p>
+                                        <p class="designation"></p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-xl-3 mt-4 mt-xl-0">
+                            <div class="one-plan">
+                                <p class="name medium">Air Freight</p>
+                                <img src="images/air-freight-icon.svg" alt="Rail Freight" class="img-investment-plans">
+                                <p class="tac description">There are some shipments demanding for faster delivery, which
+                                    is
+                                    why Crypto Innova offers air freight in addition to sea freight.</p>
+                                <ul class="specification">
+                                    <li>
+                                        <p class="categories">Amount:</p>
+                                        <p class="designation">$1000 - $100000</p>
+                                    </li>
+                                    <li class="profit">
+                                        <p class="categories">Profit:</p>
+                                        <p class="designation">40% in 20 days</p>
+                                    </li>
+                                    <li>
+                                        <p class="categories">Return:</p>
+                                        <p class="designation">140%</p>
+                                    </li>
+                                    <li>
+                                        <p class="categories">Investment period:</p>
+                                        <p class="designation">20 days</p>
+                                    </li>
+                                    <li>
+                                        <p class="categories">Principal deposit back:</p>
+                                        <p class="designation">Yes</p>
+                                    </li>
+                                    <li>
+                                        <p class="categories">Accruals back and the end:</p>
+                                        <p class="designation">Yes</p>
+                                    </li>
+                                    <li>
+                                        <p class="categories">Deposit insurance</p>
+                                        <p class="designation">Yes</p>
+                                    </li>
+                                    <li>
+                                        <p class="categories">Instant withdrawal</p>
+                                        <p class="designation"></p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-xl-3 mt-4 mt-xl-0">
+                            <div class="one-plan">
+                                <p class="name medium">Multimodal Transportation</p>
+                                <img src="images/multimodal-transportation-icon.svg" alt="Rail Freight"
+                                     class="img-investment-plans">
+                                <p class="tac description">Multimodal transportation allows you to combine different
+                                    modes
+                                    of transport according to your needs and peferences.</p>
+                                <ul class="specification">
+                                    <li>
+                                        <p class="categories">Amount:</p>
+                                        <p class="designation">$30 - $30000</p>
+                                    </li>
+                                    <li class="profit">
+                                        <p class="categories">Profit:</p>
+                                        <p class="designation">1542% per year</p>
+                                    </li>
+                                    <li>
+                                        <p class="categories">Principal included:</p>
+                                        <p class="designation">Yes</p>
+                                    </li>
+                                    <li>
+                                        <p class="categories">Deposit insurance:</p>
+                                        <p class="designation">Yes</p>
+                                    </li>
+                                    <li>
+                                        <p class="categories">Investment period:</p>
+                                        <p class="designation">unlimited</p>
+                                    </li>
+                                    <li>
+                                        <p class="categories">Accruals:</p>
+                                        <p class="designation">every 15 days</p>
+                                    </li>
+                                    <li>
+                                        <p class="categories">Daily interest:</p>
+                                        <p class="designation">4.5%</p>
+                                    </li>
+                                    <li>
+                                        <p class="categories">Instant withdrawal</p>
+                                        <p class="designation"></p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="subtitle">
+                        2. Select a payment system
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-xl-9">
+                            <div class="currency-block align-items-center">
+                                <div class="row">
+                                    <div class="col-3 col-sm">
+                                        <div class="one-currency active">
+                                            <img src="images/bitcoin.svg" alt="Bitcoin">
+                                        </div>
+                                        <p class="name">
+                                            Btc
+                                        </p>
+                                        <div class="depiction">Bitcoin</div>
+                                    </div>
+                                    <div class="col-3 col-sm">
+                                        <div class="one-currency">
+                                            <img src="images/eth.svg" alt=" Ethereum">
+                                        </div>
+                                        <p class="name">
+                                            Eth
+                                        </p>
+                                        <div class="depiction"> Ethereum</div>
+                                    </div>
+                                    <div class="col-3 col-sm">
+                                        <div class="one-currency">
+                                            <img src="images/pm.svg" alt="Perfect Money">
+                                        </div>
+                                        <p class="name">
+                                            Pm
+                                        </p>
+                                        <div class="depiction">Perfect Money</div>
+                                    </div>
+                                    <div class="col-3 col-sm">
+                                        <div class="one-currency">
+                                            <img src="images/btch.svg" alt="Bitcoin cash">
+                                        </div>
+                                        <p class="name">
+                                            Btch
+                                        </p>
+                                        <div class="depiction">Bitcoin Cash</div>
+                                    </div>
+                                    <div class="col-3 col-sm">
+                                        <div class="one-currency">
+                                            <img src="images/ltc.svg" alt="Litcoin">
+                                        </div>
+                                        <p class="name">
+                                            Ltc
+                                        </p>
+                                        <div class="depiction">Litcoin</div>
+                                    </div>
+                                    <div class="col-3 col-sm">
+                                        <div class="one-currency">
+                                            <img src="images/xmr.svg" alt="Monero">
+                                        </div>
+                                        <p class="name">
+                                            Xmr
+                                        </p>
+                                        <div class="depiction">Monero</div>
+                                    </div>
+                                    <div class="col-3 col-sm">
+                                        <div class="one-currency">
+                                            <img src="images/zec.svg" alt="Zcash">
+                                        </div>
+                                        <p class="name">
+                                            Zec
+                                        </p>
+                                        <div class="depiction">Zcash</div>
+                                    </div>
+                                    <div class="col-3 col-sm">
+                                        <div class="one-currency">
+                                            <img src="images/eos.svg" alt="Eos">
+                                        </div>
+                                        <p class="name">
+                                            Eos
+                                        </p>
+                                        <div class="depiction">EOS.IO</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xl-3">
+                            <div class="insurance">
+                                <img src="images/check.svg" alt="">
+                                <p>Insurance certificate included<br> 100% insurance</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="subtitle">
+                        3. Enter deposit amount
+                    </div>
+                    <div class="enter-deposit">
+                        <div class="row">
+                            <div class="col-lg-12 col-xl-7">
+                                <form action="deposit">
+                                    <input type="text">
+                                    <div class="your">
+                                        <div class="your-deposit">
+                                            <p>Your deposit amount:</p>
+                                            <p class="blue3 medium">BTC 0.1</p>
+                                        </div>
+                                        <div class="your-daily-income">
+                                            <p>Your daily income:</p>
+                                            <p class="blue3 medium">BTC 0.001800</p>
+                                        </div>
+                                        <div class="your-daily-income">
+                                            <p>Your total income:</p>
+                                            <p class="blue3 medium">BTC 0.180000</p>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn-styles select">Make Deposit</a>
+                                </form>
+                            </div>
+                            <div class="offset-lg-4 offset-xl-0 col-lg-8 col-xl-5 mt-4 mt-xl-0">
+                                <div class="ads">
+                                    <div class="text">
+                                        <p class="name">Swiss-Style Investment Guarantee of Your Safety</p>
+                                        <p>All deposits in the amount exceeding USD 50,000 have been insured by <span
+                                                class="medium blue3">AXA XL</span></p>
+                                        <p class="italic">*The total amount of the insurance fund amounts to USD
+                                            10,000,000</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <!--END MAKE DEPOSIT-->
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
