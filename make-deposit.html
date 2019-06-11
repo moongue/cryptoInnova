@@ -6,10 +6,12 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <script src="js/script.js"></script>
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"/>
     <link rel="stylesheet" href="font/material-design-iconic-font/css/material-design-iconic-font.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Make Deposit</title>
@@ -87,7 +89,7 @@
                     </div>
                 </div>
                 <div class="buttons md-hide">
-                    <a href="#" class="btn-styles select">Make Deposit</a>
+                    <a href="#make-deposit" rel="modal:open" class="btn-styles select">Make Deposit</a>
                     <a href="#" class="btn-styles">Withdrawal</a>
                 </div>
                 <div class="social-telegram md-hide">
@@ -157,7 +159,7 @@
                             <a href="#">@cryptoinnova2<img src="images/telegram-icon.svg" alt="Telegram"></a>
                         </div>
                         <div class="buttons">
-                            <a href="#" class="btn-styles select">Make Deposit</a>
+                            <a href="#make-deposit" rel="modal:open" class="btn-styles select">Make Deposit</a>
                             <a href="#" class="btn-styles">Withdrawal</a>
                         </div>
                     </div>
@@ -457,7 +459,7 @@
                                             <p class="blue3 medium">BTC 0.180000</p>
                                         </div>
                                     </div>
-                                    <a href="#" class="btn-styles select">Make Deposit</a>
+                                    <a href="#make-deposit" rel="modal:open" class="btn-styles select">Make Deposit</a>
                                 </form>
                             </div>
                             <div class="offset-lg-4 offset-xl-0 col-lg-8 col-xl-5 mt-4 mt-xl-0">
@@ -476,9 +478,72 @@
                 </div>
             </main>
             <!--END MAKE DEPOSIT-->
-
         </div>
     </div>
 </div>
+
+<!--MODAL-->
+<div id="make-deposit" class="modal">
+    <div class="border-b">
+        <div class="title offset">
+            <img src="images/payment-of-deposit.png" alt="Payment of deposit">
+            Payment of deposit
+        </div>
+        <div class="inputs offset">
+            <div class="block">
+                <p>Send this exact amount of:</p>
+                <div class="field">
+                    <input type="text">
+                    <button><i class="zmdi zmdi-copy"></i></button>
+                </div>
+            </div>
+            <div class="block">
+                <p>to bitcoin Address:</p>
+                <div class="field">
+                    <input type="text">
+                    <button><i class="zmdi zmdi-copy"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="border-b">
+        <div class="qr-code offset">
+            <div class="block">
+                <p>When you receive transaction confirmarions the deposit will open automatically</p>
+                <div class="data">
+                    <ul>
+                        <li>
+                            <p>Invoce #</p>
+                            <p>1558533501</p>
+                        </li>
+                        <li>
+                            <p>Amount</p>
+                            <p>100 usd (0.01272300 btc)</p>
+                        </li>
+                        <li>
+                            <p>Username</p>
+                            <p>paohkadm</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="img-qr-code">
+                <img src="images/qr-code.jpg" alt="QR Code">
+            </div>
+        </div>
+    </div>
+    <div class="bottom offset">
+        <div class="timer">
+            <p>Time left to proceed: <span>14:42</span></p>
+            <p>waiting for the payment...</p>
+        </div>
+        <div class="btn">
+            <a href="#" class="btn-styles select">Pay with Bitcoin</a>
+        </div>
+    </div>
+    <a href="#" rel="modal:close" class="modal-close"><i class="zmdi zmdi-close"></i></a>
+</div>
+<!--END MODAL-->
+
 </body>
 </html>
