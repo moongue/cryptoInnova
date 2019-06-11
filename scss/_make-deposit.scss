@@ -1,6 +1,13 @@
 .make-deposit {
-  padding-bottom: 160px;
+  padding-bottom: 60px;
+  padding-left: 15px;
   .investment-plans {
+    margin-left: -10px;
+    margin-right: -10px;
+    .col-sm-6 {
+      padding-right: 10px;
+      padding-left: 10px;
+    }
     .one-plan {
       background: $white;
       cursor: pointer;
@@ -76,7 +83,6 @@
     .one-currency {
       width: 50px;
       height: 50px;
-
       box-sizing: border-box;
       display: flex;
       align-items: center;
@@ -102,6 +108,7 @@
       text-align: center;
       margin-top: 6px;
       color: $blue;
+      font-size: 10px;
     }
   }
   .insurance {
@@ -110,7 +117,7 @@
     justify-content: center;
     border: 1px solid $green;
     height: 100%;
-    padding: 38px;
+    padding: 20px;
     position: relative;
     &:before {
       content: '\f1f7';
@@ -164,7 +171,7 @@
       max-width: 180px;
       }
     }
-    .ads {
+    .more-inf {
       border-radius: 3px;
       background: $white;
       display: flex;
@@ -184,9 +191,10 @@
         max-width: 270px;
         background: $white;
         padding:0 15px;
+        line-height: 1.4;
         z-index: 4;
         .name {
-          padding-top: 70px;
+          padding-top: 30px;
           font-size: 18px;
           color: $blue;
           text-transform: uppercase;
@@ -196,10 +204,28 @@
           padding-top: 20px;
         }
         p.italic {
-          padding-top: 70px;
+          padding-top: 30px;
           font-size: 11px;
           color: #868daa;
           padding-bottom: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media #{$md} {
+  .make-deposit {
+    padding-left: 0;
+  }
+}
+
+@media#{$sm} {
+  .make-deposit {
+    .currency-block {
+      .row {
+        .col-sm {
+          padding: 0 8px !important;
         }
       }
     }

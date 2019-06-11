@@ -26,7 +26,7 @@ a {
 }
 .btn-styles {
   width: 100%;
-  height: 50px;
+  padding: 20px 0;
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -45,17 +45,23 @@ a {
   }
 }
 
-h2 {
+.title-main {
   margin: 40px 0 0;
   font-size: 28px;
   color: $blue;
   font-weight: 500;
+  @media #{$sm} {
+    font-size: 24px;
+  }
 }
 .subtitle {
   margin-top: 35px;
   margin-bottom: 20px;
   font-size: 17px;
   color: $grey-font;
+  @media #{$sm} {
+    margin: 20px 0;
+  }
 }
 .tac {
   text-align: center;
@@ -69,10 +75,14 @@ h2 {
 .italic {
   font-style: italic;
 }
+.df {
+  display: flex;
+  justify-content: space-between;
+}
 .md-show {
-  display: none;
+  display: none !important;
   @media #{$md} {
-    display: inline-block !important;
+    display: block !important;
   }
 }
 .md-hide {
@@ -80,10 +90,31 @@ h2 {
     display: none !important;
   }
 }
-
+.lg-show {
+  display: none !important;
+  @media #{$lg} {
+    display: block !important;
+  }
+}
+.lg-hide {
+  @media #{$lg} {
+    display: none !important;
+  }
+}
 .sm-hide {
   @media #{$sm} {
     display: none !important;
+  }
+}
+.xl-show {
+  display: none;
+  @media #{$xl} {
+    display: block !important;
+  }
+}
+.xl-hide {
+  @media #{$xl} {
+    display: none!important;
   }
 }
 .sm-show {
