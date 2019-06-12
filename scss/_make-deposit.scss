@@ -80,25 +80,6 @@
     height: 100%;
     font-size: 13px;
     background: $white;
-    .one-currency {
-      width: 50px;
-      height: 50px;
-      box-sizing: border-box;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid #e1eef6;
-      margin: 15px auto 0;
-      cursor: pointer;
-      &.choose {
-        border: 1px solid $blue3;
-      }
-      img {
-        height: 25px;
-        width: auto;
-        filter: brightness(.3);
-      }
-    }
     .name {
       text-align: center;
       margin-top: 10px;

@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"/>
     <link rel="stylesheet" href="font/material-design-iconic-font/css/material-design-iconic-font.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Withdrawal</title>
+    <title>Transaction</title>
 </head>
 <body>
 <div class="wrapper">
@@ -178,148 +178,179 @@
                 <!--END BURGER-->
             </header>
 
-            <!--WITHDRAWAL-->
-            <main class="withdrawal">
+            <!--TRANSACTION-->
+            <main class="transaction">
                 <div class="container">
-                    <div class="withdrawal-from-balance">
-                        <div class="title-main">Withdrawal from balance</div>
-                        <div class="row">
-                            <div class="col-md-6 col-xl-3">
-                                <div class="payment-system choose">
-                                    <div class="top">
-                                        <p>btc</p>
-                                        <div class="img-currency">
-                                            <img src="images/bitcoin.svg" alt="Btc">
-                                        </div>
-                                    </div>
-                                    <div class="bot">
-                                        <p>Bitcoin</p>
-                                        <div class="currency">
-                                            0.432112
-                                        </div>
-                                    </div>
+                    <div class="title-main">
+                        Transactions
+                    </div>
+                    <div class="filter d-flex justify-content-between">
+                        <div class="payment-system-filter">
+                            <p>Payment system</p>
+                            <div class="d-flex justify-content-between">
+                                <div class="one-currency choose">
+                                    <img src="images/bitcoin.svg" alt="Bitcoin">
                                 </div>
-                            </div>
-                            <div class="col-md-6 col-xl-3">
-                                <div class="payment-system">
-                                    <div class="top">
-                                        <p>xmr</p>
-                                        <div class="img-currency">
-                                            <img src="images/xmr.svg" alt="Xmr">
-                                        </div>
-                                    </div>
-                                    <div class="bot">
-                                        <p>Monero</p>
-                                        <div class="currency">
-                                            1.320000
-                                        </div>
-                                    </div>
+                                <div class="one-currency">
+                                    <img src="images/eth.svg" alt="Ethereum">
                                 </div>
-                            </div>
-                            <div class="col-md-6 col-xl-3">
-                                <div class="payment-system">
-                                    <div class="top">
-                                        <p>eth</p>
-                                        <div class="img-currency">
-                                            <img src="images/eth.svg" alt="Eth">
-                                        </div>
-                                    </div>
-                                    <div class="bot">
-                                        <p>Ethereum</p>
-                                        <div class="currency">
-                                            0.221746
-                                        </div>
-                                    </div>
+                                <div class="one-currency">
+                                    <img src="images/pm.svg" alt="Perfect money">
+                                </div>
+                                <div class="one-currency">
+                                    <img src="images/btch.svg" alt="Bitconin cash">
+                                </div>
+                                <div class="one-currency">
+                                    <img src="images/ltc.svg" alt="Litcoin">
+                                </div>
+                                <div class="one-currency">
+                                    <img src="images/xmr.svg" alt="Monero">
+                                </div>
+                                <div class="one-currency">
+                                    <img src="images/zec.svg" alt="Zcash">
+                                </div>
+                                <div class="one-currency">
+                                    <img src="images/eos.svg" alt="EOS.IO">
+                                </div>
+                                <div class="one-currency">
+                                    All
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-12 col-xl-9">
-                                <div class="form">
-                                    <form action="withdrawal">
-                                        <input type="text" class="styles-input" placeholder="1.752112 btc">
-                                        <div class="btn">
-                                            <a href="#" class="btn-styles select">Withdrawal</a>
-                                        </div>
-                                    </form>
+                        <div class="type-of-transaction">
+                            <p>Type of transaction</p>
+                            <div class="select-wrap">
+                                <select name="select-box" id="selectId" class="select-filter">
+                                    <option value="item-1" name="value">All</option>
+                                    <option value="item-2" name="value">Not All</option>
+                                    <option value="item-3" name="value">Anything</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="date">
+                            <div class="d-flex">
+                                <div class="from-date">
+                                    <p>By date from:</p>
+                                    <input type="date" id="theDateToday">
+                                </div>
+                                <div class="date-to">
+                                    <p>By date to:</p>
+                                    <input type="date" id="theDateTomorrow">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="section-history">
-                        <div class="title-main">
-                            Withdrawal history
-                        </div>
                         <div class="history">
                             <div class="table">
                                 <div class="name-history">
-                                    <p>Payment system</p>
-                                    <p>Date</p>
+                                    <p>Type</p>
                                     <p>Amount</p>
+                                    <p>Date</p>
                                     <p>Status</p>
                                 </div>
                                 <div class="row-descr">
-                                    <p class="system"><span><img src="images/bitcoin.svg" alt="Btc"></span>Bitcoin</p>
+                                    <p class="system"><span><img src="images/registration-icon.svg" alt=""></span>Registration</p>
+                                    <p class="amount"></p>
                                     <p class="date"><span>10:00</span> 02/05/2019</p>
-                                    <p class="amount"><span>+0.09130 btc</span>(165.21 usd)</p>
-                                    <p class="status confirmed">Confirmed</p>
+                                    <p class="status confirmed">Done</p>
                                 </div>
                                 <div class="row-descr">
-                                    <p class="system"><span><img src="images/eth.svg" alt="Btc"></span>Ethereum</p>
+                                    <p class="system"><span><img src="images/authorization-icon.svg" alt=""></span>Authorization</p>
+                                    <p class="amount"></p>
                                     <p class="date"><span>10:00</span> 02/05/2019</p>
-                                    <p class="amount"><span>+0.09130 btc</span>(165.21 usd)</p>
-                                    <p class="status confirmed">Confirmed</p>
+                                    <p class="status confirmed">Done</p>
                                 </div>
                                 <div class="row-descr">
-                                    <p class="system"><span><img src="images/pm.svg" alt="Btc"></span>Perfect Money</p>
+                                    <p class="system"><span><img src="images/make-deposit-menu.svg" alt=""></span>Opening deposit</p>
+                                    <p class="amount"></p>
                                     <p class="date"><span>10:00</span> 02/05/2019</p>
-                                    <p class="amount"><span class="minus">-0.09130 btc</span>(165.21 usd)</p>
                                     <p class="status pending">Pending</p>
                                 </div>
                                 <div class="row-descr">
-                                    <p class="system"><span><img src="images/btch.svg" alt="Btc"></span>Bitcoin Cash</p>
-                                    <p class="date"><span>10:00</span> 02/05/2019</p>
+                                    <p class="system"><span><img src="images/deposit-accrual-icon.svg" alt=""></span>Deposit accrual</p>
                                     <p class="amount"><span>+0.09130 btc</span>(165.21 usd)</p>
-                                    <p class="status confirmed">Confirmed</p>
+                                    <p class="date"><span>10:00</span> 02/05/2019</p>
+                                    <p class="status confirmed">Done</p>
                                 </div>
                                 <div class="row-descr">
-                                    <p class="system"><span><img src="images/ltc.svg" alt="Btc"></span>Litcoin</p>
-                                    <p class="date"><span>10:00</span> 02/05/2019</p>
+                                    <p class="system"><span><img src="images/withdrawal-menu.svg" alt=""></span>Withdrawal</p>
                                     <p class="amount"><span>+0.09130 btc</span>(165.21 usd)</p>
-                                    <p class="status confirmed">Confirmed</p>
+                                    <p class="date"><span>10:00</span> 02/05/2019</p>
+                                    <p class="status confirmed">Done</p>
                                 </div>
                                 <div class="row-descr">
-                                    <p class="system"><span><img src="images/xmr.svg" alt="Btc"></span>Monero</p>
+                                    <p class="system"><span><img src="images/cash-icon.svg" alt=""></span>Cash bonus to the account</p>
+                                    <p class="amount"><span>+0.09130 btc</span>(165.21 usd)</p>
                                     <p class="date"><span>10:00</span> 02/05/2019</p>
-                                    <p class="amount"><span class="minus">-0.09130 btc</span>(165.21 usd)</p>
-                                    <p class="status pending">Pending</p>
+                                    <p class="status confirmed">Done</p>
                                 </div>
                                 <div class="row-descr">
-                                    <p class="system"><span><img src="images/zec.svg" alt="Btc"></span>Zcash</p>
-                                    <p class="date"><span>10:00</span> 02/05/2019</p>
-                                    <p class="amount"><span>+0.09130 btc</span>(165.21 usd)</p>
-                                    <p class="status confirmed">Confirmed</p>
+                                    <p class="system"><span><img src="images/referral-icon.svg" alt=""></span>Referral Registration</p>
+                                    <p class="amount"></p>
+                                    <p class="date"><span class="denied">10:00</span> 02/05/2019</p>
+                                    <p class="status denied">Denied</p>
                                 </div>
                                 <div class="row-descr">
-                                    <p class="system"><span><img src="images/eos.svg" alt="Btc"></span>EOS.IO</p>
-                                    <p class="date"><span>10:00</span> 02/05/2019</p>
+                                    <p class="system"><span><img src="images/referral-commission-icon.svg" alt=""></span>Referral commission accrual</p>
                                     <p class="amount"><span>+0.09130 btc</span>(165.21 usd)</p>
-                                    <p class="status confirmed">Confirmed</p>
+                                    <p class="date"><span>10:00</span> 02/05/2019</p>
+                                    <p class="status confirmed">Done</p>
+                                </div>
+                                <div class="row-descr">
+                                    <p class="system"><span><img src="images/balance-removal-icon.svg" alt=""></span>Balance removal</p>
+                                    <p class="amount"><span>+0.09130 btc</span>(165.21 usd)</p>
+                                    <p class="date"><span>10:00</span> 02/05/2019</p>
+                                    <p class="status confirmed">Done</p>
+                                </div>
+                                <div class="row-descr">
+                                    <p class="system"><span><img src="images/bounty-menu.svg" alt=""></span>Bounty Reward</p>
+                                    <p class="amount"><span>+0.09130 btc</span>(165.21 usd)</p>
+                                    <p class="date"><span>10:00</span> 02/05/2019</p>
+                                    <p class="status confirmed">Done</p>
+                                </div>
+                                <div class="row-descr">
+                                    <p class="system"><span><img src="images/failure-icon.svg" alt=""></span>Failure to bounty program</p>
+                                    <p class="amount"><span>+0.09130 btc</span>(165.21 usd)</p>
+                                    <p class="date"><span>10:00</span> 02/05/2019</p>
+                                    <p class="status confirmed">Done</p>
+                                </div>
+                                <div class="row-descr">
+                                    <p class="system"><span><img src="images/enable-2fa-icon.svg" alt=""></span>Enable 2FA</p>
+                                    <p class="amount"></p>
+                                    <p class="date"></p>
+                                    <p class="status unused">Unused</p>
+                                </div>
+                                <div class="row-descr">
+                                    <p class="system"><span><img src="images/disable-2fa-icon.svg" alt=""></span>Disable 2FA</p>
+                                    <p class="amount"></p>
+                                    <p class="date"></p>
+                                    <p class="status unused">Unused</p>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="total-withdrawal d-flex align-items-center justify-content-between">
-                        <div class="title-main">
-                            Total Withdrawal
-                        </div>
-                        <div class="amount">
-                            2,546 usd
+                        <div class="pagination">
+                            <div class="arrow prev">
+                                <i class="zmdi zmdi-long-arrow-left"></i>
+                            </div>
+                            <div class="pages">
+                                <ul>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">...</a></li>
+                                    <li><a href="#">12</a></li>
+                                </ul>
+                            </div>
+                            <div class="arrow next">
+                                <i class="zmdi zmdi-long-arrow-right"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
             </main>
-            <!--END WITHDRAWAL-->
+            <!--END TRANSACTION-->
         </div>
     </div>
 </div>

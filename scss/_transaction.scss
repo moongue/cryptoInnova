@@ -1,0 +1,196 @@
+.transaction {
+  padding-bottom: 60px;
+  .filter {
+    padding: 15px 40px;
+    background: $white;
+    margin-top: 20px;
+    p {
+      font-size: 12px;
+      color: #868daa;
+    }
+    .payment-system-filter {
+      max-width: 530px;
+      width: 100%;
+      margin-right: 15px;
+      margin-top: 15px;
+      .one-currency {
+        color: $blue;
+        font-size: 15px;
+        padding: 0;
+        margin: 15px 0 0 0 ;
+      }
+    }
+    .type-of-transaction {
+      max-width: 255px;
+      width: 100%;
+      margin-top: 15px;
+      .select-filter {
+        display: inline-block;
+        vertical-align: top;
+        max-width: 255px;
+        width: 100%;
+      }
+      .select-wrap {
+        position: relative;
+        margin-top: 15px;
+        width: 100%;
+      }
+      .select-wrap select {
+        margin: 20px;
+      }
+      .select__gap {
+        background: #f9fcfe;
+        color: #467797;
+        border: 1px solid #e1eef6;
+        font-size: 15px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        padding: 0 30px 0 20px;
+        cursor: pointer;
+        position: relative;
+        &.on {
+          border: 1px solid $blue3;
+        }
+      }
+      .on.select__gap,
+      .select__gap:hover {
+        color: #467797;
+      }
+      .select__list {
+        background: #f9fcfe;
+        border: 1px solid #e1eef6;
+        border-top: none;
+        position: absolute;
+        color: #000;
+        width: 100%;
+        margin: 0 0;
+        z-index: 877;
+      }
+      .select__list.on {
+        display: block;
+      }
+      .select__item span {
+        display: block;
+        padding: 10px 20px;
+        cursor: pointer;
+        color: #868daa;
+        font-size: 13px;
+      }
+      .select__item.selected,
+      .select__item span:hover {
+        color: $blue3;
+      }
+      .select__gap:after {
+        content: '\f2f9';
+        font-family: 'Material-Design-Iconic-Font';
+        position: absolute;
+        font-size: 16px;
+        color: #868daa;
+        right: 15px;
+        top: calc((100% - 15px) / 2);
+        transition: all .27s ease-in-out;
+        transform: rotate(0deg);
+      }
+      .on.select__gap:after {
+        transform: rotate(180deg);
+      }
+    }
+    .date {
+      margin-left: 20px;
+      margin-top: 15px;
+      input[type=date] {
+        position: relative;
+        margin-top: 15px;
+        padding: 0 20px;
+        width: 146px;
+        height: 50px;
+        background: #f9fcfe;
+        border: 1px solid #e1eef6;
+        font-size: 13px;
+        color: #4f5a83;
+        &::-webkit-calendar-picker-indicator {
+          opacity: 0;
+          color: transparent;
+          background-size: contain;
+          background: transparent;
+        }
+        &::-webkit-inner-spin-button {
+          display: none;
+        }
+      }
+      .from-date {
+        padding-right: 20px;
+        input {
+          position: relative;
+          &:before {
+            content: '\f32e';
+            font-family: Material-Design-Iconic-Font;
+            font-size: 16px;
+            position: absolute;
+            right: 20px;
+            color: #868daa;
+          }
+        }
+      }
+      .date-to {
+        input {
+          &:before {
+            content: '\f332';
+            font-family: Material-Design-Iconic-Font;
+            font-size: 16px;
+            position: absolute;
+            right: 20px;
+            color: #868daa;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media #{$lg} {
+  .transaction {
+      .filter {
+        flex-wrap: wrap;
+        .date {
+          margin-left: 0;
+        }
+      }
+  }
+}
+@media #{$xs} {
+  .transaction {
+    .filter {
+      padding: 15px 10px;
+      .payment-system-filter {
+        max-width: 100%;
+        margin-right: 0;
+        > .d-flex {
+          flex-wrap: wrap;
+        }
+        //.one-currency {
+        //  flex-basis: 20%;
+        //}
+      }
+      .type-of-transaction {
+        max-width: 100% ;
+      }
+      .date {
+        width: 100%;
+        input[type=date] {
+          width: 100%;
+        }
+        .from-date, .date-to {
+          width: 50%;
+        }
+        .from-date {
+          padding-right: 5px;
+        }
+        .date-to {
+          padding-left: 5px;
+        }
+      }
+    }
+  }
+}
