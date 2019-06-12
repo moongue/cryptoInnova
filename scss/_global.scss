@@ -24,6 +24,16 @@ a {
   max-width: 1920px;
   margin: 0 auto;
 }
+.styles-input {
+    width: 100%;
+    height: 60px;
+    padding-left: 29px;
+    border: 1px solid #e1eef6;
+    background: #f9fcfe;
+    font-size: 22px;
+  text-transform: uppercase;
+    color: $blue;
+}
 .btn-styles {
   width: 100%;
   padding: 20px 0;

@@ -13,7 +13,7 @@
       cursor: pointer;
       border-radius: 3px;
       height: 100%;
-      &:hover {
+      &:hover, &.active {
         outline: 1px solid $blue3;
         box-shadow: 0 0 0 1.7px $blue3;
       }
@@ -89,7 +89,8 @@
       justify-content: center;
       border: 1px solid #e1eef6;
       margin: 15px auto 0;
-      &.active {
+      cursor: pointer;
+      &.choose {
         border: 1px solid $blue3;
       }
       img {
@@ -142,15 +143,6 @@
     form {
       background: $white;
       padding: 40px;
-      input {
-        width: 100%;
-        height: 60px;
-        padding-left: 29px;
-        border: 1px solid #e1eef6;
-        background: #f9fcfe;
-        font-size: 22px;
-        color: $blue;
-      }
       .your {
         display: flex;
         justify-content: space-between;
@@ -168,7 +160,7 @@
       }
       .btn-styles {
         margin-top: 20px;
-      max-width: 180px;
+        max-width: 180px;
       }
     }
     .more-inf {
@@ -190,7 +182,7 @@
       .text {
         max-width: 270px;
         background: $white;
-        padding:0 15px;
+        padding: 0 15px;
         line-height: 1.4;
         z-index: 4;
         .name {

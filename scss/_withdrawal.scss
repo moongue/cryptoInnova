@@ -1,0 +1,279 @@
+.withdrawal {
+  padding-bottom: 30px;
+  .withdrawal-from-balance {
+    .payment-system {
+      border-radius: 3px;
+      padding: 15px 20px;
+      margin-top: 25px;
+      background: $white;
+      cursor: pointer;
+      transition: all .3s ease;
+      &.choose, &:hover {
+        background: $blue3;
+        .top {
+          p {
+            color: $blue;
+          }
+          .img-currency {
+            background: #80bef9;
+            img {
+              filter: contrast(0) brightness(10);
+
+            }
+          }
+        }
+        .bot {
+          color: $white;
+        }
+      }
+      .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        p {
+          text-transform: uppercase;
+          font-weight: 500;
+          color: #b0b4c3;
+          font-size: 13px;
+        }
+        .img-currency {
+          background: #f2f7fc;
+          width: 50px;
+          height: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            width: 27px;
+            height: 27px;
+            filter: brightness(.4);
+          }
+        }
+      }
+      .bot {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        color: $blue;
+        p {
+          font-size: 15px;
+        }
+        .currency {
+          font-size: 22px;
+        }
+      }
+    }
+    .form {
+      padding: 40px;
+      background: $white;
+      margin-top: 15px;
+      form {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .styles-input {
+          max-width: 607px;
+        }
+        .btn {
+          max-width: 180px;
+          width: 100%;
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+  .withdrawal-history {
+    .history {
+      padding-top: 30px;
+      background: $white;
+      margin-top: 20px;
+      .name-history {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 50px 10px;
+        p {
+          font-size: 12px;
+          flex-basis: 25%;
+          color: #868daa;
+        }
+      }
+      .row-descr {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 50px;
+        align-items: center;
+        border-bottom: 1px solid #ebf3fb;
+        &:last-child {
+          border-bottom: none;
+        }
+        p {
+          flex-basis: 25%;
+          display: flex;
+          align-items: center;
+          padding: 20px 0;
+          font-size: 13px;
+          color: $blue;
+          &.date {
+            span {
+              color: $blue3;
+              padding-right: 10px;
+            }
+          }
+          &.amount {
+            text-transform: uppercase;
+            span {
+              color: #00c3b3;
+              padding-right: 8px;
+              &.minus {
+                color: #ff6f79;
+              }
+            }
+          }
+          &.status {
+            padding-left: 25px;
+            position: relative;
+            &.confirmed {
+              color: $green;
+              &:before {
+                content: '';
+                background: url(../images/confirmed.png) no-repeat;
+                width: 15px;
+                height: 15px;
+                position: absolute;
+                left: 0;
+                top: calc((100% - 15px) / 2);
+              }
+            }
+            &.pending {
+              color: $orange;
+              &:before {
+                content: '';
+                background: url(../images/pending.png) no-repeat;
+                width: 15px;
+                height: 15px;
+                position: absolute;
+                left: 0;
+                top: calc((100% - 15px) / 2);
+              }
+            }
+          }
+          img {
+            height: 20px;
+            width: auto;
+            padding-right: 20px;
+          }
+        }
+      }
+    }
+  }
+  .total-withdrawal {
+    background: $white;
+    margin-top: 15px;
+    padding: 40px 50px;
+    .title-main {
+      margin: 0;
+    }
+    .amount {
+      color: #373770;
+      font-size: 46px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+@media #{$md} {
+  .withdrawal {
+    .withdrawal-history {
+      .history {
+        overflow-x: scroll;
+        .table {
+          min-width: 850px;
+        }
+        .name-history {
+          p {
+            flex-basis: 25%;
+            &:first-child {
+              flex-basis: 20%;
+            }
+            &:last-child {
+              flex-basis: 12%;
+            }
+          }
+        }
+        .row-descr {
+          p {
+            flex-basis: 25%;
+            &:first-child {
+              flex-basis: 20%;
+            }
+            &:last-child {
+              flex-basis: 12%;
+            }
+          }
+        }
+      }
+    }
+    .total-withdrawal {
+      .amount {
+        font-size: 38px;
+      }
+    }
+  }
+}
+
+@media #{$sm} {
+  .withdrawal {
+    .withdrawal-history {
+      .history {
+        .name-history {
+          padding: 0 20px;
+          p {
+            flex-basis: 27.33333%;
+            &:last-child {
+              flex-basis: 18%;
+            }
+          }
+        }
+        .table {
+          min-width: 700px !important;
+        }
+        .row-descr {
+          padding: 0 20px;
+          p {
+            flex-basis: 27.33333%;
+            &:last-child {
+              flex-basis: 18%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media #{$xs} {
+  .withdrawal {
+    .withdrawal-from-balance {
+      .form {
+        padding: 20px;
+        form {
+          flex-direction: column;
+          .btn {
+            margin-top: 15px;
+            margin-left: 0;
+            max-width: 100%;
+          }
+        }
+      }
+    }
+
+    .total-withdrawal {
+      flex-direction: column;
+      align-items: flex-start !important;
+      .amount {
+        margin-top: 15px;
+      }
+    }
+  }
+}
