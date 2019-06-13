@@ -95,7 +95,23 @@
 .zmdi-chevron-right {
   display: none;
   color: #000;
-  font-size: 30px;
+  font-size: 90px;
+}
+@media #{$xl} {
+  .menu {
+    .menu-panel {
+      li {
+        a {
+          padding: 15px 30px;
+          font-size: 15px;
+          &:before {
+            width: 22px;
+            height: 22px;
+          }
+        }
+      }
+    }
+  }
 }
 @media #{$lg} {
   .menu {
@@ -159,3 +175,8 @@
   }
 }
 
+@media #{$sm} {
+  .zmdi-chevron-right {
+    font-size: 60px;
+  }
+}

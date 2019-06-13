@@ -201,6 +201,38 @@ function dateTomorrow() {
     $("#theDateTomorrow").attr("value", today);
 }
 
+function videoPlay() {
+    var overlay = document.getElementById('overlay');
+    var vid = document.getElementById('video');
+
+    if(overlay.addEventListener){
+        overlay.addEventListener("click", play, false)
+    }else if(overlay.attachEvent){
+        overlay.attachEvent("onclick", play)
+    }
+
+    function play() {
+        if (vid.paused){
+            vid.play();
+            overlay.className = "o";
+        }else {
+            vid.pause();
+            overlay.className = "";
+        }
+    }
+}
+
+function addBlocker() {
+    $('.show-tooltip').click(function() {
+        $('.show-tooltip + .tooltip').addClass('show');
+        $('body').append('<div class="blocker"></div>')
+    });
+    $('.modal-close').click(function() {
+        $('.show-tooltip + .tooltip').removeClass('show');
+        $('.blocker').remove()
+    })
+}
+
 $(window).on('load', function () {
     showLink();
     showDropdownBalance();
@@ -215,4 +247,6 @@ $(window).on('load', function () {
     stylesSelect();
     dateToday();
     dateTomorrow();
+    videoPlay();
+    addBlocker();
 });

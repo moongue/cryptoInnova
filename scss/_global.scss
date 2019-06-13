@@ -32,7 +32,9 @@ option:focus {
   max-width: 1920px;
   margin: 0 auto;
 }
-
+.blocker {
+  background-color: rgba(0, 0, 0, .4);
+}
 .styles-input {
   width: 100%;
   height: 60px;
@@ -62,6 +64,9 @@ option:focus {
   &.select {
     background: $blue3;
     color: $white;
+    &:hover {
+      background: #3e91d6;
+    }
   }
 }
 

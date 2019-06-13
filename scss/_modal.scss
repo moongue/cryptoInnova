@@ -134,6 +134,61 @@
   }
 }
 
+#bounty-reward {
+  max-width: 450px;
+  padding: 60px 70px;
+  .title {
+    margin-bottom: 20px;
+  }
+  .block-input {
+    margin-top: 20px;
+    label {
+      line-height: 1.6;
+    }
+    textarea {
+      height: 100px;
+    }
+  }
+  .styles-input {
+    text-transform: inherit;
+  }
+  .buttons {
+    margin-top: 30px;
+  }
+  .check {
+    margin-top: 20px;
+    padding-left: 20px;
+    label {
+      position: relative;
+    }
+  }
+  input[type=checkbox] {
+    display: none;
+  }
+  input[type=checkbox] + label:before {
+    content: "\2713";
+    color: transparent;
+    display: inline-block;
+    border: 1px solid #e1eef6;
+    font-size: 14px;
+    line-height: 13px;
+    margin: -5px 5px 0 0;
+    background: #f9fcfe;
+    height: 14px;
+    width: 14px;
+    text-align: center;
+    vertical-align: middle;
+    transition: color ease .3s;
+    position: absolute;
+    left: -20px;
+    top: 8px;
+  }
+
+  input[type=checkbox]:checked + label:before {
+    color: #4e5983;
+  }
+}
+
 #banners-referral {
   padding: 40px;
   &.modal {
@@ -247,6 +302,17 @@
         top: inherit !important;
         bottom: 0;
         max-height: 60px;
+      }
+    }
+  }
+}
+
+@media #{$xs} {
+  #bounty-reward {
+    padding: 30px;
+    .col-sm-6 {
+      &:nth-child(2) {
+        margin-top: 15px;
       }
     }
   }

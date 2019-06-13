@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"/>
+    <link rel="stylesheet" href="font/material-design-iconic-font/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Bounty</title>
+</head>
+<body>
+<div class="wrapper">
+    <div class="row no-gutters align-items-start">
+        <div class="col-2 no-gutters pr-0">
+            <nav class="menu">
+                <div class="logo md-hide">
+                    <a href="#">
+                        <img src="images/logo.svg" alt="Logo">
+                    </a>
+                </div>
+                <ul class="menu-panel">
+                    <li><a href="#" class="account-menu-link">Account</a></li>
+                    <li class="active"><a href="#" class="make-deposit-menu-link">Make deposit</a></li>
+                    <li><a href="#" class="withdrawal-menu-link">Withdrawal</a></li>
+                    <li><a href="#" class="transaction-menu-link">Transaction history</a></li>
+                    <li><a href="#" class="referral-menu-link">Referral program</a></li>
+                    <li><a href="#" class="bounty-menu-link">Bounty</a></li>
+                    <li><a href="#" class="setting-menu-link">Settings</a></li>
+                    <li class="logout"><a href="#" class="logout-menu-link">Log Out</a></li>
+                </ul>
+            </nav>
+            <i class="zmdi zmdi-chevron-right btn-toggle-nav"></i>
+        </div>
+        <div class="col-lg-10 col-12 no-gutters pl-0">
+            <header>
+                <div class="user">
+                    <div class="logo md-show">
+                        <a href="#">
+                            <img src="images/logo.svg" alt="Logo">
+                        </a>
+                    </div>
+                    <div class="nickname">
+                        <div class="avatar-user">
+                            <img src="images/standart-avatar.svg" alt="User">
+                        </div>
+                        <div class="block">
+                            <a href="#" class="name">Nickname</A>
+                            <a href="#" class="copy-link">copy link <i class="zmdi zmdi-link"></i></a>
+                        </div>
+                        <div class="tooltip-link">
+                            <p class="link-user">http://cryptoinnova.com/?profile=nickname</p>
+                        </div>
+                    </div>
+                    <div class=" df sm-hide">
+                        <div class="status">
+                            <p>Status:</p>
+                            <p class="user-status">Active user</p>
+                        </div>
+                        <div class="rank">
+                            <p>Rank:</p>
+                            <div class="upgrade-block">
+                                <p class="user-rank">Basic client</p>
+                                <a href="#" class="btn-upgrade">upgrade</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="balance md-hide">
+                    <p>Your balance:</p>
+                    <div class="choose-balance">
+                        <i class="zmdi zmdi-chevron-down"></i>
+                        <p class="currency btc">0.000000 BTC</p>
+                        <div class="dropdown-balance">
+                            <p class="currency btc active">0.000000 btc</p>
+                            <p class="currency eth">0.000000 eth</p>
+                            <p class="currency pm">0.000000 pm</p>
+                            <p class="currency btch">0.000000 btch</p>
+                            <p class="currency ltc">0.000000 ltc</p>
+                            <p class="currency xmr">0.000000 xmr</p>
+                            <p class="currency zec">0.000000 zec</p>
+                            <p class="currency eos">0.000000 eos</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons lg-hide">
+                    <a href="#make-deposit" rel="modal:open" class="btn-styles select">Make Deposit</a>
+                    <a href="#" class="btn-styles">Withdrawal</a>
+                </div>
+                <div class="social-telegram xl-hide">
+                    <a href="#"><img src="images/telegram-icon.svg" alt="Telegram">@cryptoinnova</a>
+                    <a href="#"><img src="images/telegram-icon.svg" alt="Telegram">@cryptoinnova2</a>
+                </div>
+                <div class="choose-language xl-hide">
+                    <div class="language"><img src="images/eng-icon.svg" alt="Eng">En</div>
+                    <i class="zmdi zmdi-chevron-down"></i>
+                    <div class="dropdown-language">
+                        <div class="language soon"><img src="images/vi-lang-icon.svg" alt="Eng">Vi</div>
+                        <div class="language soon"><img src="images/es-lang-icon.svg" alt="Eng">Es</div>
+                        <div class="language soon"><img src="images/pl-lang-icon.svg" alt="Eng">Pl</div>
+                        <div class="language soon"><img src="images/ja-lang-icon.svg" alt="Eng">Ja</div>
+                        <div class="language soon"><img src="images/zh-lang-icon.svg" alt="Eng">Zh</div>
+                    </div>
+                </div>
+                <!--BURGER TOGGLE MENU-->
+                <div class="mobile-menu-toggle xl-show">
+                    <svg class="ham hamRotate ham-burger" viewBox="0 0 100 100" width="60"
+                         onclick="this.classList.toggle('active')">
+                        <path
+                                class="line top"
+                                d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"/>
+                        <path
+                                class="line middle"
+                                d="m 30,50 h 40"/>
+                        <path
+                                class="line bottom"
+                                d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"/>
+                    </svg>
+                </div>
+                <div class="dropdown-header">
+                    <div class="content-dropdown">
+                        <div class="balance md-show">
+                            <p>Your balance:</p>
+                            <div class="choose-balance">
+                                <i class="zmdi zmdi-chevron-down"></i>
+                                <p class="currency btc">0.000000 BTC</p>
+                                <div class="dropdown-balance">
+                                    <p class="currency btc active">0.000000 btc</p>
+                                    <p class="currency eth">0.000000 eth</p>
+                                    <p class="currency pm">0.000000 pm</p>
+                                    <p class="currency btch">0.000000 btch</p>
+                                    <p class="currency ltc">0.000000 ltc</p>
+                                    <p class="currency xmr">0.000000 xmr</p>
+                                    <p class="currency zec">0.000000 zec</p>
+                                    <p class="currency eos">0.000000 eos</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user sm-show">
+                            <div class="status sm-show">
+                                <p>Status:</p>
+                                <p class="user-status">Active user</p>
+                            </div>
+                            <div class="rank sm-show">
+                                <p>Rank:</p>
+                                <div class="upgrade-block">
+                                    <a href="#" class="btn-upgrade">upgrade</a>
+                                    <p class="user-rank">Basic client</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="buttons lg-show">
+                            <a href="#make-deposit" rel="modal:open" class="btn-styles select">Make Deposit</a>
+                            <a href="#" class="btn-styles">Withdrawal</a>
+                        </div>
+                        <div class="choose-language">
+                            <div class="language"><img src="images/eng-icon.svg" alt="Eng">En</div>
+                            <i class="zmdi zmdi-chevron-down"></i>
+                            <div class="dropdown-language">
+                                <div class="language soon"><img src="images/vi-lang-icon.svg" alt="Eng">Vi</div>
+                                <div class="language soon"><img src="images/es-lang-icon.svg" alt="Eng">Es</div>
+                                <div class="language soon"><img src="images/pl-lang-icon.svg" alt="Eng">Pl</div>
+                                <div class="language soon"><img src="images/ja-lang-icon.svg" alt="Eng">Ja</div>
+                                <div class="language soon"><img src="images/zh-lang-icon.svg" alt="Eng">Zh</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--END BURGER-->
+            </header>
+
+            <!--BOUNTY-->
+            <main class="bounty">
+                <div class="container">
+                    <div class="title-main">
+                        Bounty program
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-12">
+                            <div class="subtitle">
+                                1. Video Review
+                            </div>
+                            <div class="block-bounty">
+                                <div id="video_holder">
+                                    <div id="overlay"><i class="zmdi zmdi-play"></i></div>
+                                    <video src="video/100483904.mp4" id="video" tabindex="0"></video>
+                                </div>
+                                <div class="title-bounty">
+                                    Get bitcoins for free
+                                </div>
+                                <p>Bonus: <span class="bonus">0.00025 - 0.07 btc</span></p>
+                                <div class="d-flex justify-content-between align-items-xl-center flex-lg-column flex-xl-row align-items-lg-start align-items-xs-center">
+                                    <div class="left flex-column justify-content-between">
+                                        <p>Have you completed the task?</p>
+                                        <p class="show-tooltip">Read the Terms for participation carefully</p>
+                                        <div class="tooltip">
+                                            <div class="conditions">
+                                                <div class="title">
+                                                    Conditions
+                                                </div>
+                                                <ul>
+                                                    <li>The video should be about our company</li>
+                                                    <li>Video duration must be at least 30 seconds</li>
+                                                    <li>In the video description, specify your referral link. It looks
+                                                        like: <span
+                                                                class="dark">https://asddfghhj.com/?ref=*******</span>
+                                                        where ******* is your username on our site
+                                                    <li>The title of the video should contain the world</li>
+                                                    <li>You can record a new video every week and get rewarded for it
+                                                    </li>
+                                                    <li>The amount of the reward depends on the quality of the video
+                                                    </li>
+                                                    <li>On the video you have to show your personal account where your
+                                                        login is displayed
+                                                    </li>
+                                                    <li>Video must be recorded after February 18.2019</li>
+                                                </ul>
+                                                <p class="dark">You must be an investor to participate in this task</p>
+                                                <a href="#" class="modal-close"><i class="zmdi zmdi-close"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="btn">
+                                        <a href="#bounty-reward" rel="modal:open" class="btn-styles select">Send an
+                                            application</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <div class="subtitle">
+                                2. Webinars
+                            </div>
+                            <div class="block-bounty">
+                                <div class="block-img">
+                                    <img src="images/webinars-img.jpg" alt="Webinars">
+                                </div>
+                                <div class="title-bounty">
+                                    How to get first bitcoins
+                                </div>
+                                <p>Bonus: <span class="bonus">0.01 - 0.1 btc</span></p>
+                                <div class="d-flex justify-content-between align-items-xl-center flex-lg-column flex-xl-row align-items-lg-start align-items-xs-center">
+                                    <div class="left flex-column justify-content-between">
+                                        <p>Have you completed the task?</p>
+                                        <a href="#">Read the Terms for participation carefully</a>
+                                    </div>
+                                    <div class="btn">
+                                        <a href="#bounty-reward" rel="modal:open" class="btn-styles select">Send an
+                                            application</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="remunerations">
+                        <div class="title-bounty">
+                            REMUNERATIONS ACCORDING TO THE BOUNTY PROGRAM
+                        </div>
+                        <p>After carrying out the task, fill the corresponding <a href="#">form</a>. Within a few days
+                            your application will be verified. If you do not fulfill the requirements, you will not be
+                            be charged a reward.<br>
+                            For any questions you can contact the <a href="#">support services</a>.</p>
+                    </div>
+                </div>
+            </main>
+            <!--END BOUNTY-->
+        </div>
+    </div>
+</div>
+
+<!--MODAL-->
+<div id="make-deposit" class="modal">
+    <div class="border-b">
+        <div class="title offset">
+            <img src="images/payment-of-deposit.png" alt="Payment of deposit">
+            Payment of deposit
+        </div>
+        <div class="inputs offset">
+            <div class="block">
+                <p>Send this exact amount of:</p>
+                <div class="field">
+                    <input type="text">
+                    <button><i class="zmdi zmdi-copy"></i></button>
+                </div>
+            </div>
+            <div class="block">
+                <p>to bitcoin Address:</p>
+                <div class="field">
+                    <input type="text">
+                    <button><i class="zmdi zmdi-copy"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="border-b">
+        <div class="qr-code offset">
+            <div class="block">
+                <p>When you receive transaction confirmarions the deposit will open automatically</p>
+                <div class="data">
+                    <ul>
+                        <li>
+                            <p>Invoce #</p>
+                            <p>1558533501</p>
+                        </li>
+                        <li>
+                            <p>Amount</p>
+                            <p>100 usd (0.01272300 btc)</p>
+                        </li>
+                        <li>
+                            <p>Username</p>
+                            <p>paohkadm</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="img-qr-code">
+                <img src="images/qr-code.jpg" alt="QR Code">
+            </div>
+        </div>
+    </div>
+    <div class="bottom offset">
+        <div class="timer">
+            <p>Time left to proceed: <span>14:42</span></p>
+            <p>waiting for the payment...</p>
+        </div>
+        <div class="btn">
+            <a href="#" class="btn-styles select">Pay with Bitcoin</a>
+        </div>
+    </div>
+    <a href="#" rel="modal:close" class="modal-close"><i class="zmdi zmdi-close"></i></a>
+</div>
+
+<div id="bounty-reward" class="modal">
+    <div class="title">
+        Bounty Rewards Request
+    </div>
+    <div class="block-input">
+        <label for="repostLink">Repost Link</label>
+        <input id="repostLink" type="text" class="styles-input">
+    </div>
+    <div class="block-input">
+        <label for="additionalInf">Additional information</label>
+        <textarea id="AdditionalInf" cols="30" rows="10" class="styles-input"></textarea>
+    </div>
+    <div class="check">
+        <input type="checkbox" id="check" name="check"/>
+        <label for="check">I confirm, that I have active deposit</label>
+
+    </div>
+    <div class="check">
+        <input type="checkbox" id="check2" name="check"/>
+        <label for="check2">I am acknowledget with the condirions of bounty program</label>
+    </div>
+    <div class="buttons row d-flex justify-content-between align-items-center">
+        <div class="col-sm-6 col-12 btn">
+            <a href="#" class="btn-styles select">Sent</a>
+        </div>
+        <div class="col-sm-6 col-12 btn">
+            <a href="#" class="btn-styles">Cancel</a>
+        </div>
+    </div>
+    <a href="#" rel="modal:close" class="modal-close"><i class="zmdi zmdi-close"></i></a>
+
+</div>
+<!--END MODAL-->
+
+</body>
+</html>
