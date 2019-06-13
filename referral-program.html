@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"/>
     <link rel="stylesheet" href="font/material-design-iconic-font/css/material-design-iconic-font.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Withdrawal</title>
+    <title>Referral program</title>
 </head>
 <body>
 <div class="wrapper">
@@ -28,10 +28,10 @@
                 </div>
                 <ul class="menu-panel">
                     <li><a href="#" class="account-menu-link">Account</a></li>
-                    <li class="active"><a href="#" class="make-deposit-menu-link">Make deposit</a></li>
+                    <li><a href="#" class="make-deposit-menu-link">Make deposit</a></li>
                     <li><a href="#" class="withdrawal-menu-link">Withdrawal</a></li>
                     <li><a href="#" class="transaction-menu-link">Transaction history</a></li>
-                    <li><a href="#" class="referral-menu-link">Referral program</a></li>
+                    <li class="active"><a href="#" class="referral-menu-link">Referral program</a></li>
                     <li><a href="#" class="bounty-menu-link">Bounty</a></li>
                     <li><a href="#" class="setting-menu-link">Settings</a></li>
                     <li class="logout"><a href="#" class="logout-menu-link">Log Out</a></li>
@@ -94,6 +94,10 @@
                     <a href="#make-deposit" rel="modal:open" class="btn-styles select">Make Deposit</a>
                     <a href="#" class="btn-styles">Withdrawal</a>
                 </div>
+                <div class="social-telegram xl-hide">
+                    <a href="#"><img src="images/telegram-icon.svg" alt="Telegram">@cryptoinnova</a>
+                    <a href="#"><img src="images/telegram-icon.svg" alt="Telegram">@cryptoinnova2</a>
+                </div>
                 <div class="choose-language xl-hide">
                     <div class="language"><img src="images/eng-icon.svg" alt="Eng">En</div>
                     <i class="zmdi zmdi-chevron-down"></i>
@@ -152,10 +156,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="social-telegram">
-                            <a href="#">@cryptoinnova<img src="images/telegram-icon.svg" alt="Telegram"></a>
-                            <a href="#">@cryptoinnova2<img src="images/telegram-icon.svg" alt="Telegram"></a>
-                        </div>
                         <div class="buttons lg-show">
                             <a href="#make-deposit" rel="modal:open" class="btn-styles select">Make Deposit</a>
                             <a href="#" class="btn-styles">Withdrawal</a>
@@ -176,148 +176,207 @@
                 <!--END BURGER-->
             </header>
 
-            <!--WITHDRAWAL-->
-            <main class="withdrawal">
+            <!--REFERRAL PROGRAM-->
+            <main class="referral-program">
                 <div class="container">
-                    <div class="withdrawal-from-balance">
-                        <div class="title-main">Withdrawal from balance</div>
-                        <div class="row">
-                            <div class="col-md-6 col-xl-3">
-                                <div class="payment-system choose">
-                                    <div class="top">
-                                        <p>btc</p>
-                                        <div class="img-currency">
-                                            <img src="images/bitcoin.svg" alt="Btc">
+                    <div class="title-main">
+                        Referral program
+                    </div>
+                    <div class="content-program">
+                        <div class="main-info">
+                            <div class="row">
+                                <div class="col-sm-6 col-lg-6 col-xl-4">
+                                    <div class="one-inf">
+                                        <div class="avatar">
+                                            <img src="images/standart-avatar.svg" alt="Avatar">
                                         </div>
-                                    </div>
-                                    <div class="bot">
-                                        <p>Bitcoin</p>
-                                        <div class="currency">
-                                            0.432112
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-xl-3">
-                                <div class="payment-system">
-                                    <div class="top">
-                                        <p>xmr</p>
-                                        <div class="img-currency">
-                                            <img src="images/xmr.svg" alt="Xmr">
-                                        </div>
-                                    </div>
-                                    <div class="bot">
-                                        <p>Monero</p>
-                                        <div class="currency">
-                                            1.320000
+                                        <div class="description">
+                                            <p>You Upliner</p>
+                                            <div class="profile">
+                                                <div class="nickname">
+                                                    MrConor
+                                                </div>
+                                                <div class="rank">
+                                                    CryptoVisor
+                                                </div>
+                                                <div class="status">
+                                                    Representativ
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-6 col-xl-3">
-                                <div class="payment-system">
-                                    <div class="top">
-                                        <p>eth</p>
-                                        <div class="img-currency">
-                                            <img src="images/eth.svg" alt="Eth">
+                                <div class="col-sm-6 col-lg-6 col-xl-4">
+                                    <div class="one-inf">
+                                        <div class="avatar">
+                                            <img src="images/standart-avatar.svg" alt="Avatar">
+                                        </div>
+                                        <div class="description">
+                                            <p>You Rank</p>
+                                            <div class="profile">
+                                                <div class="nickname">
+                                                    CryptoVisor
+                                                </div>
+                                                <div class="rank">
+                                                    12%-2%-1%
+                                                </div>
+                                                <div class="status">
+                                                    Representativ
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="bot">
-                                        <p>Ethereum</p>
-                                        <div class="currency">
-                                            0.221746
+                                </div>
+                                <div class="col-sm-6 col-lg-6 col-xl-4">
+                                    <div class="one-inf referral-link">
+                                        <a href="#" class="avatar">
+                                            <img src="images/qr-code.jpg" alt="QR Code">
+                                            <span class="hover-effect">
+                                                <i class="zmdi zmdi-zoom-in"></i>
+                                            </span>
+                                        </a>
+                                        <div class="description">
+                                            <p>You Upliner</p>
+                                            <div class="link">
+                                                http://cryptoinnova.com/?profile=nickname
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <a href="#" class="copy-link-referral">copy link <i
+                                                        class="zmdi zmdi-link"></i></a>
+                                                <a href="#banners-referral" rel="modal:open" class="show-banners">banners</a>
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-12 col-xl-9">
-                                <div class="form">
-                                    <form action="withdrawal">
-                                        <input type="text" class="styles-input" placeholder="1.752112 btc">
-                                        <div class="btn">
-                                            <a href="#" class="btn-styles select">Withdrawal</a>
-                                        </div>
-                                    </form>
+                        <div class="table-amount">
+                            <div class="row">
+                                <div class="col-6 col-sm-4 col-md-2">
+                                    <p>Your referrals:</p>
+                                    <p class="count">0</p>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-2">
+                                    <p>Active:</p>
+                                    <p class="count">0</p>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-2">
+                                    <p>Registration today:</p>
+                                    <p class="count">0</p>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-2">
+                                    <p>Active today:</p>
+                                    <p class="count">0</p>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-2">
+                                    <p>Team invest amount:</p>
+                                    <p class="count">0 usd</p>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-2">
+                                    <p>Total referral commission:</p>
+                                    <p class="count">0 usd</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="section-table-information">
-                        <div class="title-main">
-                            Withdrawal history
-                        </div>
                         <div class="table-information">
-                            <div class="table">
+                            <div class="table table-referral">
                                 <div class="name-table">
-                                    <p>Payment system</p>
-                                    <p>Date</p>
-                                    <p>Amount</p>
-                                    <p>Status</p>
+                                    <p>Referral line</p>
+                                    <p>Active referrals</p>
+                                    <p>Total attracted amount</p>
+                                    <p>Referral commission</p>
                                 </div>
                                 <div class="row-descr">
-                                    <p class="system"><span><img src="images/bitcoin.svg" alt="Btc"></span>Bitcoin</p>
-                                    <p class="date"><span>10:00</span> 02/05/2019</p>
-                                    <p class="amount"><span>+0.09130 btc</span>(165.21 usd)</p>
-                                    <p class="status confirmed">Confirmed</p>
+                                    <p class="line">Line 1</p>
+                                    <p>34</p>
+                                    <p>10.20 usd</p>
+                                    <p>3672.00 usd</p>
                                 </div>
                                 <div class="row-descr">
-                                    <p class="system"><span><img src="images/eth.svg" alt="Btc"></span>Ethereum</p>
-                                    <p class="date"><span>10:00</span> 02/05/2019</p>
-                                    <p class="amount"><span>+0.09130 btc</span>(165.21 usd)</p>
-                                    <p class="status confirmed">Confirmed</p>
+                                    <p class="line">Line 1</p>
+                                    <p>34</p>
+                                    <p>10.20 usd</p>
+                                    <p>3672.00 usd</p>
                                 </div>
                                 <div class="row-descr">
-                                    <p class="system"><span><img src="images/pm.svg" alt="Btc"></span>Perfect Money</p>
-                                    <p class="date"><span>10:00</span> 02/05/2019</p>
-                                    <p class="amount"><span class="minus">-0.09130 btc</span>(165.21 usd)</p>
-                                    <p class="status pending">Pending</p>
-                                </div>
-                                <div class="row-descr">
-                                    <p class="system"><span><img src="images/btch.svg" alt="Btc"></span>Bitcoin Cash</p>
-                                    <p class="date"><span>10:00</span> 02/05/2019</p>
-                                    <p class="amount"><span>+0.09130 btc</span>(165.21 usd)</p>
-                                    <p class="status confirmed">Confirmed</p>
-                                </div>
-                                <div class="row-descr">
-                                    <p class="system"><span><img src="images/ltc.svg" alt="Btc"></span>Litcoin</p>
-                                    <p class="date"><span>10:00</span> 02/05/2019</p>
-                                    <p class="amount"><span>+0.09130 btc</span>(165.21 usd)</p>
-                                    <p class="status confirmed">Confirmed</p>
-                                </div>
-                                <div class="row-descr">
-                                    <p class="system"><span><img src="images/xmr.svg" alt="Btc"></span>Monero</p>
-                                    <p class="date"><span>10:00</span> 02/05/2019</p>
-                                    <p class="amount"><span class="minus">-0.09130 btc</span>(165.21 usd)</p>
-                                    <p class="status pending">Pending</p>
-                                </div>
-                                <div class="row-descr">
-                                    <p class="system"><span><img src="images/zec.svg" alt="Btc"></span>Zcash</p>
-                                    <p class="date"><span>10:00</span> 02/05/2019</p>
-                                    <p class="amount"><span>+0.09130 btc</span>(165.21 usd)</p>
-                                    <p class="status confirmed">Confirmed</p>
-                                </div>
-                                <div class="row-descr">
-                                    <p class="system"><span><img src="images/eos.svg" alt="Btc"></span>EOS.IO</p>
-                                    <p class="date"><span>10:00</span> 02/05/2019</p>
-                                    <p class="amount"><span>+0.09130 btc</span>(165.21 usd)</p>
-                                    <p class="status confirmed">Confirmed</p>
+                                    <p class="line">Line 1</p>
+                                    <p>34</p>
+                                    <p>10.20 usd</p>
+                                    <p>3672.00 usd</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="total-withdrawal d-flex align-items-center justify-content-between">
+                    <div class="search-referrals">
                         <div class="title-main">
-                            Total Withdrawal
+                            Search referrals
                         </div>
-                        <div class="amount">
-                            2,546 usd
+                        <div class="block-search">
+                            <label for="searchUser">Search by username</label>
+                            <div class="input-search">
+                                <input type="text" class="styles-input" id="searchUser">
+                                <button><i class="zmdi zmdi-search"></i></button>
+                            </div>
+                        </div>
+                        <div class="section-table-information">
+                            <div class="table-information">
+                                <div class="table">
+                                    <div class="name-table">
+                                        <p>ID</p>
+                                        <p>Level</p>
+                                        <p>Date registration</p>
+                                        <p>Funds invested</p>
+                                        <p>Commission received</p>
+                                    </div>
+                                    <div class="row-descr">
+                                        <p>Goover</p>
+                                        <p>1</p>
+                                        <p>02/05/2019</p>
+                                        <p class="tt">5.000 usd</p>
+                                        <p class="tt">600 usd</p>
+                                    </div>
+                                    <div class="row-descr">
+                                        <p>Goover</p>
+                                        <p>1</p>
+                                        <p>02/05/2019</p>
+                                        <p class="tt">5.000 usd</p>
+                                        <p class="tt">600 usd</p>
+                                    </div>
+                                    <div class="row-descr">
+                                        <p>Goover</p>
+                                        <p>1</p>
+                                        <p>02/05/2019</p>
+                                        <p class="tt">5.000 usd</p>
+                                        <p class="tt">600 usd</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pagination">
+                                <div class="arrow prev">
+                                    <i class="zmdi zmdi-long-arrow-left"></i>
+                                </div>
+                                <div class="pages">
+                                    <ul>
+                                        <li class="active"><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">...</a></li>
+                                        <li><a href="#">12</a></li>
+                                    </ul>
+                                </div>
+                                <div class="arrow next">
+                                    <i class="zmdi zmdi-long-arrow-right"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </main>
-            <!--END WITHDRAWAL-->
+            <!--END REFERRAL PROGRAM-->
         </div>
     </div>
 </div>
@@ -382,6 +441,71 @@
         </div>
     </div>
     <a href="#" rel="modal:close" class="modal-close"><i class="zmdi zmdi-close"></i></a>
+</div>
+
+<div id="banners-referral" class="modal">
+    <div class="one-block">
+        <div class="example-wh size-468x60">
+
+        </div>
+        <p class="size">468x60</p>
+        <div class="copy-iframe">
+            <code>
+                <p>
+                    &ltiframe scr="https://weenzee.com/am/?u=WRBF315C49&I=1*t=5" width="468" height="60" frameborder="0"
+                    scrolling="no" allowTransparency="true"&gt&lt/iframe&gt
+                </p>
+            </code>
+            <button>Copy link</button>
+        </div>
+    </div>
+    <div class="one-block">
+        <div class="example-wh size-728x90">
+
+        </div>
+        <p class="size">728x90</p>
+        <div class="copy-iframe">
+            <code>
+                <p>
+                    &ltiframe scr="https://weenzee.com/am/?u=WRBF315C49&I=1*t=5" width="728" height="90" frameborder="0"
+                    scrolling="no" allowTransparency="true"&gt&lt/iframe&gt
+                </p>
+            </code>
+            <button>Copy link</button>
+        </div>
+    </div>
+    <div class="one-block">
+        <div class="example-wh size-1000x100">
+
+        </div>
+        <p class="size">1000x100</p>
+        <div class="copy-iframe">
+            <code>
+                <p>
+                    &ltiframe scr="https://weenzee.com/am/?u=WRBF315C49&I=1*t=5" width="1000" height="100" frameborder="0"
+                    scrolling="no" allowTransparency="true"&gt&lt/iframe&gt
+                </p>
+            </code>
+            <button>Copy link</button>
+        </div>
+    </div>
+    <div class="one-block">
+        <div class="example-wh size-1200x150">
+
+        </div>
+        <p class="size">1200x150</p>
+        <div class="copy-iframe">
+            <code>
+                <p>
+                    &ltiframe scr="https://weenzee.com/am/?u=WRBF315C49&I=1*t=5" width="1200" height="150" frameborder="0"
+                    scrolling="no" allowTransparency="true"&gt&lt/iframe&gt
+                </p>
+            </code>
+            <button>Copy link</button>
+        </div>
+    </div>
+    <a href="#" rel="modal:close" class="modal-close"><i class="zmdi zmdi-close"></i></a>
+
 </div>
 <!--END MODAL-->
 

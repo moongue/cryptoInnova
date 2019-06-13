@@ -27,9 +27,19 @@ header {
       display: flex;
       align-items: center;
       position: relative;
+      .avatar-user {
+        width: 54px;
+        height: 54px;
+        background: #f2f7fc;
+        border-radius: 50%;
+        border: 1px solid #e1eef6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
       img {
-        width: 55px;
-        height: 55px;
+        width: 35px;
+        height: 35px;
       }
       .name {
         color: $blue3;
@@ -422,10 +432,8 @@ header {
     text-align: right;
     z-index: 123;
     box-shadow: -5px 5px 5px 0px rgba(0,0,0,0.1);
-    //box-shadow: 0 3px 12px rgba(0, 0, 0, .1);
     .content-dropdown {
       display: flex;
-      //flex-direction: column;
       align-items: center;
       justify-content: flex-end;
       .social-telegram, .buttons {
@@ -478,9 +486,6 @@ header {
         font-size: 13px;
       }
     }
-    .social-telegram {
-      padding: 0 20px;
-    }
   }
 }
 
@@ -497,18 +502,6 @@ header {
           padding: 0;
           .choose-balance {
             max-width: 100%;
-          }
-        }
-        .social-telegram {
-          margin-top: 15px;
-          padding-right: 0;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-end;
-          a {
-            img {
-              margin: 0 0 0 10px;
-            }
           }
         }
         .rank {
@@ -600,16 +593,6 @@ header {
         justify-content: space-between;
       }
     }
-    .social-telegram {
-      a {
-        text-align: right;
-        justify-content: space-between;
-        width: 100%;
-        img {
-          margin: 0 0 0 10px;
-        }
-      }
-    }
     .buttons {
       a {
         width: 100px;
@@ -626,13 +609,6 @@ header {
           .choose-balance {
             max-width: 100%;
           }
-        }
-        .social-telegram {
-          margin-top: 15px;
-          padding-right: 0;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-end;
         }
         .rank {
           .btn-upgrade {
@@ -665,7 +641,7 @@ header {
         padding-right: 0;
       }
       .nickname {
-        img {
+        .avatar-user {
           display: none;
         }
         .tooltip-link {

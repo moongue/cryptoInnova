@@ -1,0 +1,183 @@
+.referral-program {
+  padding-bottom: 60px;
+  .content-program {
+    background: $white;
+    padding: 15px 40px 30px;
+    margin-top: 15px;
+    border-radius: 3px;
+    .main-info {
+      .col-sm-6 {
+        &:nth-child(-n + 2) {
+          .one-inf {
+            border-right: 1px solid #ebf3fb;
+          }
+        }
+      }
+      .one-inf {
+        display: flex;
+        margin-top: 15px;
+        .avatar {
+          background: #f2f7fc;
+          width: 100px;
+          height: 100px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 1px solid #e1eef6;
+          img {
+            width: 60px;
+            height: 60px;
+          }
+        }
+        .description {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding-left: 15px;
+          max-width: 180px;
+          p {
+            color: #8d93aa;
+            font-size: 12px;
+          }
+          .profile {
+            .nickname {
+              font-size: 15px;
+              color: $blue3;
+              margin-bottom: 8px;
+            }
+            .rank {
+              color: #8d93aa;
+              margin-bottom: 8px;
+            }
+            .status {
+              font-size: 11px;
+              color: $white;
+              padding: 6px 9px;
+              border-radius: 3px;
+              background: $blue3;
+              text-transform: uppercase;
+            }
+          }
+        }
+        &.referral-link {
+          .avatar {
+            position: relative;
+            &:hover {
+              .hover-effect {
+                opacity: 1;
+                visibility: visible;
+                transform: scale(1) rotate(0deg);
+              }
+            }
+            img {
+              width: 100%;
+              height: auto;
+              min-width: 98px;
+            }
+            .hover-effect {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 24px;
+              color: #fff;
+              background: rgba(78, 89, 131, .7);;
+              transition: all .3s ease-in-out;
+              transform: scale(.4);
+              opacity: 0;
+              visibility: hidden;
+            }
+          }
+          .link {
+            font-size: 12px;
+            color: #4e5983;
+            line-height: 1.2;
+          }
+          .copy-link-referral {
+            color: #8d93aa;
+            font-size: 12px;
+          }
+          .show-banners {
+            padding: 6px 9px;
+            background: #f6a23b;
+            text-transform: uppercase;
+            color: $white;
+            border-radius: 3px;
+            font-size: 11px;
+            margin-left: 11px;
+          }
+        }
+      }
+    }
+    .table-amount {
+      padding: 0 15px 15px;
+      border: 1px solid $blue3;
+      margin-top: 40px;
+      .col-6 {
+        border-right: 1px solid #ebf3fb;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &:last-child {
+          border: none;
+        }
+      }
+      p {
+        font-size: 13px;
+        color: #868daa;
+        padding-top: 15px;
+        line-height: 1.2;
+        &.count {
+          padding-top: 15px;
+          color: $blue3;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  .search-referrals {
+    .block-search {
+      margin-top: 20px;
+      padding: 40px;
+      background: $white;
+      label {
+      }
+      .input-search {
+        position: relative;
+        margin-top: 10px;
+        input {
+          padding-right: 65px;
+          text-transform: inherit;
+        }
+        button {
+          position: absolute;
+          height: 60px;
+          width: 60px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          top: 0;
+          right: 0;
+          background: none;
+          border: none;
+          font-size: 16px;
+          color: #868daa;
+        }
+      }
+    }
+  }
+}
+
+@media #{$sm} {
+  .referral-program {
+    .content-program {
+      padding: 15px;
+    }
+    .block-search {
+      padding: 15px !important;
+    }
+  }
+
+}

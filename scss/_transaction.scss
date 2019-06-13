@@ -17,7 +17,7 @@
         color: $blue;
         font-size: 15px;
         padding: 0;
-        margin: 15px 0 0 0 ;
+        margin: 15px 0 0 0;
       }
     }
     .type-of-transaction {
@@ -65,7 +65,7 @@
         color: #000;
         width: 100%;
         margin: 0 0;
-        z-index: 877;
+        z-index: 143;
       }
       .select__list.on {
         display: block;
@@ -151,30 +151,35 @@
 
 @media #{$lg} {
   .transaction {
-      .filter {
-        flex-wrap: wrap;
-        .date {
-          margin-left: 0;
-        }
+    .filter {
+      flex-wrap: wrap;
+      .date {
+        margin-left: 0;
       }
+    }
   }
 }
+
+@media #{$sm} {
+  .transaction {
+    .filter {
+      padding: 15px;
+    }
+  }
+}
+
 @media #{$xs} {
   .transaction {
     .filter {
-      padding: 15px 10px;
       .payment-system-filter {
         max-width: 100%;
         margin-right: 0;
         > .d-flex {
           flex-wrap: wrap;
         }
-        //.one-currency {
-        //  flex-basis: 20%;
-        //}
       }
       .type-of-transaction {
-        max-width: 100% ;
+        max-width: 100%;
       }
       .date {
         width: 100%;
