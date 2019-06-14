@@ -1,0 +1,280 @@
+.settings {
+  padding-bottom: 60px;
+  .btn {
+    max-width: 150px;
+    width: 100%;
+    .btn-styles {
+      border-radius: 3px;
+      padding: 17px 0;
+    }
+  }
+  .block-input {
+    margin-top: 30px;
+  }
+  label {
+    line-height: 28px;
+    font-size: 12px;
+    color: #868daa;
+  }
+  .styles-input {
+    height: 50px;
+    max-width: 255px;
+    text-transform: inherit;
+  }
+  .title-setting {
+    color: #4e5983;
+    font-size: 22px;
+    + p {
+      font-size: 13px;
+      color: #868daa;
+      margin-top: 15px;
+      line-height: 1.2;
+    }
+  }
+  .check {
+    position: relative;
+    width: 100px;
+    height: 50px;
+    margin-top: 20px;
+    p {
+      padding-left: 10px;
+      font-size: 12px;
+    }
+  }
+  .block-settings {
+    background: $white;
+    margin-top: 20px;
+    border-radius: 3px;
+    .offset {
+      padding: 30px 40px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ebf3fb;
+    }
+    .settings-avatar {
+      .img-avatar {
+        width: 120px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f2f7fc;
+        border: 1px solid #e1eef6;
+        img {
+          width: 60px;
+          height: 60px;
+        }
+      }
+      .block {
+        max-width: 390px;
+        margin-left: 30px;
+        font-size: 13px;
+        color: #868daa;
+        p {
+          margin-top: 15px;
+          line-height: 1.2;
+        }
+      }
+    }
+    .settings-information {
+      .block-input {
+        &:nth-child(2) {
+          margin-left: 20px;
+        }
+      }
+
+    }
+    .setting-account {
+      .select-wrap {
+        margin-top: 30px;
+        max-width: 255px;
+        + .block-input {
+          max-width: 500px;
+          width: 100%;
+          margin-left: 30px;
+          .styles-input {
+            max-width: 500px;
+          }
+        }
+      }
+    }
+    .setting-change-password {
+      .block-input {
+        &:nth-child( n + 2) {
+          margin-left: 30px;
+        }
+      }
+      .btn {
+        margin-left: 30px;
+      }
+    }
+    .setting-change-pay-password {
+      .block-input {
+        &:nth-child(n + 2) {
+          margin-left: 30px;
+        }
+      }
+      .btn {
+        margin-left: 30px;
+      }
+    }
+    .setting-2f {
+      .show-tooltip {
+        padding-left: 20px;
+        cursor: pointer;
+        color: $blue3;
+      }
+      .block-tooltip {
+        position: relative;
+
+        .tooltip {
+          position: absolute;
+          display: none;
+          width: 520px;
+          background: $white;
+          border-radius: 3px;
+          padding: 30px;
+          font-size: 13px;
+          box-shadow: 0 3px 12px rgba(0, 0, 0, .1);
+          top: -75px;
+          left: 60px;
+          &:before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 12px 12px 12px 0;
+            border-color: transparent #fff transparent transparent;
+            position: absolute;
+            left: -12px;
+            top: 70px;
+          }
+          &-name {
+            color: #4e5983;
+            font-weight: 500;
+            & + p {
+              padding-top: 20px;
+              color: #969cb0;
+              line-height: 1.4;
+            }
+          }
+          &.show {
+            display: block;
+            z-index: 2000 !important;
+          }
+          .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 16px;
+            color: #4e5983;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media #{$lg} {
+  .block-settings {
+    .setting-2f {
+      .block-tooltip {
+        .tooltip {
+          width: 380px !important;
+        }
+      }
+    }
+  }
+}
+
+@media #{$sm} {
+  .block-settings {
+    .offset {
+      padding: 20px 15px !important;
+    }
+    .setting-change-password {
+      .block-input {
+        &:nth-child(3) {
+          margin-left: 0 !important;
+        }
+      }
+    }
+    .setting-2f {
+      .block-tooltip {
+        .tooltip {
+          top: -230px !important;
+          right: -50px !important;
+          left: unset !important;
+
+          &:before {
+            left: unset !important;
+            right: 50px !important;
+            top: unset !important;
+            bottom: -15px !important;
+            transform: rotate(-90deg);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media #{$xs} {
+  .block-settings {
+    .btn {
+      margin-top: 15px;
+      max-width: 100% !important;
+    }
+    .block-input {
+      margin-left: 0 !important;
+      width: 100%;
+    }
+    .styles-input {
+      max-width: 100%;
+    }
+    .settings-avatar {
+      flex-direction: column;
+      align-items: flex-start !important;
+      .block {
+        margin-left: 0 !important;
+        margin-top: 15px;
+      }
+    }
+    .settings-information {
+      .block-input {
+        &:nth-child(2) {
+          margin-left: 0 !important;
+        }
+      }
+    }
+    .setting-account {
+      .select-wrap {
+        max-width: 100% !important;
+      }
+      .flex-xs-column {
+        .block-input {
+          margin-left: 0 !important;
+        }
+      }
+    }
+    .setting-2f {
+      .block-tooltip {
+        .tooltip {
+          right: -13px !important;
+          top: -270px !important;
+          width: 265px !important;
+          &:before {
+            right: 13px !important;
+          }
+        }
+      }
+    }
+    .setting-change-password {
+      .flex-xs-column {
+        align-items: flex-start !important;
+      }
+      .btn {
+        margin-left: 0 !important;
+      }
+    }
+  }
+}

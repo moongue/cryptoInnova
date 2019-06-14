@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"/>
     <link rel="stylesheet" href="font/material-design-iconic-font/css/material-design-iconic-font.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Withdrawal</title>
+    <title>Settings</title>
 </head>
 <body>
 <div class="wrapper">
@@ -190,148 +190,168 @@
                 <!--END BURGER-->
             </header>
 
-            <!--WITHDRAWAL-->
-            <main class="withdrawal">
+            <!--SETTINGS-->
+            <main class="settings">
                 <div class="container">
-                    <div class="withdrawal-from-balance">
-                        <div class="title-main">Withdrawal from balance</div>
-                        <div class="row">
-                            <div class="col-md-6 col-xl-3">
-                                <div class="payment-system choose">
-                                    <div class="top">
-                                        <p>btc</p>
-                                        <div class="img-currency">
-                                            <img src="images/bitcoin.svg" alt="Btc">
-                                        </div>
-                                    </div>
-                                    <div class="bot">
-                                        <p>Bitcoin</p>
-                                        <div class="currency">
-                                            0.432112
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-xl-3">
-                                <div class="payment-system">
-                                    <div class="top">
-                                        <p>xmr</p>
-                                        <div class="img-currency">
-                                            <img src="images/xmr.svg" alt="Xmr">
-                                        </div>
-                                    </div>
-                                    <div class="bot">
-                                        <p>Monero</p>
-                                        <div class="currency">
-                                            1.320000
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-xl-3">
-                                <div class="payment-system">
-                                    <div class="top">
-                                        <p>eth</p>
-                                        <div class="img-currency">
-                                            <img src="images/eth.svg" alt="Eth">
-                                        </div>
-                                    </div>
-                                    <div class="bot">
-                                        <p>Ethereum</p>
-                                        <div class="currency">
-                                            0.221746
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12 col-xl-9">
-                                <div class="form">
-                                    <form action="withdrawal">
-                                        <input type="text" class="styles-input" placeholder="1.752112 btc">
-                                        <div class="btn">
-                                            <a href="#" class="btn-styles select">Withdrawal</a>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="title-main">
+                        Settings
                     </div>
-                    <div class="section-table-information">
-                        <div class="title-main">
-                            Withdrawal history
+                    <div class="block-settings">
+                        <div class="settings-avatar d-flex align-items-center offset">
+                            <div class="img-avatar">
+                                <img src="images/standart-avatar.svg" alt="Avatar">
+                            </div>
+                            <div class="block flex-column">
+                                <div class="btn">
+                                    <a href="#" class="btn-styles select">Remove Avatar</a>
+                                </div>
+                                <p>
+                                    You can upload images up to 256x256. Your avatar shows up in your public profile and
+                                    your team notifications.
+                                </p>
+                            </div>
                         </div>
-                        <div class="table-information">
-                            <div class="table">
-                                <div class="name-table">
-                                    <p>Payment system</p>
-                                    <p>Date</p>
-                                    <p>Amount</p>
-                                    <p>Status</p>
+                        <div class="settings-information offset">
+                            <div class="d-flex justify-content-between flex-xs-column">
+                                <div class="flex-column">
+                                    <div class="title-setting">
+                                        Your Personal Information
+                                    </div>
+                                    <p>By letting us know your name can make our support experience much more
+                                        personal.</p>
                                 </div>
-                                <div class="row-descr">
-                                    <p class="system"><span><img src="images/bitcoin.svg" alt="Btc"></span>Bitcoin</p>
-                                    <p class="date"><span>10:00</span> 02/05/2019</p>
-                                    <p class="amount"><span>+0.09130 btc</span>(165.21 usd)</p>
-                                    <p class="status confirmed">Confirmed</p>
+                                <div class="btn">
+                                    <a href="#" class="btn-styles nonactive">Save Changes</a>
                                 </div>
-                                <div class="row-descr">
-                                    <p class="system"><span><img src="images/eth.svg" alt="Btc"></span>Ethereum</p>
-                                    <p class="date"><span>10:00</span> 02/05/2019</p>
-                                    <p class="amount"><span>+0.09130 btc</span>(165.21 usd)</p>
-                                    <p class="status confirmed">Confirmed</p>
+                            </div>
+                            <div class="d-flex flex-xs-column">
+                                <div class="block-input d-flex flex-column">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" id="firstName" class="styles-input">
                                 </div>
-                                <div class="row-descr">
-                                    <p class="system"><span><img src="images/pm.svg" alt="Btc"></span>Perfect Money</p>
-                                    <p class="date"><span>10:00</span> 02/05/2019</p>
-                                    <p class="amount"><span class="minus">-0.09130 btc</span>(165.21 usd)</p>
-                                    <p class="status pending">Pending</p>
-                                </div>
-                                <div class="row-descr">
-                                    <p class="system"><span><img src="images/btch.svg" alt="Btc"></span>Bitcoin Cash</p>
-                                    <p class="date"><span>10:00</span> 02/05/2019</p>
-                                    <p class="amount"><span>+0.09130 btc</span>(165.21 usd)</p>
-                                    <p class="status confirmed">Confirmed</p>
-                                </div>
-                                <div class="row-descr">
-                                    <p class="system"><span><img src="images/ltc.svg" alt="Btc"></span>Litcoin</p>
-                                    <p class="date"><span>10:00</span> 02/05/2019</p>
-                                    <p class="amount"><span>+0.09130 btc</span>(165.21 usd)</p>
-                                    <p class="status confirmed">Confirmed</p>
-                                </div>
-                                <div class="row-descr">
-                                    <p class="system"><span><img src="images/xmr.svg" alt="Btc"></span>Monero</p>
-                                    <p class="date"><span>10:00</span> 02/05/2019</p>
-                                    <p class="amount"><span class="minus">-0.09130 btc</span>(165.21 usd)</p>
-                                    <p class="status pending">Pending</p>
-                                </div>
-                                <div class="row-descr">
-                                    <p class="system"><span><img src="images/zec.svg" alt="Btc"></span>Zcash</p>
-                                    <p class="date"><span>10:00</span> 02/05/2019</p>
-                                    <p class="amount"><span>+0.09130 btc</span>(165.21 usd)</p>
-                                    <p class="status confirmed">Confirmed</p>
-                                </div>
-                                <div class="row-descr">
-                                    <p class="system"><span><img src="images/eos.svg" alt="Btc"></span>EOS.IO</p>
-                                    <p class="date"><span>10:00</span> 02/05/2019</p>
-                                    <p class="amount"><span>+0.09130 btc</span>(165.21 usd)</p>
-                                    <p class="status confirmed">Confirmed</p>
+                                <div class="block-input d-flex flex-column">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" id="lastName" class="styles-input">
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="total-withdrawal d-flex align-items-center justify-content-between">
-                        <div class="title-main">
-                            Total Withdrawal
+                        <div class="setting-account offset">
+                            <div class="d-flex justify-content-between flex-xs-column">
+                                <div class="flex-column">
+                                    <div class="title-setting">
+                                        Account Information
+                                    </div>
+                                    <p>Here you can change the email and living address you use.</p>
+                                </div>
+                                <div class="btn">
+                                    <a href="#" class="btn-styles select">Save Changes</a>
+                                </div>
+                            </div>
+                            <div class="block-input d-flex flex-column">
+                                <label for="email">Email</label>
+                                <input type="text" id="email" class="styles-input">
+                            </div>
+                            <div class="d-flex flex-xs-column">
+                                <div class="select-wrap">
+                                    <label for="selectId">Country</label>
+                                    <select name="select-box" id="selectId" class="select-filter">
+                                        <option value="item-1" name="value">Russia</option>
+                                        <option value="item-2" name="value">Poland</option>
+                                        <option value="item-3" name="value">Germany</option>
+                                    </select>
+                                </div>
+                                <div class="block-input d-flex flex-column">
+                                    <label for="addressForCorrespondence">Address for Correspondence</label>
+                                    <input type="text" id="addressForCorrespondence" class="styles-input">
+                                </div>
+                            </div>
+                            <div class="block-input d-flex flex-column">
+                                <label for="mobilePhone">Mobile Phone</label>
+                                <input type="text" id="mobilePhone" class="styles-input">
+                            </div>
                         </div>
-                        <div class="amount">
-                            2,546 usd
+                        <div class="setting-change-password offset">
+                            <div class="title-setting">
+                                Change Password
+                            </div>
+                            <div class="d-flex align-items-end flex-md-nowrap flex-sm-wrap flex-xs-column">
+                                <div class="block-input d-flex flex-column">
+                                    <label for="oldPassword">Enter Old Password</label>
+                                    <input type="text" id="oldPassword" class="styles-input">
+                                </div>
+                                <div class="block-input d-flex flex-column">
+                                    <label for="newPassword">Enter New Password</label>
+                                    <input type="text" id="newPassword" class="styles-input">
+                                </div>
+                                <div class="block-input d-flex flex-column">
+                                    <label for="repeatPassword">Repeat New Password</label>
+                                    <input type="text" id="repeatPassword" class="styles-input">
+                                </div>
+                                <div class="btn">
+                                    <a href="#" class="btn-styles select">Change Password</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="setting-change-pay-password offset">
+                            <div class="title-setting">
+                                Change Pay Password
+                            </div>
+                            <div class="d-flex align-items-end flex-xs-column">
+                                <div class="block-input d-flex flex-column">
+                                    <label for="newPasswordPay">Enter New Password</label>
+                                    <input type="text" id="newPasswordPay" class="styles-input">
+                                </div>
+                                <div class="block-input d-flex flex-column">
+                                    <label for="repeatNewPasswordPay">Repeat New Password</label>
+                                    <input type="text" id="repeatNewPasswordPay" class="styles-input">
+                                </div>
+                                <div class="btn">
+                                    <a href="#" class="btn-styles select">Change Password</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="setting-2f offset">
+                            <div class="d-flex">
+                                <div class="title-setting">
+                                    Two-Factor Authentication
+                                </div>
+
+                                <div class="block-tooltip">
+                                    <div class="show-tooltip">
+                                        <i class="zmdi zmdi-info-outline"></i>
+                                    </div>
+                                    <div class="tooltip">
+                                        <div class="tooltip-name">
+                                            2FA To The Rescue
+                                        </div>
+                                        <p>2FA is an extra layer of security used to make sure that
+                                            people trying to gain access to an online account are who they are. First, a
+                                            user will enter their username and a password. Then, instead of immediately
+                                            gaining access, they will be required to provide another piece of
+                                            information.</p>
+                                        <p class="modal-close"><i class="zmdi zmdi-close"></i></a>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="check d-flex align-items-center">
+                                <input type="checkbox" id="check2f" class="styles-switcher" name="" value="">
+                                <p id="changedText">off</p>
+                            </div>
+                        </div>
+                        <div class="setting-malling offset">
+                            <div class="title-setting">
+                                Newsletter
+                            </div>
+                            <div class="check d-flex align-items-center">
+                                <input type="checkbox" id="milling" class="styles-switcher" name="" value="" checked>
+                                <p id="changedText2">Subscribed</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </main>
-            <!--END WITHDRAWAL-->
+            <!--END SETTINGS-->
         </div>
     </div>
 </div>
@@ -397,6 +417,7 @@
     </div>
     <a href="#" rel="modal:close" class="modal-close"><i class="zmdi zmdi-close"></i></a>
 </div>
+
 <!--END MODAL-->
 
 </body>

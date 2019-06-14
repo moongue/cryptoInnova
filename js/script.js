@@ -201,26 +201,7 @@ function dateTomorrow() {
     $("#theDateTomorrow").attr("value", today);
 }
 
-function videoPlay() {
-    var overlay = document.getElementById('overlay');
-    var vid = document.getElementById('video');
 
-    if(overlay.addEventListener){
-        overlay.addEventListener("click", play, false)
-    }else if(overlay.attachEvent){
-        overlay.attachEvent("onclick", play)
-    }
-
-    function play() {
-        if (vid.paused){
-            vid.play();
-            overlay.className = "o";
-        }else {
-            vid.pause();
-            overlay.className = "";
-        }
-    }
-}
 
 function addBlocker() {
     $('.show-tooltip').click(function() {
@@ -233,6 +214,47 @@ function addBlocker() {
     })
 }
 
+function changeTextCheckbox() {
+    var text = document.querySelector('#changedText');
+    ('#check2f').onclick = function() {
+        if (c.checked) {
+            text.textContent='On'
+        } else {
+            text.textContent='Off'
+        }
+    };
+
+    var text2 = document.querySelector('#changedText2');
+
+    ('#milling').onclick = function() {
+        if (c2.checked) {
+            text2.textContent = 'Subscribed'
+        } else {
+            text2.textContent = 'Off'
+        }
+    }
+}
+
+function videoPlay() {
+        var overlay = document.getElementById('overlay');
+        var vid = document.getElementById('video');
+
+        if (overlay.addEventListener) {
+            overlay.addEventListener("click", play, false)
+        } else if (overlay.attachEvent) {
+            overlay.attachEvent("onclick", play)
+        }
+
+        function play() {
+            if (vid.paused) {
+                vid.play();
+                overlay.className = "o";
+            } else {
+                vid.pause();
+                overlay.className = "";
+            }
+        }
+}
 $(window).on('load', function () {
     showLink();
     showDropdownBalance();
@@ -247,6 +269,7 @@ $(window).on('load', function () {
     stylesSelect();
     dateToday();
     dateTomorrow();
-    videoPlay();
     addBlocker();
+    changeTextCheckbox();
+    videoPlay();
 });

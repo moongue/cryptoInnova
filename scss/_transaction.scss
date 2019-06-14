@@ -24,77 +24,7 @@
       max-width: 255px;
       width: 100%;
       margin-top: 15px;
-      .select-filter {
-        display: inline-block;
-        vertical-align: top;
-        max-width: 255px;
-        width: 100%;
-      }
-      .select-wrap {
-        position: relative;
-        margin-top: 15px;
-        width: 100%;
-      }
-      .select-wrap select {
-        margin: 20px;
-      }
-      .select__gap {
-        background: #f9fcfe;
-        color: #467797;
-        border: 1px solid #e1eef6;
-        font-size: 15px;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        padding: 0 30px 0 20px;
-        cursor: pointer;
-        position: relative;
-        &.on {
-          border: 1px solid $blue3;
-        }
-      }
-      .on.select__gap,
-      .select__gap:hover {
-        color: #467797;
-      }
-      .select__list {
-        background: #f9fcfe;
-        border: 1px solid #e1eef6;
-        border-top: none;
-        position: absolute;
-        color: #000;
-        width: 100%;
-        margin: 0 0;
-        z-index: 143;
-      }
-      .select__list.on {
-        display: block;
-      }
-      .select__item span {
-        display: block;
-        padding: 10px 20px;
-        cursor: pointer;
-        color: #868daa;
-        font-size: 13px;
-      }
-      .select__item.selected,
-      .select__item span:hover {
-        color: $blue3;
-      }
-      .select__gap:after {
-        content: '\f2f9';
-        font-family: 'Material-Design-Iconic-Font';
-        position: absolute;
-        font-size: 16px;
-        color: #868daa;
-        right: 15px;
-        top: calc((100% - 15px) / 2);
-        transition: all .27s ease-in-out;
-        transform: rotate(0deg);
-      }
-      .on.select__gap:after {
-        transform: rotate(180deg);
-      }
+
     }
     .date {
       margin-left: 20px;
