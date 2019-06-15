@@ -158,12 +158,13 @@
 @media #{$lg} {
   .bounty {
     .block-bounty {
-.btn {
-  margin-top: 20px;
-}
+      .btn {
+        margin-top: 20px;
+      }
     }
   }
 }
+
 @media #{$xs} {
   .bounty {
     .block-bounty {
@@ -174,6 +175,7 @@
     }
   }
 }
+
 @media #{$xll} {
   .block-bounty {
     .left {

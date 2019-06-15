@@ -92,11 +92,13 @@
     }
   }
 }
+
 .zmdi-chevron-right {
   display: none;
   color: #000;
   font-size: 90px;
 }
+
 @media #{$xl} {
   .menu {
     .menu-panel {
@@ -113,6 +115,7 @@
     }
   }
 }
+
 @media #{$lg} {
   .menu {
     .logo {
@@ -141,15 +144,15 @@
 @media #{$md} {
   .menu {
     transform: translateX(-110%);
-    box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.1);
+    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.1);
     display: block;
     position: fixed;
     height: 100%;
     top: 83px;
     width: 250px;
     max-height: 1005px;
-    z-index:348;
-    transition: all.3s ease;
+    z-index: 348;
+    transition: all .3s ease;
     &.active {
       transform: translateX(0);
     }

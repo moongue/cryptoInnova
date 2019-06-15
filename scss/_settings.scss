@@ -59,6 +59,7 @@
         justify-content: center;
         background: #f2f7fc;
         border: 1px solid #e1eef6;
+        margin-right: 30px;
         img {
           width: 60px;
           height: 60px;
@@ -66,7 +67,6 @@
       }
       .block {
         max-width: 390px;
-        margin-left: 30px;
         font-size: 13px;
         color: #868daa;
         p {
@@ -191,6 +191,11 @@
     .offset {
       padding: 20px 15px !important;
     }
+    .settings-avatar {
+      .img-avatar {
+        margin-right: 15px !important;
+      }
+    }
     .setting-change-password {
       .block-input {
         &:nth-child(3) {
@@ -213,6 +218,20 @@
             transform: rotate(-90deg);
           }
         }
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) {
+  .block-settings {
+    .settings-avatar {
+      flex-direction: row !important;
+      .img-avatar {
+        margin-right: 15px;
+      }
+      .block {
+        margin-top: 0 !important;
       }
     }
   }

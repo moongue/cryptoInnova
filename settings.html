@@ -329,8 +329,7 @@
                                             user will enter their username and a password. Then, instead of immediately
                                             gaining access, they will be required to provide another piece of
                                             information.</p>
-                                        <p class="modal-close"><i class="zmdi zmdi-close"></i></a>
-
+                                        <p class="modal-close"><i class="zmdi zmdi-close"></i></a></p>
                                     </div>
                                 </div>
                             </div>
@@ -350,6 +349,16 @@
                         </div>
                     </div>
                 </div>
+
+                <a href="#modal1" rel="modal:open">Modal1</a>
+                <a href="#modal2" rel="modal:open">Modal2</a>
+                <a href="#modal3" rel="modal:open">Modal3</a>
+                <a href="#modal4" rel="modal:open">Modal4</a>
+                <a href="#logIn" rel="modal:open">Modal5</a>
+                <a href="#resetPassword" rel="modal:open">Modal6</a>
+                <a href="#checkIn" rel="modal:open">Modal7</a>
+                <a href="#logInCode" rel="modal:open">Modal8</a>
+                <a href="#complete" rel="modal:open">Modal9</a>
             </main>
             <!--END SETTINGS-->
         </div>
@@ -418,6 +427,292 @@
     <a href="#" rel="modal:close" class="modal-close"><i class="zmdi zmdi-close"></i></a>
 </div>
 
+<div id="modal1" class="modal modal-settings">
+    <div class="offset bd-bottom">
+        <div class="title">
+            Enable Two-Factor Authentication
+        </div>
+        <div class="step d-flex">
+            <div class="block">
+                <div class="step-name">Step 1: Configure your 2FA app</div>
+                <p>To enable 2FA, you'll need to have a 2AF auth instaled on your phone or tablet (examples include
+                    Google
+                    Authenticator, Duo Mobile, and Authy).</p>
+                <p>
+                    Most apps will let you get set up by scanning our QR code from within the app. If you prefer, you
+                    can
+                    type
+                    in the key manually.
+                </p>
+                <div class="key d-flex"><i class="zmdi zmdi-key"></i>LZYSI2TSMRSWOYJSPEYSMSQ</div>
+            </div>
+            <div class="qr-code">
+                <img src="images/qr-code.jpg" alt="Qr code">
+            </div>
+        </div>
+    </div>
+    <div class="offset">
+        <div class="step">
+            <div class="step-name">Step 2: Enter a 2FA code</div>
+            <p>Generate a code from your newly-activated 2FA app to confirm that you're all set up.</p>
+            <div class="d-flex justify-content-between align-items-end flex-md-row flex-xs-column">
+                <div class="block-input">
+                    <label for="generate2FA">Enter a generated 2FA passcode*</label>
+                    <input type="text" id="generate2FA" class="styles-input">
+                </div>
+                <div class="btn">
+                    <a href="#" class="btn-styles select">Enable 2FA</a>
+                </div>
+                <div class="btn">
+                    <a href="#" class="btn-styles" rel="modal:close">
+                        Cancel
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#" rel="modal:close" class="modal-close"><i class="zmdi zmdi-close"></i></a>
+</div>
+<div id="modal2" class="modal modal-settings">
+    <div class="offset">
+        <div class="title">
+            Generate Two-Factor Backup Codes
+        </div>
+        <p>Keep these single-use backup codes somewhere safe but accessible. They can used if your authentication app is
+            unavailable (1, 2, 3, etc).</p>
+        <div class="d-flex justify-content-between align-items-end flex-md-row flex-xs-column">
+            <div class="block-input">
+                <label for="password">Password</label>
+                <input type="text" id="password" class="styles-input">
+            </div>
+            <div class="btn">
+                <a href="#" class="btn-styles select">Generate</a>
+            </div>
+            <div class="btn">
+                <a href="#" class="btn-styles" rel="modal:close">
+                    Cancel
+                </a>
+            </div>
+        </div>
+    </div>
+    <a href="#" rel="modal:close" class="modal-close"><i class="zmdi zmdi-close"></i></a>
+</div>
+
+<div id="modal3" class="modal modal-settings reset modal3">
+    <div class="offset">
+        <div class="title">
+            Generate Two-Factor Backup Codes
+        </div>
+        <p>Keep these single-use backup codes somewhere safe but accessible. They can used if your authentication app is
+            unavailable (1, 2, 3, etc).</p>
+        <div class="step-name">
+            You shiny new backup codes:
+        </div>
+        <ul>
+            <li>06389271</li>
+            <li>06389271</li>
+            <li>06389271</li>
+            <li>06389271</li>
+            <li>06389271</li>
+            <li>06389271</li>
+            <li>06389271</li>
+            <li>06389271</li>
+        </ul>
+        <div class="d-flex justify-content-between align-items-end flex-md-row flex-xs-column">
+            <div class="d-flex justify-content-between align-items-end flex-md-row flex-xs-column max-w-480">
+                <div class="btn">
+                    <a href="#" class="btn-styles standart"><i class="zmdi zmdi-download"></i>Download</a>
+                </div>
+                <div class="btn">
+                    <a href="#" class="btn-styles standart"><i class="zmdi zmdi-copy"></i>Copy</a>
+                </div>
+                <div class="btn">
+                    <a href="#" class="btn-styles standart"><i class="zmdi zmdi-print"></i>Print</a>
+                </div>
+            </div>
+            <div class="btn">
+                <a href="#" class="btn-styles" rel="modal:close">
+                    Close
+                </a>
+            </div>
+        </div>
+    </div>
+    <a href="#" rel="modal:close" class="modal-close"><i class="zmdi zmdi-close"></i></a>
+</div>
+
+<div id="modal4" class="modal modal-settings modal4">
+    <div class="offset">
+        <div class="title">
+            Generate Two-Factor Backup Codes
+        </div>
+        <p>Disabling two-factor authentication will also delete their tow-factor backup codes. The next time they log
+            in, they'll have to use their password or single sign-on of available.</p>
+
+        <div class="d-flex justify-content-between align-items-end flex-md-row flex-xs-column">
+            <div class="btn">
+                <a href="#" class="btn-styles select">Disable</a>
+            </div>
+            <div class="btn">
+                <a href="#" class="btn-styles" rel="modal:close">
+                    Cancel
+                </a>
+            </div>
+        </div>
+    </div>
+    <a href="#" rel="modal:close" class="modal-close"><i class="zmdi zmdi-close"></i></a>
+</div>
+<div id="logIn" class="modal modal-settings account-popup log-in-popup">
+    <div class="offset">
+        <div class="title">
+            <p><span>Log in </span>to crypto innova</p>
+        </div>
+        <div class="subtitle line">
+            New to Crypto Innova? <a href="#">Sign Up</a>
+        </div>
+        <div class="block-input">
+            <label for="logInEmail">Email*</label>
+            <input type="text" id="logInEmail" class="styles-input">
+        </div>
+        <div class="block-input">
+            <label for="logInPassword">Password*</label>
+            <input type="text" id="logInPassword" class="styles-input">
+        </div>
+        <div class="bottom d-flex justify-content-between align-items-center flex-md-row flex-xs-column">
+            <div class="d-flex flex-column">
+                <p>Unable to lg in?</p>
+                <a href="#" class="reset-password">Reset Password</a>
+            </div>
+            <div class="btn">
+                <a href="#" class="btn-styles select">
+                    Log in
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="resetPassword" class="modal modal-settings account-popup reset-password-popup">
+    <div class="offset">
+        <div class="title">
+            <p><span>Log in </span>to crypto innova</p>
+        </div>
+        <div class="subtitle line">
+            Enter your email address and we will send you a link to reset your password.
+        </div>
+        <div class="block-input">
+            <label for="resetPasswordEmail">Email*</label>
+            <input type="text" id="resetPasswordEmail" class="styles-input">
+        </div>
+        <div class="d-flex justify-content-center">
+            <div class="btn">
+                <a href="#" class="btn-styles select">
+                    Send Password
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="checkIn" class="modal modal-settings account-popup check-in-popup">
+    <div class="offset">
+        <div class="title line">
+            <p>Check in</p>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-6">
+                <div class="block-input">
+                    <label>Login</label>
+                    <input type="text" class="styles-input">
+                </div>
+            </div>
+            <div class="col-12 col-sm-6">
+                <div class="block-input">
+                    <label>Country</label>
+                    <input type="text" class="styles-input">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-6">
+                <div class="block-input">
+                    <label>Email</label>
+                    <input type="text" class="styles-input">
+                </div>
+            </div>
+            <div class="col-12 col-sm-6">
+                <div class="block-input">
+                    <label>Password</label>
+                    <input type="text" class="styles-input">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-6">
+                <div class="block-input">
+                    <label>First and Last Name</label>
+                    <input type="text" class="styles-input">
+                </div>
+            </div>
+            <div class="col-12 col-sm-6">
+                <div class="block-input">
+                    <label>Your upline</label>
+                    <input type="text" class="styles-input">
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3 align-items-center">
+            <div class="col-12 col-sm-6">
+                <div class="captcha">
+                    <img src="images/captcha.jpg" alt="Captcha">
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 align-items-center">
+                <div class="btn">
+                    <a href="#" class="btn-styles select">
+                        Check in
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="check">
+                    <input type="checkbox" id="check3" name="check"/>
+                    <label for="check3">I agree to the Terms of Services</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="logInCode" class="modal modal-settings account-popup log-in-code">
+    <div class="offset">
+        <div class="title">
+            <p>Log in</p>
+        </div>
+        <p>
+            Enter the code generated your two-factor auth applocation, or one of your <a href="#">backup codes.</a>
+        </p>
+        <div class="block-input">
+            <label for="">Code</label>
+            <input type="text" class="styles-input">
+        </div>
+        <div class="btn">
+            <a href="#" class="btn-styles select">
+                Log in
+            </a>
+        </div>
+    </div>
+</div>
+
+<div id="complete" class="modal modal-settings account-popup complete-popup">
+    <div class="title">
+        <p><span>Complete the </span>registration</p>
+    </div>
+    <div class="subtitle line">
+        Go to yor mail to complete the registration
+    </div>
+</div>
 <!--END MODAL-->
 
 </body>
