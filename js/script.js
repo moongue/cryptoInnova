@@ -38,7 +38,13 @@ function showNav() {
 
 function toggleMenu() {
     $('.mobile-menu-toggle').click(function () {
-        $('.dropdown-header').toggleClass('open')
+        $('.dropdown-header').toggleClass('open');
+        $('.overlay-shadow').fadeToggle(300);
+        $('.overlay-shadow').click(function() {
+            $('.overlay-shadow').fadeOut(300);
+            $('.dropdown-header').removeClass('open');
+            $('.ham-burger').removeClass('active');
+        })
     })
 }
 
@@ -49,6 +55,17 @@ function addClassNavScroll() {
             $('.menu').addClass('fixed');
         } else {
             $('.menu').removeClass('fixed');
+        }
+    });
+}
+
+function addClassNavTwoScroll() {
+    $(window).scroll(function () {
+        var height = $(window).scrollTop();
+        if (height > 60) {
+            $('.dropdown-header').addClass('fixed');
+        } else {
+            $('.dropdown-header').removeClass('fixed');
         }
     });
 }
@@ -316,6 +333,7 @@ $(window).on('load', function () {
     showNav();
     toggleMenu();
     addClassNavScroll();
+    addClassNavTwoScroll();
     choosePlan();
     chooseCurrency();
     choosePaymentSystem();

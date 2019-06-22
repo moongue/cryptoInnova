@@ -55,7 +55,20 @@ h2 {
     }
   }
 }
-
+@media #{$lg} {
+  h2 {
+    &.line {
+      &:before {
+        top: -15px;
+      }
+    }
+  }
+}
+@media #{$md} {
+  h2 {
+    font-size: 28px;
+  }
+}
 .subheading {
   font-size: 26px;
   color: $dark;
@@ -167,14 +180,23 @@ p {
   }
 }
 
+@media #{$lg} {
+  .wrapper-bd {
+    padding: 0;
+    &.offset-two-side {
+      padding: 90px 0;
+    }
+    .block-side {
+      display: none;
+    }
+  }
+}
+
 @media #{$sm} {
   .wrapper-bd {
     padding: 0;
     &.offset-two-side {
-      padding: 80px 0 40px 0;
-    }
-    .block-side {
-      display: none;
+      padding: 60px 0;
     }
   }
 }
@@ -379,6 +401,17 @@ p {
 
 .blocker {
   z-index: 1999 !important;
+}
+
+.overlay-shadow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .6);
+  z-index: 120;
+  display: none;
 }
 
 //STYLES SELECT

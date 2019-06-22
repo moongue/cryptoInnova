@@ -147,6 +147,18 @@ h2.line:before {
   background: #4fa5f7;
 }
 
+@media only screen and (max-width: 1200px) {
+  h2.line:before {
+    top: -15px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  h2 {
+    font-size: 28px;
+  }
+}
+
 .subheading {
   font-size: 26px;
   color: #18185a;
@@ -271,17 +283,27 @@ p {
   }
 }
 
+@media only screen and (max-width: 1200px) {
+  .wrapper-bd {
+    padding: 0;
+  }
+
+  .wrapper-bd.offset-two-side {
+    padding: 90px 0;
+  }
+
+  .wrapper-bd .block-side {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 767px) {
   .wrapper-bd {
     padding: 0;
   }
 
   .wrapper-bd.offset-two-side {
-    padding: 80px 0 40px 0;
-  }
-
-  .wrapper-bd .block-side {
-    display: none;
+    padding: 60px 0;
   }
 }
 
@@ -538,6 +560,17 @@ p {
 
 .blocker {
   z-index: 1999 !important;
+}
+
+.overlay-shadow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 120;
+  display: none;
 }
 
 .select-filter {
@@ -4568,7 +4601,7 @@ p {
 
 .header-main {
   background: #fff;
-  z-index: 3;
+  z-index: 444;
   position: relative;
 }
 
@@ -4662,7 +4695,14 @@ p {
   -webkit-transition-delay: 300ms;
   -o-transition-delay: 300ms;
   transition-delay: 300ms;
+  -webkit-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
   left: 0;
+}
+
+.header-main .dropdown-header.fixed {
+  top: 0 !important;
 }
 
 .header-main .dropdown-header.open {
@@ -4823,6 +4863,7 @@ p {
 .header-main .dropdown-header .dropdown-header__inner nav ul li a {
   padding: 5px 0;
   display: block;
+  color: #4e5983;
   border-bottom: 1px solid #ebf3fb;
 }
 
@@ -4842,10 +4883,11 @@ p {
 
 .header-main .dropdown-header .dropdown-header__inner .btn .btn-styles {
   background: #4e5983;
+  border: none;
 }
 
 .header-main .dropdown-header .dropdown-header__inner .choose-language {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .header-main .dropdown-header .dropdown-header__inner .choose-language .dropdown-language {
@@ -5160,6 +5202,9 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   overflow: hidden;
   padding-bottom: 30px;
 }
@@ -5410,7 +5455,7 @@ p {
   -webkit-box-align: center;
   align-items: center;
   -ms-flex-align: center;
-  margin: 20px 0;
+  margin: 10px 0;
   width: 100%;
 }
 
@@ -5421,6 +5466,7 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 10px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -5458,7 +5504,6 @@ p {
 .calculate .period-choose-item:hover {
   border: 1px solid #4fa5f7;
   padding: 0;
-  margin-top: 0;
 }
 
 .calculate .result-wrap {
@@ -5750,6 +5795,11 @@ p {
 
   .top-section .left .talks .images .item-img {
     margin-top: 10px;
+    margin-bottom: 30px;
+  }
+
+  .top-section .left .talks .images .item-img img {
+    height: 26px;
   }
 
   .top-section .left .talks .images .item-img:nth-child(n + 3) img {
@@ -5759,6 +5809,10 @@ p {
 
   .about-us .text {
     padding-left: 15px;
+  }
+
+  .about-us .text p {
+    font-size: 14px;
   }
 }
 
@@ -5782,6 +5836,10 @@ p {
     -webkit-box-ordinal-group: 0;
     -ms-flex-order: -1;
     order: -1;
+  }
+
+  .about-us .content .text p {
+    padding-top: 20px;
   }
 
   .about-us .content .block-img {
@@ -5823,6 +5881,10 @@ p {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+
+  .calculate .content .block-inf p {
+    margin-top: 25px;
   }
 
   .benefits .img-block {
@@ -5928,6 +5990,11 @@ p {
     padding: 15px;
   }
 
+  .calculate .calc-insurance-wrap {
+    max-width: 100%;
+    width: 100%;
+  }
+
   .calculate .input-deposit {
     margin-right: 0;
   }
@@ -5968,8 +6035,12 @@ p {
     left: 0;
   }
 
-  .benefits .content .benefits-block ul li {
+  .benefits .content .benefits-block .list-benefits li {
     max-width: 100%;
+  }
+
+  .benefits .content .benefits-block .list-benefits li p {
+    font-size: 12px;
   }
 
   .benefits .content .block-statistics {
@@ -5989,6 +6060,10 @@ p {
 
   .benefits .content .block-statistics .enumeration-statistics .statistic-item {
     max-width: 100%;
+  }
+
+  .benefits .content .block-statistics .enumeration-statistics .statistic-item .sum {
+    font-size: 36px;
   }
 }
 
@@ -6099,6 +6174,10 @@ p {
   border-radius: 50%;
   cursor: pointer;
   margin-right: 10px;
+}
+
+.footer .top-footer .business-inf p {
+  margin-top: 0;
 }
 
 .footer .top-footer .business-inf a {

@@ -1,6 +1,6 @@
 .header-main {
   background: #fff;
-  z-index: 3;
+  z-index: 444;
   position: relative;
   .top-head {
     padding: 13px 0;
@@ -90,6 +90,10 @@
     visibility: hidden;
     z-index: 99;
     transition-delay: $duration*1ms;
+    transition: all .2s;
+    &.fixed {
+      top: 0 !important;
+    }
     @if ($position == right) {
       right: 0;
     } @else if ($position == left) {
@@ -218,6 +222,7 @@
             a {
               padding: 5px 0;
               display: block;
+              color: #4e5983;
               border-bottom: 1px solid #ebf3fb;
             }
           }
@@ -240,11 +245,12 @@
 
         .btn-styles {
           background: $blue;
+          border: none;
         }
       }
 
       .choose-language {
-        margin-top: 10px;
+        margin-top: 20px;
 
         .dropdown-language {
           right: inherit;
