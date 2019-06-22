@@ -76,7 +76,7 @@ function chooseCurrency() {
     var panels = document.getElementsByClassName("one-currency");
     var actives = document.getElementsByClassName('choose');
     for (i = 0; panels.length > i; i++) {
-        panels[i].onclick = function() {
+        panels[i].onclick = function () {
             var currentActive = actives[0];
             if (currentActive)
                 currentActive.classList.remove("choose");
@@ -91,7 +91,7 @@ function choosePaymentSystem() {
     var panels = document.getElementsByClassName("payment-system");
     var actives = document.getElementsByClassName("choose");
     for (i = 0; panels.length > i; i++) {
-        panels[i].onclick = function() {
+        panels[i].onclick = function () {
             var currentActive = actives[0];
             if (currentActive)
                 currentActive.classList.remove("choose");
@@ -103,13 +103,13 @@ function choosePaymentSystem() {
 }
 
 function activeSelectType() {
-    $('.select-wrapper').click(function() {
+    $('.select-wrapper').click(function () {
         $('.select-wrapper').toggleClass('active')
     })
 }
 
 function stylesSelect() {
-    $('.select-filter').each(function(){
+    $('.select-filter').each(function () {
         // Variables
         var $this = $(this),
             selectOption = $this.find('option'),
@@ -121,7 +121,7 @@ function stylesSelect() {
         // Wrap all in select box
         $this.wrap('<div class="select"></div>');
         // Style box
-        $('<div>',{
+        $('<div>', {
             class: 'select__gap',
             text: 'All'
         }).insertAfter($this);
@@ -129,16 +129,16 @@ function stylesSelect() {
         var selectGap = $this.next('.select__gap'),
             caret = selectGap.find('.caret');
         // Add ul list
-        $('<ul>',{
+        $('<ul>', {
             class: 'select__list'
         }).insertAfter(selectGap);
 
         var selectList = selectGap.next('.select__list');
         // Add li - option items
-        for(var i = 0; i < selectOptionLength; i++){
-            $('<li>',{
+        for (var i = 0; i < selectOptionLength; i++) {
+            $('<li>', {
                 class: 'select__item',
-                html: $('<span>',{
+                html: $('<span>', {
                     text: selectOption.eq(i).text()
                 })
             })
@@ -149,12 +149,12 @@ function stylesSelect() {
         var selectItem = selectList.find('li');
 
         selectList.slideUp(0);
-        selectGap.on('click', function(){
-            if(!$(this).hasClass('on')){
+        selectGap.on('click', function () {
+            if (!$(this).hasClass('on')) {
                 $(this).addClass('on');
                 selectList.slideDown(dur);
 
-                selectItem.on('click', function(){
+                selectItem.on('click', function () {
                     var chooseItem = $(this).data('value');
 
                     $('select').val(chooseItem).attr('selected', 'selected');
@@ -174,17 +174,17 @@ function stylesSelect() {
 }
 
 function dateToday() {
-        var date = new Date();
+    var date = new Date();
 
-        var day = date.getDate();
-        var month = date.getMonth() + 1;
-        var year = date.getFullYear();
+    var day = date.getDate();
+    var month = date.getMonth() + 1;
+    var year = date.getFullYear();
 
-        if (month < 10) month = "0" + month;
-        if (day < 10) day = "0" + day;
+    if (month < 10) month = "0" + month;
+    if (day < 10) day = "0" + day;
 
-        var today = year + "-" + month + "-" + day;
-        $("#theDateToday").attr("value", today);
+    var today = year + "-" + month + "-" + day;
+    $("#theDateToday").attr("value", today);
 }
 
 function dateTomorrow() {
@@ -201,14 +201,51 @@ function dateTomorrow() {
     $("#theDateTomorrow").attr("value", today);
 }
 
+function sliderPerson() {
+    $('.carousel').owlCarousel({
+        loop: true,
+        nav: true,
+        dots: false,
+        margin: 30,
+        responsive: {
+            0: {
+              items: 1
+            },
+            576: {
+              items: 2
+            },
+            992: {
+                items: 3
+            }
+        }
+    })
+}
 
+function sliderPlan() {
+    $('.carousel-plan').owlCarousel({
+        loop: false,
+        nav: true,
+        dots: false,
+        items: 1
+
+    })
+}
+
+function chooseInvest() {
+    $('.dropdown-invest .invest').click(function(){
+        $('.dropdown-invest .invest').removeClass('active');
+        $(this).addClass('active');
+        var active = $(this).text();
+        $('.invest-show').text(active);
+    })
+}
 
 function addBlocker() {
-    $('.show-tooltip').click(function() {
+    $('.show-tooltip').click(function () {
         $('.show-tooltip + .tooltip').addClass('show');
         $('body').append('<div class="blocker"></div>')
     });
-    $('.modal-close').click(function() {
+    $('.modal-close').click(function () {
         $('.show-tooltip + .tooltip').removeClass('show');
         $('.blocker').remove()
     })
@@ -216,17 +253,21 @@ function addBlocker() {
 
 function changeTextCheckbox() {
     var text = document.querySelector('#changedText');
-    ('#check2f').onclick = function() {
+    var c = document.querySelector('#check2f');
+
+    c.onclick = function () {
         if (c.checked) {
-            text.textContent='On'
+            text.textContent = 'On'
         } else {
-            text.textContent='Off'
+            text.textContent = 'Off'
         }
     };
 
     var text2 = document.querySelector('#changedText2');
+    var c2 = document.querySelector('#milling');
 
-    ('#milling').onclick = function() {
+
+    c2.onclick = function () {
         if (c2.checked) {
             text2.textContent = 'Subscribed'
         } else {
@@ -235,26 +276,39 @@ function changeTextCheckbox() {
     }
 }
 
-function videoPlay() {
-        var overlay = document.getElementById('overlay');
-        var vid = document.getElementById('video');
-
-        if (overlay.addEventListener) {
-            overlay.addEventListener("click", play, false)
-        } else if (overlay.attachEvent) {
-            overlay.attachEvent("onclick", play)
-        }
-
-        function play() {
-            if (vid.paused) {
-                vid.play();
-                overlay.className = "o";
-            } else {
-                vid.pause();
-                overlay.className = "";
-            }
-        }
+function alertNotification () {
+    $('.alert-success').click(function() {
+        $('.alert-notifications.success').toggleClass('alert-show');
+    });
+    $('.alert-error').click(function() {
+        $('.alert-notifications.error').toggleClass('alert-show');
+    })
 }
+
+
+function videoPlay() {
+    var overlay = document.getElementById('overlay');
+    var vid = document.getElementById('video');
+
+    if (overlay.addEventListener) {
+        overlay.addEventListener("click", play, false)
+    } else if (overlay.attachEvent) {
+        overlay.attachEvent("onclick", play)
+    }
+
+    function play() {
+        if (vid.paused) {
+            vid.play();
+            overlay.className = "o";
+        } else {
+            vid.pause();
+            overlay.className = "";
+        }
+    }
+}
+
+
+
 $(window).on('load', function () {
     showLink();
     showDropdownBalance();
@@ -269,7 +323,11 @@ $(window).on('load', function () {
     stylesSelect();
     dateToday();
     dateTomorrow();
+    sliderPerson();
     addBlocker();
-    changeTextCheckbox();
+    alertNotification();
+    chooseInvest();
+    sliderPlan();
     videoPlay();
+    changeTextCheckbox();
 });

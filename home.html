@@ -1,0 +1,963 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <script src="plugins/owl-carousel/owl.carousel.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"/>
+    <link rel="stylesheet" href="font/material-design-iconic-font/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="plugins/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Home</title>
+</head>
+<body>
+
+<header class="header-main">
+    <div class="top-head md-hide">
+        <div class="wrapper-content">
+            <div class="d-flex justify-content-between align-content-center">
+                <div class="buttons d-flex ">
+                    <div class="btn-new">
+                        <a href="#" class="styles-btn-circle">
+                            <span><i class="zmdi zmdi-account"></i></span> Sign in
+                        </a>
+                    </div>
+                    <div class="btn-new">
+                        <a href="#" class="styles-btn-circle">
+                            <span><i class="zmdi zmdi-sign-in"></i></span> Registration
+                        </a>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="social-telegram">
+                        <div class="d-flex align-items-center">
+                            <img src="images/telegram-icon.svg" alt="Telegram">
+                            <div class="flex-column">
+                                <a href="#">@cryptoinnova</a>
+                                <p>channel</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="block-img">
+                                <i class="zmdi zmdi-comment-text"></i>
+                            </div>
+                            <div class="flex-column">
+                                <a href="#">@cryptoinnova2</a>
+                                <p>community</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choose-language">
+                        <div class="language"><img src="images/eng-icon.svg" alt="Eng">En</div>
+                        <i class="zmdi zmdi-chevron-down"></i>
+                        <div class="dropdown-language">
+                            <div class="language soon"><img src="images/vi-lang-icon.svg" alt="Eng">Vi</div>
+                            <div class="language soon"><img src="images/es-lang-icon.svg" alt="Eng">Es</div>
+                            <div class="language soon"><img src="images/pl-lang-icon.svg" alt="Eng">Pl</div>
+                            <div class="language soon"><img src="images/ja-lang-icon.svg" alt="Eng">Ja</div>
+                            <div class="language soon"><img src="images/zh-lang-icon.svg" alt="Eng">Zh</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-head md-hide">
+        <div class="wrapper-content">
+            <div class="d-flex justify-content-between align-content-center">
+                <a href="#" class="logo">
+                    <img src="images/logo.svg" alt="Logo">
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Investment</a></li>
+                        <li><a href="#">Partnership</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contacts</a></li>
+                    </ul>
+                </nav>
+                <div class="btn">
+                    <a href="#" class="btn-styles select">Get started</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mob-head md-show">
+        <div class="wrapper-content">
+            <div class="d-flex justify-content-between">
+                <a href="#" class="logo">
+                    <img src="images/logo.svg" alt="Logo">
+                </a>
+                <div class="buttons d-flex ">
+                    <div class="btn-new">
+                        <a href="#" class="styles-btn-circle">
+                            <span><i class="zmdi zmdi-account"></i></span> Sign in
+                        </a>
+                    </div>
+                    <div class="btn-new">
+                        <a href="#" class="styles-btn-circle">
+                            <span><i class="zmdi zmdi-sign-in"></i></span> Registration
+                        </a>
+                    </div>
+                </div>
+                <div class="mobile-menu-toggle lg-show">
+                    <svg class="ham hamRotate ham-burger" viewBox="0 0 100 100" width="60"
+                         onclick="this.classList.toggle('active')">
+                        <path
+                                class="line top"
+                                d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"/>
+                        <path
+                                class="line middle"
+                                d="m 30,50 h 40"/>
+                        <path
+                                class="line bottom"
+                                d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dropdown-header">
+        <div class="dropdown-header__inner">
+            <div class="buttons d-flex">
+                <div class="btn-new">
+                    <a href="#" class="styles-btn-circle">
+                        <span><i class="zmdi zmdi-account"></i></span> Sign in
+                    </a>
+                </div>
+                <div class="btn-new">
+                    <a href="#" class="styles-btn-circle">
+                        <span><i class="zmdi zmdi-sign-in"></i></span> Registration
+                    </a>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Investment</a></li>
+                    <li><a href="#">Partnership</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+            </nav>
+            <div class="btn">
+                <a href="#" class="btn-styles select">Get started</a>
+            </div>
+            <div class="choose-language">
+                <div class="language"><img src="images/eng-icon.svg" alt="Eng">En</div>
+                <i class="zmdi zmdi-chevron-down"></i>
+                <div class="dropdown-language">
+                    <div class="language soon"><img src="images/vi-lang-icon.svg" alt="Eng">Vi</div>
+                    <div class="language soon"><img src="images/es-lang-icon.svg" alt="Eng">Es</div>
+                    <div class="language soon"><img src="images/pl-lang-icon.svg" alt="Eng">Pl</div>
+                    <div class="language soon"><img src="images/ja-lang-icon.svg" alt="Eng">Ja</div>
+                    <div class="language soon"><img src="images/zh-lang-icon.svg" alt="Eng">Zh</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="top-section">
+    <div class="bg-white">
+        <div class="wrapper-bd bd">
+            <div class="block-side left-side">
+                <div class="line">
+                    Cryptoinnova
+                </div>
+            </div>
+            <div class="wrapper-content">
+                <div class="left">
+                    <div class="block">
+                        <p class="item">profit up to <span class="t-bold">1542 %</span></p>
+                        <h1>Crypto <span class="t-bold">Innova</span></h1>
+                        <p>Invest in a decentralized logistics platform that offers innovative solutions based on the
+                            introduction of blockchain in international freight forwarding</p>
+
+                    </div>
+                    <div class="talks">
+                        <div class="talks-item">
+                            <p>They talk about us:</p>
+                        </div>
+                        <div class="images">
+                            <div class="item-img">
+                                <img src="images/block-logo-2.svg" alt="">
+                            </div>
+                            <div class="item-img">
+                                <img src="images/block-logo-1.svg" alt="">
+                            </div>
+                            <div class="item-img">
+                                <img src="images/block-logo-3.svg" alt="">
+                            </div>
+                            <div class="item-img">
+                                <img src="images/block-logo-4.svg" alt="">
+                            </div>
+                            <div class="item-img">
+                                <img src="images/block-logo-5.svg" alt="">
+                            </div>
+                            <div class="item-img">
+                                <img src="images/block-logo-6.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="video_holder">
+            <div id="overlay" class="o"><i class="zmdi zmdi-play"></i></div>
+            <video src="video/header.mp4" id="video" tabindex="0" autoplay loop></video>
+        </div>
+    </div>
+</section>
+
+<section class="about-us">
+    <div class="wrapper-bd bd blue offset-two-side">
+        <div class="block-side left-side">
+            <div class="line">
+                About us
+            </div>
+        </div>
+        <div class="block-side right-side">
+            <div class="line">
+                About us
+            </div>
+        </div>
+        <div class="block-side bottom right-side">
+            <div class="line">
+                About us
+            </div>
+        </div>
+        <div class="block-side bottom left-side">
+            <div class="line">
+                About us
+            </div>
+        </div>
+        <div class="wrapper-content">
+            <div class="content">
+                <div class="block-img">
+                    <img src="images/about-img.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h2 class="line">
+                        About <span class="t-blue">Us</span>
+                    </h2>
+                    <p>
+                        We are building <span class="t-bold">the backbone of global trade.</span>
+                        <br>
+                        <br>
+                        Our ideas, visions and technology are powered by a great team and a unique culture.
+                        <br>
+                        <br>
+                        <span class="t-bold">Crypto Innova Capital Sagl</span> is a digital asset-free freight service
+                        provider located in Switzerland. Our ultimate goal is to create the best freight-forwarding
+                        experience for our global customers. <span class="t-bold">We achieve this by leveraging state-of-the-art-technology</span>
+                        to provide seamless processes and best-in-class services.
+
+                    </p>
+                </div>
+            </div>
+            <div class="our-team">
+                <div class="subheading">
+                    Meet the founders and executives
+                </div>
+                <p>We assemble the greatest minds and use the latest technology to create the best customer-oriented
+                    logistics platform.</p>
+                <div class="owl-styles">
+                    <div class="carousel">
+                        <div class="person-item">
+                            <div class="photo">
+                                <img src="images/person-1.jpg" alt="">
+                            </div>
+                            <p class="name">
+                                Dr.Ottmar Gast
+                            </p>
+                            <p class="post">
+                                Chairman of the Executive Board
+                            </p>
+                        </div>
+                        <div class="person-item">
+                            <div class="photo">
+                                <img src="images/person-2.jpg" alt="">
+                            </div>
+                            <p class="name">
+                                Kirstin Huettener Tong
+                            </p>
+                            <p class="post">
+                                VP Supplier Management, Home24
+                            </p>
+                        </div>
+                        <div class="person-item">
+                            <div class="photo">
+                                <img src="images/person-3.jpg" alt="">
+                            </div>
+                            <p class="name">
+                                Dr. Ottmar Gast
+                            </p>
+                            <p class="post">
+                                Chairman of the Executive Board
+                            </p>
+                        </div>
+                        <div class="person-item">
+                            <div class="photo">
+                                <img src="images/person-1.jpg" alt="">
+                            </div>
+                            <p class="name">
+                                Dr.Ottmar Gast
+                            </p>
+                            <p class="post">
+                                Chairman of the Executive Board
+                            </p>
+                        </div>
+                        <div class="person-item">
+                            <div class="photo">
+                                <img src="images/person-1.jpg" alt="">
+                            </div>
+                            <p class="name">
+                                Dr.Ottmar Gast
+                            </p>
+                            <p class="post">
+                                Chairman of the Executive Board
+                            </p>
+                        </div>
+                        <div class="person-item">
+                            <div class="photo">
+                                <img src="images/person-1.jpg" alt="">
+                            </div>
+                            <p class="name">
+                                Dr.Ottmar Gast
+                            </p>
+                            <p class="post">
+                                Chairman of the Executive Board
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="investment-program">
+    <div class="bg-white">
+        <div class="wrapper-bd bd offset-two-side">
+            <div class="block-side left-side">
+                <div class="line">
+                    Investment program
+                </div>
+            </div>
+            <div class="block-side right-side">
+                <div class="line">
+                </div>
+            </div>
+            <div class="block-side bottom right-side">
+                <div class="line">
+                    Investment program
+                </div>
+            </div>
+            <div class="block-side bottom left-side">
+                <div class="line">
+                </div>
+            </div>
+            <div class="wrapper-content">
+                <h2 class="line">
+                    Investment <span class="t-blue">program</span>
+                </h2>
+                <div class="tabs">
+                    <div class="btn-new active">
+                        <div class="styles-btn-circle">
+                            <span><i class="zmdi zmdi-account"></i></span>
+                            <p> Rail Freight</p>
+                        </div>
+                    </div>
+                    <div class="btn-new">
+                        <div class="styles-btn-circle">
+                            <span><i class="zmdi zmdi-account"></i></span>
+                            <p> Multimodal Transportation</p>
+                        </div>
+                    </div>
+                    <div class="btn-new">
+                        <div class="styles-btn-circle">
+                            <span><i class="zmdi zmdi-account"></i></span>
+                            <p> Sea Freight</p>
+                        </div>
+                    </div>
+                    <div class="btn-new">
+                        <div class="styles-btn-circle">
+                            <span><i class="zmdi zmdi-account"></i></span>
+                            <p> Air Freight</p>
+                        </div>
+                    </div>
+                </div>
+                <p>
+                    In terms of transit time and freight rates, rail freight is a compromise solution between sea
+                    freight and air freight.
+                </p>
+                <div class="owl-styles">
+                    <div class="carousel-plan">
+                        <div class="investment-plan">
+                            <div class="block-img">
+                                <img src="images/sea-freight-img.jpg" alt="">
+                            </div>
+                            <div class="more">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="more-item">
+                                            <p>Amount:</p>
+                                            <p class="value">%30 - $3000</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="more-item">
+                                            <p>Profit:</p>
+                                            <p class="value">995% per year</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="more-item">
+                                            <p>Principal included:</p>
+                                            <p class="value">Yes</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="more-item">
+                                            <p>Deposit insurance:</p>
+                                            <p class="value">Yes</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="more-item">
+                                            <p>Investment period:</p>
+                                            <p class="value">unlimited</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="more-item">
+                                            <p>Accruals</p>
+                                            <p class="value">every 3 days</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="more-item">
+                                            <p>Daily interest:</p>
+                                            <p class="value">3%</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="more-item">
+                                            <p>Withdrawal:</p>
+                                            <p class="value">Instant</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="investment-plan">
+                            <div class="block-img">
+                                <img src="images/air-freight-img.jpg" alt="">
+                            </div>
+                            <div class="more">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="more-item">
+                                            <p>Amount:</p>
+                                            <p class="value">%30 - $3000</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="more-item">
+                                            <p>Profit:</p>
+                                            <p class="value">995% per year</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="more-item">
+                                            <p>Principal included:</p>
+                                            <p class="value">Yes</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="more-item">
+                                            <p>Deposit insurance:</p>
+                                            <p class="value">Yes</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="more-item">
+                                            <p>Investment period:</p>
+                                            <p class="value">unlimited</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="more-item">
+                                            <p>Accruals</p>
+                                            <p class="value">every 3 days</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="more-item">
+                                            <p>Daily interest:</p>
+                                            <p class="value">3%</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="more-item">
+                                            <p>Withdrawal:</p>
+                                            <p class="value">Instant</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="investment-plan">
+                            <div class="block-img">
+                                <img src="images/rail-freight-img.jpg" alt="">
+                            </div>
+                            <div class="more">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="more-item">
+                                            <p>Amount:</p>
+                                            <p class="value">%30 - $3000</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="more-item">
+                                            <p>Profit:</p>
+                                            <p class="value">995% per year</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="more-item">
+                                            <p>Principal included:</p>
+                                            <p class="value">Yes</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="more-item">
+                                            <p>Deposit insurance:</p>
+                                            <p class="value">Yes</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="more-item">
+                                            <p>Investment period:</p>
+                                            <p class="value">unlimited</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="more-item">
+                                            <p>Accruals</p>
+                                            <p class="value">every 3 days</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="more-item">
+                                            <p>Daily interest:</p>
+                                            <p class="value">3%</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="more-item">
+                                            <p>Withdrawal:</p>
+                                            <p class="value">Instant</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="investment-plan">
+                            <div class="block-img">
+                                <img src="images/multimodal-transportation-img.jpg" alt="">
+                            </div>
+                            <div class="more">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="more-item">
+                                            <p>Amount:</p>
+                                            <p class="value">%30 - $3000</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="more-item">
+                                            <p>Profit:</p>
+                                            <p class="value">995% per year</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="more-item">
+                                            <p>Principal included:</p>
+                                            <p class="value">Yes</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="more-item">
+                                            <p>Deposit insurance:</p>
+                                            <p class="value">Yes</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="more-item">
+                                            <p>Investment period:</p>
+                                            <p class="value">unlimited</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="more-item">
+                                            <p>Accruals</p>
+                                            <p class="value">every 3 days</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="more-item">
+                                            <p>Daily interest:</p>
+                                            <p class="value">3%</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="more-item">
+                                            <p>Withdrawal:</p>
+                                            <p class="value">Instant</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn invest">
+                    <a href="#" class="btn-styles select">Invest now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="calculate">
+    <div class="wrapper-bd bd offset-two-side">
+        <div class="block-side left-side">
+            <div class="line">
+                Calculate
+            </div>
+        </div>
+        <div class="block-side bottom right-side">
+            <div class="line">
+                Calculate
+            </div>
+        </div>
+        <div class="wrapper-content">
+            <div class="content">
+                <div class="block-inf">
+                    <h2 class="line"><span class="t-blue">Calculate</span> your profit</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet.
+                        <br>
+                        <br>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dolores excepturi officiis placeat
+                        rerum
+                        sed sunt tempore.
+                    </p>
+                </div>
+                <div class="calculator-wrap shadow">
+                    <div class="currency-choose-wrap">
+                        <div class="currency-choose-item check" data-currency="btc">
+                            <div class="img-currency">
+                                <img src="images/bitcoin.svg" alt="btc">
+                            </div>
+                            <p class="currency-abb">btc</p>
+                        </div>
+                        <div class="currency-choose-item" data-currency="eth">
+                            <div class="img-currency">
+                                <img src="images/eth.svg" alt="Eth">
+                            </div>
+                            <p class="currency-abb">eth</p>
+                        </div>
+                        <div class="currency-choose-item" data-currency="pm">
+                            <div class="img-currency">
+                                <img src="images/pm.svg" alt="pm">
+                            </div>
+                            <p class="currency-abb">pm</p>
+                        </div>
+                        <div class="currency-choose-item" data-currency="btch">
+                            <div class="img-currency">
+                                <img src="images/btch.svg" alt="btch">
+                            </div>
+                            <p class="currency-abb">btch</p>
+                        </div>
+                        <div class="currency-choose-item" data-currency="ltc">
+                            <div class="img-currency">
+                                <img src="images/ltc.svg" alt="ltc">
+                            </div>
+                            <p class="currency-abb">ltc</p>
+                        </div>
+                        <div class="currency-choose-item" data-currency="xmr">
+                            <div class="img-currency">
+                                <img src="images/xmr.svg" alt="xmr">
+                            </div>
+                            <p class="currency-abb">xmr</p>
+                        </div>
+                        <div class="currency-choose-item" data-currency="zec">
+                            <div class="img-currency">
+                                <img src="images/zec.svg" alt="zec">
+                            </div>
+                            <p class="currency-abb">zec</p>
+                        </div>
+                        <div class="currency-choose-item" data-currency="eos">
+                            <div class="img-currency">
+                                <img src="images/eos.svg" alt="eos">
+                            </div>
+                            <p class="currency-abb">EOS.IO</p>
+                        </div>
+                    </div>
+
+                    <div class="input-wrap input-deposit">
+                        <div class="input-title">Deposit amount</div>
+                        <input type="text" name="deposit-amount" placeholder="1.752112 BTC">
+                    </div>
+
+                    <div class="input-wrap">
+                        <div class="input-title">Investment plan</div>
+                        <div class="choose-invest">
+                            <i class="zmdi zmdi-chevron-down"></i>
+                            <p class="invest-show">Rail Freight 200%</p>
+                            <div class="dropdown-invest">
+                                <p class="invest active" data-invest="rail-200">Rail Freight 200%</p>
+                                <p class="invest" data-invest="rail-100">Rail Freight 100%</p>
+                                <p class="invest" data-invest="rail-300">Rail Freight 300%</p>
+                                <p class="invest" data-invest="rail-500">Rail Freight 500%</p>
+                                <p class="invest" data-invest="rail-700">Rail Freight 700%</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="period-choose-wrap">
+                        <div class="period-choose-item" data-period="30-days">
+                            <div class="period-value">30</div>
+                            <div class="period-days">days</div>
+                            <div class="period-detail">Trial period</div>
+                        </div>
+
+                        <div class="period-choose-item" data-period="60-days">
+                            <div class="period-value">60</div>
+                            <div class="period-days">days</div>
+                        </div>
+
+                        <div class="period-choose-item check" data-period="90-days">
+                            <div class="period-value">90</div>
+                            <div class="period-days">days</div>
+                            <div class="period-detail">Recommended</div>
+                        </div>
+
+                        <div class="period-choose-item" data-period="180-days">
+                            <div class="period-value">180</div>
+                            <div class="period-days">days</div>
+                        </div>
+                    </div>
+
+                    <div class="result-wrap">
+                        <div class="result-item per-day">
+                            <div class="result-tittle">Accruals per day:</div>
+                            <div class="result-value">10.20 USD / 1.00%</div>
+                        </div>
+
+                        <div class="result-item total-result">
+                            <div class="result-tittle">Total will get:</div>
+                            <div class="result-value">3672.00 USD/367.20 %</div>
+                        </div>
+                    </div>
+
+                    <div class="calc-insurance-wrap">
+                        <div class="calc-insurance-img">
+                            <img src="images/check.svg" alt="insurance">
+                        </div>
+                        <p>Insurance certificate included 100% insurance</p>
+                        <a href="#insurance-popup-2" class="insurance-info"></a>
+                    </div>
+
+                    <div class="calc-btn-wrap">
+                        <button class="calc-btn">Make deposit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="many-deposit">
+    <div class="bg-white">
+        <div class="wrapper-bd bd offset-two-side">
+            <div class="block-side left-side">
+                <div class="line">
+                    Deposit
+                </div>
+            </div>
+            <div class="block-side bottom right-side">
+                <div class="line">
+                    Deposit
+                </div>
+            </div>
+            <div class="wrapper-content">
+                <h2 class="line"><span class="t-blue">Many deposit</span> and withdrawal options</h2>
+                <div class="content">
+                    <div class="block-img">
+                        <img src="images/card.jpg" alt="">
+                    </div>
+                    <div class="inf">
+                        <p>The most popular ways to deposit money are available to you: Bitcoin, Bitcoin Cash, Litecoin,
+                            Ethereum, Monero, Zcash, EOS, Perfect Money</p>
+                        <div class="btn">
+                            <a href="#" class="btn-styles select">Start now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="benefits">
+    <div class="wrapper-bd bd offset-two-side">
+        <div class="block-side left-side">
+            <div class="line">
+                Our benefits
+            </div>
+        </div>
+        <div class="block-side right-side">
+            <div class="line">
+            </div>
+        </div>
+        <div class="block-side bottom right-side">
+            <div class="line">
+                Our benefits
+            </div>
+        </div>
+        <div class="block-side bottom left-side">
+            <div class="line">
+            </div>
+        </div>
+        <div class="wrapper-content">
+            <div class="content">
+                <div class="benefits-block">
+                    <p class="subhead">Our <span class="t-blue">Benefits</span></p>
+                    <ul class="list-benefits">
+                        <li>
+                            <div class="icon"><img src="images/benefit-1.svg" alt=""></div>
+                            <p>Investing in high margin business</p></li>
+                        <li>
+                            <div class="icon"><img src="images/benefit-2.svg" alt=""></div>
+                            <p>Profit up to 1000%</p></li>
+                        <li>
+                            <div class="icon"><img src="images/benefit-3.svg" alt=""></div>
+                            <p>The more you invest, the higher your interest rate</p>
+                        </li>
+                        <li>
+                            <div class="icon"><img src="images/benefit-4.svg" alt=""></div>
+                            <p>Automatic profit and instant money withdrawal</p></li>
+                        <li>
+                            <div class="icon"><img src="images/benefit-5.svg" alt=""></div>
+                            <p>There is no account verification, quick registration</p>
+                        </li>
+                        <li>
+                            <div class="icon"><img src="images/benefit-6.svg" alt=""></div>
+                            <p>There are no commissions for depositing and
+                                withdrawing money</p>
+                        </li>
+                        <li>
+                            <div class="icon"><img src="images/benefit-7.svg" alt=""></div>
+                            <p>Free insurance at the opening of the deposit. In case
+                                of bankruptcy of the company, the investor gets 100% coverage of his deposit.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="img-block">
+                    <img src="images/iphone.png" alt="Iphone">
+                </div>
+                <div class="block-statistics">
+                    <p class="subhead right">
+                        Statistics
+                    </p>
+                    <div class="enumeration-statistics">
+                        <div class="statistic-item">
+                            <p>Total Deposit</p>
+                            <p class="sum">$500000</p>
+                        </div>
+                        <div class="statistic-item">
+                            <p>Total Withdrawal</p>
+                            <p class="sum">$200000</p>
+                        </div>
+                        <div class="statistic-item">
+                            <p>Number of accounts</p>
+                            <p class="sum">789391</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="bd-b">
+        <div class="wrapper-content">
+            <div class="top-footer">
+                <a href="#" class="logo">
+                    <img src="images/logo-white.svg" alt="Logo">
+                </a>
+                <p>© 2019 Crypto Innova Capital Sagl</p>
+                <ul class="social-network">
+                    <li><a href="#"><i class="zmdi zmdi-facebook"></i></a></li>
+                    <li><a href="#"><i class="zmdi zmdi-youtube-play"></i></a></li>
+                    <li><a href="#"><i class="zmdi zmdi-linkedin"></i></a></li>
+                    <li><a href="#"><img src="images/telegram-icon-blue.svg" alt=""></a></li>
+                    <li><a href="#"><i class="zmdi zmdi-comment-text"></i></a></li>
+                </ul>
+                <div class="business-inf">
+                    <div class="btn">
+                        <i class="zmdi zmdi-menu"></i>
+                    </div>
+                    <p>Business information: <a href="#">officially registered company</a></p>
+                </div>
+            </div>
+            <div class="bot-footer">
+                <div class="side-top">
+                    <p>Other ways to contact us: write us, call <a href="#">+41 912087039 (24/5)</a></p>
+                    <p>Headquarters Crypto Innova Capital Sagl: Via Guido Calgari 2, Lugano, 6900, Switzerland </p>
+                </div>
+                <div class="side-bot">
+                    <ul class="more-page">
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Terms of Contest</a></li>
+                        <li><a href="#">Investments</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Terms Of Services</a></li>
+                        <li><a href="#">Partnership</a></li>
+                        <li><a href="#">Contacts</a></li>
+                        <li><a href="#">Privacy Protection</a></li>
+                    </ul>
+                    <p>
+                        By continuing to use this service, the user agrees to the terms fo the Cryptoinnova.com Offer
+                        Agreement; It is considered that he/she got familiarized and he/she accepted the following
+                        limitation of liability by Cryptoinnova.com: Cryptoinnova.com platform reports a disclaimer for
+                        possible risks and losses caused by the use of cryptocurrency and the Crypto Innova service. In
+                        particular, it refers to the changes in laws governing the use of electronic and cryptocurrency
+                        funds, market volatility of cryptocurrencies and any other conditions that may effect the market
+                        value and liquidity of any of the
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>

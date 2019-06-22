@@ -358,6 +358,11 @@
       margin-right: 0 !important;
     }
   }
+  .check {
+    input[type=checkbox] {
+      display: none !important;
+    }
+  }
   .styles-input {
     height: 50px;
   }
@@ -407,6 +412,7 @@
   }
   .block-input {
     max-width: 260px;
+    margin-right: 15px;
   }
   .btn {
     max-width: 150px;
@@ -451,6 +457,7 @@
     &.modal3 {
       .btn {
         margin-top: 15px !important;
+        margin-right: 15px !important;
         max-width: 200px;
         width: 100%;
       }
@@ -528,6 +535,14 @@
       width: 100%;
     }
     &.modal4 {
+      .btn {
+        &:first-child {
+          margin-right: 7px;
+        }
+        &:last-child {
+          margin-left: 7px;
+        }
+      }
       .justify-content-between {
         padding-right: 0;
       }
@@ -560,6 +575,16 @@
         margin-top: 15px !important;
         max-width: 100%;
         width: 100%;
+      }
+    }
+  }
+  .modal-settings {
+    .block-input {
+      margin-right: 0;
+    }
+    &.modal3 {
+      .btn {
+        margin-right: 0 !important;
       }
     }
   }

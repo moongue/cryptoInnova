@@ -1,0 +1,1022 @@
+.top-section {
+  z-index: 2;
+  position: relative;
+
+  #video_holder {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 52%;
+  }
+
+  #video {
+    object-fit: unset;
+    height: 601px;
+  }
+
+  .left {
+    padding-top: 150px;
+    padding-bottom: 25px;
+
+    .item {
+      color: $blue3;
+      font-size: 18px;
+      padding-left: 80px;
+      padding-top: 0;
+      position: relative;
+      margin-bottom: 50px;
+
+      &:before {
+        content: '';
+        width: 40px;
+        height: 1px;
+        background: $blue3;
+        position: absolute;
+        top: calc((100% - 1px) / 2);
+        left: 0;
+      }
+    }
+
+    p {
+      max-width: 430px;
+      padding-top: 28px;
+    }
+
+    .talks {
+      margin-top: 80px;
+      position: relative;
+      z-index: 2;
+
+      .talks-item {
+        padding-bottom: 15px;
+        border-bottom: 1px solid #ebf3fb;
+
+        p {
+          color: $dark;
+          font-size: 15px;
+        }
+      }
+
+      .images {
+        display: flex;
+        padding-top: 32px;
+
+        .item-img {
+          margin-right: 40px;
+
+          img {
+            height: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.about-us {
+  position: relative;
+
+  .block-img {
+    max-width: 683px;
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+  }
+
+  .text {
+    padding-left: 70px;
+    max-width: 450px;
+
+    p {
+      padding-top: 50px;
+    }
+  }
+
+  .our-team {
+    margin-top: 140px;
+
+    p {
+      margin-top: 25px;
+    }
+
+    .carousel {
+      display: flex;
+      position: relative;
+      margin-top: 60px;
+
+      .person-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: $white;
+        border-radius: 3px;
+        box-shadow: 0 11px 12px 0 rgba(0, 0, 0, 0.05);
+        padding: 15px 0 35px;
+
+        .photo {
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+
+        .name {
+          margin-top: 30px;
+          font-size: 20px;
+          font-weight: 500;
+        }
+
+        .post {
+          margin-top: 13px;
+          color: #969cb0;
+          font-size: 15px;
+        }
+      }
+
+      .owl-item {
+        display: inline-block;
+      }
+
+
+    }
+  }
+}
+
+.investment-program {
+  .btn.invest {
+    max-width: 220px;
+    margin: 20px auto 0;
+
+    a.btn-styles {
+      border-radius: 46px;
+    }
+  }
+
+  .tabs {
+    margin-top: 30px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+
+    .btn-new {
+      margin-top: 20px;
+      width: 100%;
+      margin-right: 13px;
+      box-sizing: border-box;
+      cursor: pointer;
+
+      &.active, &:hover {
+        .styles-btn-circle {
+          background: #2fa3fa;
+          border: 1px solid #2fa3fa;
+
+          p {
+            color: $white;
+          }
+
+          span {
+            background: $white;
+
+            .zmdi {
+              color: #2fa3fa;
+            }
+          }
+        }
+      }
+
+      .styles-btn-circle {
+        height: 50px;
+        color: #868daa;
+        font-size: 15px;
+        border: 1px solid #dadde5;
+
+        p {
+          text-align: center;
+          width: calc((100% - 60px));
+        }
+
+        span {
+          width: 40px;
+          height: 40px;
+          background: #f2f7fc;
+
+          .zmdi {
+            color: $blue;
+          }
+        }
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:nth-child(1) {
+        max-width: 232px;
+      }
+
+      &:nth-child(2) {
+        max-width: 340px;
+      }
+
+      &:nth-child(3) {
+        max-width: 254px;
+      }
+
+      &:nth-child(4) {
+        max-width: 254px;
+      }
+    }
+  }
+
+  .carousel-plan {
+    position: relative;
+    display: flex;
+    margin-top: 100px;
+
+    .owl-stage {
+      display: flex;
+    }
+
+    .investment-plan {
+      display: flex;
+      overflow: hidden;
+      padding-bottom: 30px;
+
+
+      .block-img {
+        max-width: 470px;
+        margin-left: 30px;
+        margin-top: 30px;
+
+        img {
+          width: 100%;
+          height: auto;
+          box-shadow: 0 11px 12px 0 rgba(0, 0, 0, 0.05),
+          -60px 0px 0px 30px rgba(234, 246, 254, 1);
+
+        }
+      }
+
+      .more {
+        margin-top: 30px;
+        margin-left: 66px;
+        max-width: 546px;
+
+        .row {
+          margin-left: -5px;
+          margin-right: -5px;
+
+          .col-6 {
+            padding: 5px;
+          }
+        }
+
+        .more-item {
+          background: #f2f7fc;
+          border-radius: 3px;
+          padding: 23px;
+
+          p {
+            font-size: 15px;
+            color: #373770;
+
+            &.value {
+              font-size: 22px;
+              font-weight: 500;
+              color: #2fa3fa;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.calculate {
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .block-inf {
+      max-width: 390px;
+      padding-right: 10px;
+
+      p {
+        margin-top: 60px;
+      }
+    }
+  }
+
+  .calculator-wrap {
+    padding: 30px;
+    background: #fff;
+    margin-top: 25px;
+    display: flex;
+    display: -ms-flexbox;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    -ms-flex-align: center;
+    margin-bottom: 30px;
+    min-width: 620px;
+    max-width: 620px;
+  }
+
+  .currency-choose-wrap {
+    display: flex;
+    display: -ms-flexbox;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    -ms-flex-align: center;
+    margin-bottom: 40px;
+    width: 100%;
+  }
+
+  .currency-choose-item {
+    cursor: pointer;
+  }
+
+  .currency-choose-item.check {
+    margin-top: 0;
+    padding-left: 0;
+  }
+
+  .currency-choose-item .img-currency {
+    width: 50px;
+    height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border: 1px solid #e1eef6;
+    margin-bottom: 10px;
+    transition: all .3s ease;
+  }
+
+  .currency-choose-item.check .img-currency,
+  .currency-choose-item:hover .img-currency {
+    border: 1px solid #4fa5f7;
+  }
+
+  .currency-choose-item .img-currency img {
+    width: 27px;
+    height: 27px;
+    -webkit-filter: brightness(0.1);
+    filter: brightness(0.1);
+  }
+
+  .currency-choose-item .currency-abb {
+    text-align: center;
+    text-transform: uppercase;
+    color: #b0b4c3;
+    font-size: 13px;
+  }
+
+  .input-wrap {
+    display: inline-block;
+    width: 48%;
+  }
+
+  .input-deposit {
+    margin-right: 2%;
+  }
+
+  .input-title {
+    font-size: 12px;
+    color: #868daa;
+    margin-bottom: 10px;
+  }
+
+  .input-wrap input {
+    width: 100%;
+    border: 1px solid #e1eef6;
+    background: #f9fcfe;
+    padding: 15px;
+    color: #4f5a83;
+    font-size: 13px;
+  }
+
+  .choose-invest {
+    width: 100%;
+    min-width: 150px;
+    background: #f9fcfe;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid #e1eef6;
+  }
+
+  .choose-invest i {
+    position: absolute;
+    right: 10px;
+    top: calc((100% - 15px) / 2);
+    transition: transform .2s;
+  }
+
+  .invest-show {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    color: #4f5a83;
+    font-size: 13px;
+    text-transform: capitalize;
+    position: relative;
+  }
+
+  .dropdown-invest {
+    position: absolute;
+    z-index: 9;
+    top: 43px;
+    left: -1px;
+    width: 101%;
+    background: #f9fcfe;
+    display: none;
+    border: 1px solid #e1eef6;
+    border-radius: 0 0 4px 4px;
+  }
+
+  .invest.active,
+  .invest:hover {
+    background: #fff;
+    border-bottom: 1px solid #e1eef6;
+  }
+
+  .invest {
+    padding: 15px;
+    color: #4e5983;
+    font-size: 13px;
+    text-align: left;
+    border-bottom: 1px solid transparent;
+  }
+
+  .period-choose-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    -ms-flex-align: center;
+    margin: 20px 0;
+    width: 100%;
+  }
+
+  .period-choose-item {
+    cursor: pointer;
+    width: 110px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #e1eef6;
+    transition: all .3s ease;
+  }
+
+  .period-value {
+    font-size: 36px;
+    color: #373770;
+  }
+
+  .period-days {
+    font-size: 12px;
+    color: #868daa;
+  }
+
+  .period-detail {
+    font-size: 11px;
+    color: #4fa5f7;
+  }
+
+  .period-choose-item.check,
+  .period-choose-item:hover {
+    border: 1px solid #4fa5f7;
+    padding: 0;
+    margin-top: 0;
+  }
+
+  .result-wrap {
+    border: 1px solid #4fa5f7;
+    margin-bottom: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 25px;
+    font-size: 13px;
+    width: 100%;
+  }
+
+  .result-item {
+    width: 50%;
+  }
+
+  .result-value {
+    margin-top: 15px;
+    color: #4fa5f7;
+    font-weight: 500;
+  }
+
+  .calc-insurance-wrap {
+    border: 1px solid #00c3b3;
+    padding: 20px 15px;
+    display: flex;
+    align-items: center;
+    -ms-flex-align: center;
+    justify-content: space-between;
+    position: relative;
+    color: #00c3b3;
+    max-width: 310px;
+  }
+
+  .calc-insurance-wrap p {
+    color: $green;
+    font-size: 13px;
+  }
+
+  .calc-insurance-img {
+    width: 35px;
+    height: 30px;
+    margin-right: 10px;
+  }
+
+  .calc-insurance-wrap .insurance-info {
+    position: relative;
+    top: auto;
+    right: auto;
+  }
+
+  .calc-insurance-wrap .insurance-info::before {
+    color: #00c3b3;
+  }
+
+  .calc-btn-wrap {
+    display: inline-block;
+    width: 170px;
+  }
+
+  .calc-btn {
+    width: 100%;
+    color: #fff;
+    background: #4fa5f7;
+    text-align: center;
+    border-radius: 50px;
+    border: none;
+    line-height: 50px;
+    text-transform: capitalize;
+    font-size: 15px;
+  }
+
+  .profit-chart {
+    margin-top: 25px;
+    height: 520px;
+    background: #fff;
+    padding: 30px;
+  }
+}
+
+.many-deposit {
+  .content {
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .btn {
+      max-width: 290px;
+      margin-top: 55px;
+
+      .btn-styles {
+        border-radius: 46px;
+        font-size: 20px;
+      }
+    }
+
+    .block-img {
+      max-width: 475px;
+      width: 100%;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .inf {
+      margin-left: 90px;
+      max-width: 490px;
+    }
+  }
+}
+
+.benefits {
+  .content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .subhead {
+    font-size: 36px;
+    font-weight: 500;
+    position: relative;
+
+    &.right {
+      text-align: right;
+      &:before {
+        left: inherit;
+        right: 0;
+      }
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -30px;
+      left: 0;
+      width: 60px;
+      height: 1px;
+      background: #2fa3fa;
+    }
+  }
+
+  .benefits-block {
+    .list-benefits {
+      margin-top: 50px;
+
+      li {
+        margin-top: 10px;
+        display: flex;
+        max-width: 340px;
+
+        .icon {
+          min-width: 66px;
+          max-width: 66px;
+          height: 66px;
+          background: $white;
+          border-radius: 3px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+
+          &:before {
+            content: '';
+            width: 60px;
+            height: 60px;
+            border: 1px solid #d5edfe;
+            border-radius: 3px;
+            position: absolute;
+            top: 3px;
+            left: 3px;
+          }
+        }
+
+        img {
+          height: 40px;
+        }
+
+        p {
+          padding-top: 14px;
+          padding-left: 24px;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 1.2;
+        }
+      }
+    }
+  }
+
+  .img-block {
+    margin: 30px 20px 0;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .block-statistics {
+    .enumeration-statistics {
+      margin-top: 70px;
+
+      .statistic-item {
+        margin-top: 30px;
+        width: 100%;
+        max-width: 255px;
+        background: $white;
+        padding: 30px;
+        text-align: center;
+        position: relative;
+
+        &:before {
+          content: '';
+          width: 96%;
+          height: 96%;
+          border: 1px solid #d5edfe;
+          position: absolute;
+          left: 2%;
+          top: 2%;
+          border-radius: 3px;
+        }
+
+        p {
+          font-size: 14px;
+          font-weight: 500;
+        }
+
+        .sum {
+          font-size: 42px;
+          font-weight: 500;
+          color: #2fa3fa;
+        }
+      }
+    }
+  }
+}
+
+@media #{$lg} {
+  .top-section {
+    #video_holder {
+      display: none;
+    }
+
+    .left {
+      padding-top: 75px;
+      display: flex;
+
+      .block {
+        flex-basis: 50%;
+      }
+
+      .talks {
+        flex-basis: 50%;
+        margin-top: 0;
+
+        .images {
+          flex-wrap: wrap;
+
+          .item-img {
+            margin-top: 10px;
+          }
+
+          .item-img:nth-child(n + 3) {
+            img {
+              filter: brightness(.8);
+            }
+          }
+        }
+      }
+    }
+  }
+  .about-us {
+    .text {
+      padding-left: 15px;
+    }
+  }
+}
+
+@media #{$md} {
+  .top-section {
+    .left {
+      flex-direction: column;
+    }
+  }
+  .about-us {
+    .content {
+      flex-direction: column;
+
+      .text {
+        max-width: 100%;
+        order: -1;
+      }
+
+      .block-img {
+        margin-top: 15px;
+        max-width: 100%;
+      }
+    }
+  }
+  .investment-program {
+    .tabs {
+      flex-wrap: wrap;
+
+      .btn-new {
+        max-width: 100% !important;
+        flex-basis: calc(50% - 10px);
+        margin-top: 10px;
+        margin-right: 0 !important;
+
+        &:nth-child(odd) {
+          margin-right: 10px !important;
+        }
+
+        &:nth-child(even) {
+          margin-left: 10px !important;
+        }
+      }
+    }
+
+    .carousel-plan {
+      .investment-plan {
+        .more {
+          .more-item {
+            padding: 10px;
+
+            p.value {
+              font-size: 19px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .calculate {
+    .content {
+      flex-direction: column;
+    }
+  }
+  .benefits {
+    .img-block {
+      display: none;
+    }
+    .benefits-block {
+      margin-right: 20px;
+    }
+  }
+}
+
+@media #{$sm} {
+  .investment-program {
+    .carousel-plan {
+      .investment-plan {
+        flex-direction: column;
+
+        .block-img {
+          max-width: 100%;
+          margin-right: 30px;
+        }
+
+        .more {
+          max-width: 100%;
+          margin-left: 0;
+
+          .more-item {
+            padding: 23px;
+
+            p.value {
+              font-size: 22px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .calculate {
+    .calculator-wrap {
+      min-width: 100%;
+      max-width: 100%;
+    }
+  }
+  .many-deposit {
+    .content {
+      margin-top: 35px;
+
+      .inf {
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+@media #{$xs} {
+  .top-section {
+    .left {
+      .talks {
+        .images {
+          .item-img {
+            img {
+              height: 22px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .investment-program {
+    .tabs {
+      flex-wrap: wrap;
+      flex-direction: column;
+
+      .btn-new {
+        max-width: 100% !important;
+        flex-basis: 100%;
+        margin-top: 10px !important;
+
+        &:nth-child(even) {
+          margin-left: 0 !important;
+        }
+
+        .styles-btn-circle {
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    .carousel-plan {
+      .owl-nav {
+        top: calc((100% - 50px) / 3);
+      }
+
+      .investment-plan {
+        .more {
+          max-width: 100%;
+          margin-left: 0;
+
+          .more-item {
+            padding: 10px;
+
+            p {
+              font-size: 12px;
+
+              &.value {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .calculate {
+    .calculator-wrap {
+      padding: 15px;
+    }
+
+    .input-deposit {
+      margin-right: 0;
+    }
+
+    .input-wrap {
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .calc-btn-wrap {
+      margin-top: 10px;
+    }
+  }
+  .many-deposit {
+    .content {
+      flex-direction: column;
+
+      .inf {
+        margin-left: 0;
+        margin-top: 20px;
+      }
+    }
+  }
+  .benefits {
+    .content {
+      flex-direction: column;
+      .subhead {
+        text-align: left;
+        &:before {
+          left: 0;
+        }
+      }
+      .benefits-block {
+        ul {
+          li {
+            max-width: 100%;
+          }
+        }
+      }
+      .block-statistics {
+        margin-top: 50px;
+        .enumeration-statistics {
+          display: flex;
+          flex-direction: column;
+          margin-top: 0;
+          .statistic-item {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

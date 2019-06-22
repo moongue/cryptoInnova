@@ -1,4 +1,4 @@
-header {
+.header {
   background: $white;
   padding: 11.5px 15px;
   height: 106px;
@@ -263,178 +263,7 @@ header {
       }
     }
   }
-  .social-telegram {
-    display: flex;
-    justify-content: space-between;
-    font-size: 12px;
-    padding: 0 20px;
-    border-right: 1px solid #ebf3fb;
-    color: #868daa;
-    .d-flex:first-child {
-      margin-right: 15px;
-    }
-    .block-img {
-      width: 23px;
-      height: 23px;
-      background: #61a8de;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: $white;
-    }
-    img {
-      width: 23px;
-      height: 23px;
-      margin-right: 3px;
-    }
-    a {
-      display: flex;
-      align-items: center;
-      padding: 0 5px;
-      transition: all .2s ease;
-      color: $grey-font;
-      &:hover {
-        color: $dark;
-        text-decoration: underline;
-      }
-    }
-    p {
-      padding: 0 5px;
-      font-size: 10px;
-    }
-  }
-  .choose-language {
-    position: relative;
-    padding: 0 15px;
-    display: flex;
-    right: 10px;
-    align-items: center;
-    cursor: pointer;
-    &:hover {
-      .zmdi-chevron-down {
-        color: $blue3;
-      }
-    }
-    &.open {
-      .zmdi-chevron-down {
-        transform: rotate(180deg);
-      }
-    }
-    .zmdi-chevron-down {
-      transition: all .2s;
-    }
-    .language {
-      display: flex;
-      align-items: center;
-      padding-right: 15px;
-      img {
-        width: 30px;
-        height: 30px;
-        margin-right: 6px;
-      }
-    }
-    .dropdown-language {
-      display: none;
-      position: absolute;
-      top: 70px;
-      right: 0;
-      box-shadow: 0 3px 12px rgba(0, 0, 0, .1);
-      background: $white;
-      padding: 15px;
-      width: 128px;
-      z-index: 9;
-      &:before {
-        content: '';
-        position: absolute;
-        top: -9px;
-        left: calc((100% - 18px) / 2);
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 0 9px 9px 9px;
-        border-color: transparent transparent #ffffff transparent;
 
-      }
-      .language {
-        padding-bottom: 5px;
-        position: relative;
-        color: $blue;
-        &:last-child {
-          padding-bottom: 0;
-        }
-        &.soon:before {
-          content: 'SOON';
-          position: absolute;
-          display: flex;
-          align-items: center;
-          justify-content: flex-end;
-          right: 0;
-          font-size: 12px;
-          color: #ff6f79;
-          width: 100%;
-          height: 30px;
-          background: rgba(255, 255, 255, .4);
-        }
-      }
-    }
-  }
-  .mobile-menu-toggle {
-    box-sizing: border-box;
-    z-index: 200;
-    width: 60px;
-    height: 60px;
-    //HAMBURGER BUTTON
-    .ham {
-      cursor: pointer;
-      -webkit-tap-highlight-color: transparent;
-      transition: transform 400ms;
-      -moz-user-select: none;
-      -webkit-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
-    .hamRotate.active {
-      transform: rotate(45deg);
-    }
-    .hamRotate180.active {
-      transform: rotate(180deg);
-    }
-    .line {
-      fill: none;
-      transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-      stroke: $blue3;
-      stroke-width: 5;
-      stroke-linecap: round;
-    }
-    .ham-burger {
-      .top {
-        stroke-dasharray: 40 160;
-      }
-      .middle {
-        stroke-dasharray: 40 142;
-        transform-origin: 50%;
-        transition: transform 400ms;
-      }
-      .bottom {
-        stroke-dasharray: 40 85;
-        transform-origin: 50%;
-        transition: transform 400ms, stroke-dashoffset 400ms;
-      }
-      &.active {
-        .top {
-          stroke-dashoffset: -64px;
-        }
-        .middle {
-          transform: rotate(90deg);
-        }
-        .bottom {
-          stroke-dashoffset: -64px;
-        }
-      }
-    }
-    //END HAMBURGER BUTTON
-  }
   .dropdown-header {
     background: $white;
     transform: scale(0);
@@ -481,7 +310,7 @@ header {
 }
 
 @media #{$xll} {
-  header {
+  .header {
     .user {
       padding-right: 20px;
       .nickname {
@@ -516,7 +345,7 @@ header {
 }
 
 @media #{$xl}{
-  header {
+  .header {
     .dropdown-header {
       max-width: 250px;
       width: 100%;
@@ -559,7 +388,7 @@ header {
 }
 
 @media #{$lg} {
-  header {
+  .header {
     height: auto;
     .user {
       .user-status, .user-rank {
@@ -606,7 +435,7 @@ header {
 }
 
 @media #{$md} {
-  header {
+  .header {
     .user {
       border: none;
       .fdc-lg {
@@ -616,7 +445,6 @@ header {
         padding: 0 9px !important;
       }
       .status, .rank {
-        height: 100%;
         justify-content: space-between;
       }
     }
@@ -660,7 +488,7 @@ header {
 }
 
 @media #{$sm} {
-  header {
+  .header {
     .dropdown-header {
       .balance {
         display: block !important;
@@ -670,7 +498,7 @@ header {
 }
 
 @media #{$xs} {
-  header {
+  .header {
     .user {
       .logo {
         padding-right: 0;
