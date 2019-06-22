@@ -249,6 +249,11 @@ function sliderPlan() {
 }
 
 function chooseInvest() {
+    $('.choose-invest').click(function () {
+        $('.choose-invest').toggleClass('active');
+        $('.dropdown-invest').slideToggle(300);
+    })
+
     $('.dropdown-invest .invest').click(function(){
         $('.dropdown-invest .invest').removeClass('active');
         $(this).addClass('active');
