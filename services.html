@@ -226,25 +226,25 @@
                 <div class="tabs">
                     <div class="btn-new active">
                         <div class="styles-btn-circle">
-                            <span><i class="zmdi zmdi-account"></i></span>
+                            <span><i class="zmdi zmdi-railway"></i></span>
                             <p> Rail Freight</p>
                         </div>
                     </div>
                     <div class="btn-new">
                         <div class="styles-btn-circle">
-                            <span><i class="zmdi zmdi-account"></i></span>
+                            <span><i class="zmdi zmdi-globe"></i></span>
                             <p> Multimodal Transportation</p>
                         </div>
                     </div>
                     <div class="btn-new">
                         <div class="styles-btn-circle">
-                            <span><i class="zmdi zmdi-account"></i></span>
+                            <span><i class="zmdi zmdi-boat"></i></i></span>
                             <p> Sea Freight</p>
                         </div>
                     </div>
                     <div class="btn-new">
                         <div class="styles-btn-circle">
-                            <span><i class="zmdi zmdi-account"></i></span>
+                            <span><i class="zmdi zmdi-airplane"></i></span>
                             <p> Air Freight</p>
                         </div>
                     </div>
@@ -319,104 +319,291 @@
                     </p>
                 </div>
                 <div class="calculator-wrap non shadow">
-                    <div class="calculate-tabs">
-                        <div class="tab active">
-                            Boxes or Pallets(LCL)
-                        </div>
-                        <div class="tab">
-                            Containers(FCL)
-                        </div>
-                        <div class="tab">
-                            Air Freight
-                        </div>
-                    </div>
-                    <div class="boxes-pallets">
-                        <div class="wrap">
-                            <div class="top">
-                                <div class="container-filter">
-                                    <p>QTY</p>
-                                    <div class="filter w-50 app-down">
-                                        <input type="number" placeholder="1">
-                                        <i class="zmdi zmdi-chevron-up"></i>
-                                        <i class="zmdi zmdi-chevron-down"></i>
+                    <div class="tabs-calculate">
+                        <ul class="calculate-tabs">
+                            <li class="tab active">
+                                Boxes or Pallets(LCL)
+                            </li>
+                            <li class="tab">
+                                Containers(FCL)
+                            </li>
+                            <li class="tab">
+                                Air Freight
+                            </li>
+                        </ul>
+                        <div class="tabs__content boxes-pallets active">
+                            <div class="wrap">
+                                <div class="top">
+                                    <div class="container-filter">
+                                        <p>QTY</p>
+                                        <div class="filter w-50 app-down">
+                                            <input type="number" placeholder="1">
+                                            <i class="zmdi zmdi-chevron-up"></i>
+                                            <i class="zmdi zmdi-chevron-down"></i>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="container-filter">
-                                    <p>Unit Weight</p>
-                                    <div class="filter w-132 two">
-                                        <input type="number" placeholder="1">
-                                        <div class="calculate-select calculate-select-mass-measurement">
-                                            <p class="select select-mass-measurement">kg</p>
-                                            <div class="dropdown-select dropdown-select-mass-measurement">
-                                                <p class="mass-measurement active" data-mass="10">10</p>
-                                                <p class="mass-measurement" data-mass="20">20</p>
-                                                <p class="mass-measurement" data-mass="30+">30+</p>
+                                    <div class="container-filter">
+                                        <p>Unit Weight</p>
+                                        <div class="filter w-132 two">
+                                            <input type="number" placeholder="1">
+                                            <div class="calculate-select calculate-select-mass-measurement">
+                                                <p class="select select-mass-measurement">kg</p>
+                                                <div class="dropdown-select dropdown-select-mass-measurement">
+                                                    <p class="mass-measurement active" data-mass="10">10</p>
+                                                    <p class="mass-measurement" data-mass="20">20</p>
+                                                    <p class="mass-measurement" data-mass="30+">30+</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="container-filter">
-                                    <p>Specify <a href="#" class="t-blue4">Dimensions</a> or <a href="#">Total
-                                        Volume</a></p>
-                                    <div class="row-filter">
-                                        <div class="filter w-75 app-down symbol">
-                                            <input type="text" placeholder="L" maxlength="1">
-                                            <i class="zmdi zmdi-chevron-up"></i>
-                                            <i class="zmdi zmdi-chevron-down"></i>
-                                        </div>
-                                        <div class="filter w-75 app-down symbol">
-                                            <input type="text" placeholder="W" maxlength="1">
-                                            <i class="zmdi zmdi-chevron-up"></i>
-                                            <i class="zmdi zmdi-chevron-down"></i>
-                                        </div>
-                                        <div class="filter w-75 app-down symbol">
-                                            <input type="text" placeholder="H" maxlength="1">
-                                            <i class="zmdi zmdi-chevron-up"></i>
-                                            <i class="zmdi zmdi-chevron-down"></i>
-                                        </div>
-                                        <div class="filter w-75">
-                                            <div class="calculate-select calculate-select-length-measurement">
-                                                <p class="select select-length-measurement">cm</p>
-                                                <div class="dropdown-select dropdown-select-length-measurement">
-                                                    <p class="length-measurement active" data-length="10">10</p>
-                                                    <p class="length-measurement" data-length="20">20</p>
-                                                    <p class="length-measurement" data-length="30+">30+</p>
+                                    <div class="container-filter">
+                                        <p>Specify <a href="#" class="t-blue4">Dimensions</a> or <a href="#">Total
+                                            Volume</a></p>
+                                        <div class="row-filter">
+                                            <div class="filter w-75 app-down symbol">
+                                                <input type="text" placeholder="L" maxlength="1">
+                                                <i class="zmdi zmdi-chevron-up"></i>
+                                                <i class="zmdi zmdi-chevron-down"></i>
+                                            </div>
+                                            <div class="filter w-75 app-down symbol">
+                                                <input type="text" placeholder="W" maxlength="1">
+                                                <i class="zmdi zmdi-chevron-up"></i>
+                                                <i class="zmdi zmdi-chevron-down"></i>
+                                            </div>
+                                            <div class="filter w-75 app-down symbol">
+                                                <input type="text" placeholder="H" maxlength="1">
+                                                <i class="zmdi zmdi-chevron-up"></i>
+                                                <i class="zmdi zmdi-chevron-down"></i>
+                                            </div>
+                                            <div class="filter w-75">
+                                                <div class="calculate-select calculate-select-length-measurement">
+                                                    <p class="select select-length-measurement">cm</p>
+                                                    <div class="dropdown-select dropdown-select-length-measurement">
+                                                        <p class="length-measurement active" data-length="10">10</p>
+                                                        <p class="length-measurement" data-length="20">20</p>
+                                                        <p class="length-measurement" data-length="30+">30+</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="bottom">
+                                    <div class="container-filter">
+                                        <p>Origin</p>
+                                        <div class="filter w-100percent">
+                                            <div class="calculate-select calculate-select-origin-county">
+                                                <p class="select select-origin-county">City.State.Country</p>
+                                                <div class="dropdown-select dropdown-select-origin-county">
+                                                    <p class="origin-county active" data-origin="Moscow">Moscow</p>
+                                                    <p class="origin-county" data-origin="Kyiv">Kyiv</p>
+                                                    <p class="origin-county" data-origin="New-York">New-York</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container-filter">
+                                        <p>Origin</p>
+                                        <div class="filter w-100percent">
+                                            <div class="calculate-select calculate-select-destination-county">
+                                                <p class="select select-destination-county">City.State.Country</p>
+                                                <div class="dropdown-select dropdown-select-destination-county">
+                                                    <p class="destination-county active" data-destination="Moscow">
+                                                        Moscow</p>
+                                                    <p class="destination-county" data-destination="Kyiv">Kyiv</p>
+                                                    <p class="destination-county" data-destination="New-York">
+                                                        New-York</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="btn">
+                                        <a href="#" class="btn-styles select bd-radius-circle">Get Freight Estimates</a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="bottom">
-                                <div class="container-filter">
-                                    <p>Origin</p>
-                                    <div class="filter w-100percent">
-                                        <div class="calculate-select calculate-select-origin-county">
-                                            <p class="select select-origin-county">City.State.Country</p>
-                                            <div class="dropdown-select dropdown-select-origin-county">
-                                                <p class="origin-county active" data-origin="Moscow">Moscow</p>
-                                                <p class="origin-county" data-origin="Kyiv">Kyiv</p>
-                                                <p class="origin-county" data-origin="New-York">New-York</p>
+                        </div>
+                        <div class="tabs__content boxes-pallets">
+                            <div class="wrap">
+                                <div class="top">
+                                    <div class="container-filter">
+                                        <p>QTY</p>
+                                        <div class="filter w-50 app-down">
+                                            <input type="number" placeholder="1">
+                                            <i class="zmdi zmdi-chevron-up"></i>
+                                            <i class="zmdi zmdi-chevron-down"></i>
+                                        </div>
+                                    </div>
+                                    <div class="container-filter">
+                                        <p>Unit Weight</p>
+                                        <div class="filter w-132 two">
+                                            <input type="number" placeholder="1">
+                                            <div class="calculate-select calculate-select-mass-measurement">
+                                                <p class="select select-mass-measurement">kg</p>
+                                                <div class="dropdown-select dropdown-select-mass-measurement">
+                                                    <p class="mass-measurement active" data-mass="10">10</p>
+                                                    <p class="mass-measurement" data-mass="20">20</p>
+                                                    <p class="mass-measurement" data-mass="30+">30+</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container-filter">
+                                        <p>Specify <a href="#" class="t-blue4">Dimensions</a> or <a href="#">Total
+                                            Volume</a></p>
+                                        <div class="row-filter">
+                                            <div class="filter w-75 app-down symbol">
+                                                <input type="text" placeholder="L" maxlength="1">
+                                                <i class="zmdi zmdi-chevron-up"></i>
+                                                <i class="zmdi zmdi-chevron-down"></i>
+                                            </div>
+                                            <div class="filter w-75 app-down symbol">
+                                                <input type="text" placeholder="W" maxlength="1">
+                                                <i class="zmdi zmdi-chevron-up"></i>
+                                                <i class="zmdi zmdi-chevron-down"></i>
+                                            </div>
+                                            <div class="filter w-75 app-down symbol">
+                                                <input type="text" placeholder="H" maxlength="1">
+                                                <i class="zmdi zmdi-chevron-up"></i>
+                                                <i class="zmdi zmdi-chevron-down"></i>
+                                            </div>
+                                            <div class="filter w-75">
+                                                <div class="calculate-select calculate-select-length-measurement">
+                                                    <p class="select select-length-measurement">cm</p>
+                                                    <div class="dropdown-select dropdown-select-length-measurement">
+                                                        <p class="length-measurement active" data-length="10">10</p>
+                                                        <p class="length-measurement" data-length="20">20</p>
+                                                        <p class="length-measurement" data-length="30+">30+</p>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="container-filter">
-                                    <p>Origin</p>
-                                    <div class="filter w-100percent">
-                                        <div class="calculate-select calculate-select-destination-county">
-                                            <p class="select select-destination-county">City.State.Country</p>
-                                            <div class="dropdown-select dropdown-select-destination-county">
-                                                <p class="destination-county active" data-destination="Moscow">
-                                                    Moscow</p>
-                                                <p class="destination-county" data-destination="Kyiv">Kyiv</p>
-                                                <p class="destination-county" data-destination="New-York">New-York</p>
+                                <div class="bottom">
+                                    <div class="container-filter">
+                                        <p>Origin</p>
+                                        <div class="filter w-100percent">
+                                            <div class="calculate-select calculate-select-origin-county">
+                                                <p class="select select-origin-county">City.State.Country</p>
+                                                <div class="dropdown-select dropdown-select-origin-county">
+                                                    <p class="origin-county active" data-origin="Moscow">Moscow</p>
+                                                    <p class="origin-county" data-origin="Kyiv">Kyiv</p>
+                                                    <p class="origin-county" data-origin="New-York">New-York</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container-filter">
+                                        <p>Origin</p>
+                                        <div class="filter w-100percent">
+                                            <div class="calculate-select calculate-select-destination-county">
+                                                <p class="select select-destination-county">City.State.Country</p>
+                                                <div class="dropdown-select dropdown-select-destination-county">
+                                                    <p class="destination-county active" data-destination="Moscow">
+                                                        Moscow</p>
+                                                    <p class="destination-county" data-destination="Kyiv">Kyiv</p>
+                                                    <p class="destination-county" data-destination="New-York">
+                                                        New-York</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="btn">
+                                        <a href="#" class="btn-styles select bd-radius-circle">Get Freight Estimates</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tabs__content boxes-pallets">
+                            <div class="wrap">
+                                <div class="top">
+                                    <div class="container-filter">
+                                        <p>QTY</p>
+                                        <div class="filter w-50 app-down">
+                                            <input type="number" placeholder="1">
+                                            <i class="zmdi zmdi-chevron-up"></i>
+                                            <i class="zmdi zmdi-chevron-down"></i>
+                                        </div>
+                                    </div>
+                                    <div class="container-filter">
+                                        <p>Unit Weight</p>
+                                        <div class="filter w-132 two">
+                                            <input type="number" placeholder="1">
+                                            <div class="calculate-select calculate-select-mass-measurement">
+                                                <p class="select select-mass-measurement">kg</p>
+                                                <div class="dropdown-select dropdown-select-mass-measurement">
+                                                    <p class="mass-measurement active" data-mass="10">10</p>
+                                                    <p class="mass-measurement" data-mass="20">20</p>
+                                                    <p class="mass-measurement" data-mass="30+">30+</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container-filter">
+                                        <p>Specify <a href="#" class="t-blue4">Dimensions</a> or <a href="#">Total
+                                            Volume</a></p>
+                                        <div class="row-filter">
+                                            <div class="filter w-75 app-down symbol">
+                                                <input type="text" placeholder="L" maxlength="1">
+                                                <i class="zmdi zmdi-chevron-up"></i>
+                                                <i class="zmdi zmdi-chevron-down"></i>
+                                            </div>
+                                            <div class="filter w-75 app-down symbol">
+                                                <input type="text" placeholder="W" maxlength="1">
+                                                <i class="zmdi zmdi-chevron-up"></i>
+                                                <i class="zmdi zmdi-chevron-down"></i>
+                                            </div>
+                                            <div class="filter w-75 app-down symbol">
+                                                <input type="text" placeholder="H" maxlength="1">
+                                                <i class="zmdi zmdi-chevron-up"></i>
+                                                <i class="zmdi zmdi-chevron-down"></i>
+                                            </div>
+                                            <div class="filter w-75">
+                                                <div class="calculate-select calculate-select-length-measurement">
+                                                    <p class="select select-length-measurement">cm</p>
+                                                    <div class="dropdown-select dropdown-select-length-measurement">
+                                                        <p class="length-measurement active" data-length="10">10</p>
+                                                        <p class="length-measurement" data-length="20">20</p>
+                                                        <p class="length-measurement" data-length="30+">30+</p>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="btn">
-                                    <a href="#" class="btn-styles select bd-radius-circle">Get Freight Estimates</a>
+                                <div class="bottom">
+                                    <div class="container-filter">
+                                        <p>Origin</p>
+                                        <div class="filter w-100percent">
+                                            <div class="calculate-select calculate-select-origin-county">
+                                                <p class="select select-origin-county">City.State.Country</p>
+                                                <div class="dropdown-select dropdown-select-origin-county">
+                                                    <p class="origin-county active" data-origin="Moscow">Moscow</p>
+                                                    <p class="origin-county" data-origin="Kyiv">Kyiv</p>
+                                                    <p class="origin-county" data-origin="New-York">New-York</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container-filter">
+                                        <p>Origin</p>
+                                        <div class="filter w-100percent">
+                                            <div class="calculate-select calculate-select-destination-county">
+                                                <p class="select select-destination-county">City.State.Country</p>
+                                                <div class="dropdown-select dropdown-select-destination-county">
+                                                    <p class="destination-county active" data-destination="Moscow">
+                                                        Moscow</p>
+                                                    <p class="destination-county" data-destination="Kyiv">Kyiv</p>
+                                                    <p class="destination-county" data-destination="New-York">
+                                                        New-York</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="btn">
+                                        <a href="#" class="btn-styles select bd-radius-circle">Get Freight Estimates</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

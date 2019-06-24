@@ -159,12 +159,19 @@ h2.line:before {
   }
 }
 
+@media only screen and (max-width: 576px) {
+  h2 {
+    font-size: 25px;
+  }
+}
+
 .subheading {
   font-size: 26px;
   color: #18185a;
   font-weight: 500;
   padding-left: 30px;
   position: relative;
+  line-height: 1.3;
 }
 
 .subheading:before {
@@ -6473,6 +6480,7 @@ p {
 .calculate .calculator-wrap .calculate-tabs .tab {
   font-size: 15px;
   color: #8d93aa;
+  cursor: pointer;
 }
 
 .calculate .calculator-wrap .calculate-tabs .tab.active {
@@ -6500,7 +6508,16 @@ p {
   -moz-appearance: textfield;
 }
 
-.calculate .calculator-wrap .boxes-pallets {
+.calculate .calculator-wrap .tabs__content {
+  width: 100%;
+  display: none;
+}
+
+.calculate .calculator-wrap .tabs__content.active {
+  display: block;
+}
+
+.calculate .calculator-wrap .tabs-calculate {
   width: 100%;
 }
 

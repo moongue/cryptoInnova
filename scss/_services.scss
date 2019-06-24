@@ -282,6 +282,7 @@
       .tab {
         font-size: 15px;
         color: $grey-font;
+        cursor: pointer;
 
         &.active {
           color: $blue3;
@@ -310,7 +311,16 @@
       -moz-appearance: textfield;
     }
 
-    .boxes-pallets {
+    .tabs__content {
+      width: 100%;
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+
+    .tabs-calculate {
       width: 100%;
     }
 
@@ -493,6 +503,7 @@
 
 .future {
   text-align: center;
+
   h2 {
     &.line {
       &:before {
@@ -500,16 +511,20 @@
       }
     }
   }
+
   p {
     margin-top: 35px;
   }
+
   .btn {
     margin: 55px auto 0;
     max-width: 290px;
   }
+
   .img-block {
     max-width: 628px;
     margin: 70px auto 0;
+
     img {
       width: 100%;
       height: auto;
@@ -582,6 +597,7 @@
     .btn {
       margin: 25px auto 0;
     }
+
     .img-block {
       margin: 35px auto 0;
     }
@@ -596,16 +612,20 @@
           font-size: 11px;
         }
       }
+
       .filter {
         &.w-75 {
           width: 54px;
         }
       }
+
       .top {
         flex-wrap: wrap;
         justify-content: stretch;
+
         .container-filter {
           margin-top: 10px;
+
           .row-filter {
             justify-content: space-between;
           }

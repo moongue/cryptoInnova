@@ -248,6 +248,14 @@ function sliderPlan() {
     })
 }
 
+function tabsCalculate() {
+    $('.calculate-tabs').on('click', 'li:not(.active)', function() {
+        $(this)
+            .addClass('active').siblings().removeClass('active')
+            .closest('div.tabs-calculate').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
+    });
+}
+
 function chooseInvest() {
     $('.choose-invest').click(function () {
         $('.choose-invest').toggleClass('active');
@@ -404,6 +412,7 @@ $(window).on('load', function () {
     dateTomorrow();
     sliderPerson();
     addBlocker();
+    tabsCalculate();
     selectMassMeasurement();
     selectLengthMeasurement();
     selectDestinationCountry();
