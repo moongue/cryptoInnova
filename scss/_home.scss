@@ -160,81 +160,7 @@
     }
   }
 
-  .tabs {
-    margin-top: 30px;
-    margin-bottom: 40px;
-    display: flex;
-    justify-content: space-between;
 
-    .btn-new {
-      margin-top: 20px;
-      width: 100%;
-      margin-right: 13px;
-      box-sizing: border-box;
-      cursor: pointer;
-
-      &.active, &:hover {
-        .styles-btn-circle {
-          background: #2fa3fa;
-          border: 1px solid #2fa3fa;
-
-          p {
-            color: $white;
-          }
-
-          span {
-            background: $white;
-
-            .zmdi {
-              color: #2fa3fa;
-            }
-          }
-        }
-      }
-
-      .styles-btn-circle {
-        height: 50px;
-        color: #868daa;
-        font-size: 15px;
-        border: 1px solid #dadde5;
-
-        p {
-          text-align: center;
-          width: calc((100% - 60px));
-        }
-
-        span {
-          width: 40px;
-          height: 40px;
-          background: #f2f7fc;
-
-          .zmdi {
-            color: $blue;
-          }
-        }
-      }
-
-      &:last-child {
-        margin-right: 0;
-      }
-
-      &:nth-child(1) {
-        max-width: 232px;
-      }
-
-      &:nth-child(2) {
-        max-width: 340px;
-      }
-
-      &:nth-child(3) {
-        max-width: 254px;
-      }
-
-      &:nth-child(4) {
-        max-width: 254px;
-      }
-    }
-  }
 
   .carousel-plan {
     position: relative;
@@ -825,24 +751,7 @@
     }
   }
   .investment-program {
-    .tabs {
-      flex-wrap: wrap;
 
-      .btn-new {
-        max-width: 100% !important;
-        flex-basis: calc(50% - 10px);
-        margin-top: 10px;
-        margin-right: 0 !important;
-
-        &:nth-child(odd) {
-          margin-right: 10px !important;
-        }
-
-        &:nth-child(even) {
-          margin-left: 10px !important;
-        }
-      }
-    }
 
     .carousel-plan {
       .investment-plan {
@@ -938,27 +847,6 @@
     }
   }
   .investment-program {
-    .tabs {
-      flex-wrap: wrap;
-      flex-direction: column;
-
-      .btn-new {
-        max-width: 100% !important;
-        flex-basis: 100%;
-        margin-top: 10px !important;
-
-        &:nth-child(even) {
-          margin-left: 0 !important;
-        }
-
-        .styles-btn-circle {
-          p {
-            font-size: 14px;
-          }
-        }
-      }
-    }
-
     .carousel-plan {
       .owl-nav {
         top: calc((100% - 50px) / 3);

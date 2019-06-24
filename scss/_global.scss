@@ -42,8 +42,10 @@ h2 {
   color: #373770;
   text-transform: uppercase;
   line-height: 1.2;
+
   &.line {
     position: relative;
+
     &:before {
       content: '';
       width: 60px;
@@ -55,6 +57,7 @@ h2 {
     }
   }
 }
+
 @media #{$lg} {
   h2 {
     &.line {
@@ -64,17 +67,20 @@ h2 {
     }
   }
 }
+
 @media #{$md} {
   h2 {
     font-size: 28px;
   }
 }
+
 .subheading {
   font-size: 26px;
   color: $dark;
   font-weight: 500;
   padding-left: 30px;
   position: relative;
+
   &:before {
     content: '';
     height: 100%;
@@ -106,6 +112,11 @@ p {
   margin: 0 auto;
 }
 
+.shadow {
+  box-shadow: 0 3px 12px 0 rgba(0, 0, 0, .05);
+}
+
+
 .blocker {
   background-color: rgba(0, 0, 0, .4);
 }
@@ -115,63 +126,80 @@ p {
   margin: 0 auto;
   padding: 0 30px;
   position: relative;
+
   &.offset-two-side {
     padding-top: 160px;
     padding-bottom: 120px;
   }
+
   &.bd {
     border-right: 1px solid #eaf6fe;
     border-left: 1px solid #eaf6fe;
+
     &.blue {
       border-right: 1px solid #deeefc;
       border-left: 1px solid #deeefc;
     }
   }
 
- .block-side {
-   position: absolute;
-   box-sizing: border-box;
-   writing-mode: tb;
-   &.bottom {
-     &.left-side {
-       top: inherit;
-       bottom: 400px;
-     }
-     &.right-side {
-       top: inherit;
-       bottom: 170px;
-     }
-   }
-   &.left-side {
-     left: 0;
-     top: 130px;
-     .line {
-       left: 23px;
-     }
-   }
-   &.right-side {
-     right: 0;
-     top: 190px;
-     .line {
-       right: -40px;
-     }
-   }
-   .line {
-     position: relative;
-     font-size: 16px;
-     width: 15px;
-     &:before {
-       content: '';
-       position: absolute;
-       width: 30px;
-       height: 1px;
-       top: 15px;
-       left: -38px;
-       transform: rotate(90deg);
-       background: $blue3;
-     }
-   }
- }
+  .block-side {
+    position: absolute;
+    box-sizing: border-box;
+    writing-mode: tb;
+
+    &.bottom {
+      &.small-offset {
+        &.left-side {
+          bottom: 200px;
+        }
+      }
+      &.left-side {
+        top: inherit;
+        bottom: 400px;
+      }
+
+      &.right-side {
+        top: inherit;
+        bottom: 170px;
+      }
+    }
+
+    &.left-side {
+      left: 0;
+      top: 130px;
+
+      .line {
+        left: 23px;
+      }
+    }
+
+    &.right-side {
+      right: 0;
+      top: 190px;
+
+      .line {
+        right: -40px;
+      }
+    }
+
+    .line {
+      position: relative;
+      font-size: 16px;
+      width: 15px;
+      white-space: nowrap;
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 1px;
+        top: 15px;
+        left: -38px;
+        transform: rotate(90deg);
+        background: $blue3;
+      }
+    }
+  }
 }
 
 @media #{$xll-fix} {
@@ -183,9 +211,11 @@ p {
 @media #{$lg} {
   .wrapper-bd {
     padding: 0;
+
     &.offset-two-side {
       padding: 90px 0;
     }
+
     .block-side {
       display: none;
     }
@@ -195,6 +225,7 @@ p {
 @media #{$sm} {
   .wrapper-bd {
     padding: 0;
+
     &.offset-two-side {
       padding: 60px 0;
     }
@@ -237,6 +268,10 @@ p {
   color: $blue3;
 }
 
+.t-blue4 {
+  color: $blue4;
+}
+
 .btn-styles {
   width: 100%;
   padding: 20px 0;
@@ -262,7 +297,9 @@ p {
       background: #3e91d6;
     }
   }
-
+&.bd-radius-circle {
+  border-radius: 41px;
+}
   &.nonactive {
     background: #e1eef6;
     color: #868daa;
@@ -497,6 +534,7 @@ p {
 .on.select__gap:after {
   transform: rotate(180deg);
 }
+
 //END STYLES SELECT
 
 //Video styles
@@ -504,9 +542,11 @@ p {
   width: 100%;
   object-fit: cover;
 }
+
 #video_holder {
   position: relative;
 }
+
 #overlay {
   position: absolute;
   top: 0;
@@ -521,9 +561,11 @@ p {
   color: $white;
   cursor: pointer;
 }
+
 #overlay.o {
   opacity: 0;
 }
+
 //End Video styles
 
 //Mobile menu toggle
@@ -1033,7 +1075,9 @@ p {
     font-size: 10px;
   }
 }
+
 //End Telegram social
+
 
 //Navigation carousel
 .owl-styles {
@@ -1082,6 +1126,7 @@ p {
     }
   }
 }
+
 @media #{$xll} {
   .owl-styles {
     .owl-nav {
@@ -1095,6 +1140,7 @@ p {
     }
   }
 }
+
 @media #{$xl} {
   .owl-styles {
     .owl-nav {
@@ -1120,6 +1166,7 @@ p {
     }
   }
 }
+
 //End navigation carousel
 
 //Choose language
@@ -1321,6 +1368,128 @@ p {
     .zmdi {
       color: $white;
       transition: all .3s ease-in-out;
+    }
+  }
+}
+
+//Tabs
+.tabs {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+
+  .btn-new {
+    margin-top: 20px;
+    width: 100%;
+    margin-right: 13px;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    &.active, &:hover {
+      .styles-btn-circle {
+        background: #2fa3fa;
+        border: 1px solid #2fa3fa;
+
+        p {
+          color: $white;
+        }
+
+        span {
+          background: $white;
+
+          .zmdi {
+            color: #2fa3fa;
+          }
+        }
+      }
+    }
+
+    .styles-btn-circle {
+      height: 50px;
+      color: #868daa;
+      font-size: 15px;
+      border: 1px solid #dadde5;
+      border-radius: 41px;
+
+      p {
+        text-align: center;
+        width: calc((100% - 60px));
+      }
+
+      span {
+        width: 40px;
+        height: 40px;
+        background: #f2f7fc;
+
+        .zmdi {
+          color: $blue;
+        }
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:nth-child(1) {
+      max-width: 232px;
+    }
+
+    &:nth-child(2) {
+      max-width: 340px;
+    }
+
+    &:nth-child(3) {
+      max-width: 254px;
+    }
+
+    &:nth-child(4) {
+      max-width: 254px;
+    }
+  }
+}
+
+@media #{$md} {
+  .tabs {
+    flex-wrap: wrap;
+
+    .btn-new {
+      max-width: 100% !important;
+      flex-basis: calc(50% - 10px);
+      margin-top: 10px;
+      margin-right: 0 !important;
+
+      &:nth-child(odd) {
+        margin-right: 10px !important;
+      }
+
+      &:nth-child(even) {
+        margin-left: 10px !important;
+      }
+    }
+  }
+}
+
+@media #{$xs} {
+  .tabs {
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    .btn-new {
+      max-width: 100% !important;
+      flex-basis: 100%;
+      margin-top: 10px !important;
+
+      &:nth-child(even) {
+        margin-left: 0 !important;
+      }
+
+      .styles-btn-circle {
+        p {
+          font-size: 14px;
+        }
+      }
     }
   }
 }

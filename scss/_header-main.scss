@@ -2,6 +2,7 @@
   background: #fff;
   z-index: 444;
   position: relative;
+
   .top-head {
     padding: 13px 0;
     border-bottom: 1px solid #ebf3fb;
@@ -56,6 +57,20 @@
         justify-content: space-between;
 
         li {
+          &.active {
+            position: relative;
+
+            &:before {
+              content: '';
+              width: 100%;
+              height: 4px;
+              background: $blue3;
+              border-radius: 3px 3px 0 0;
+              position: absolute;
+              bottom: -54px;
+            }
+          }
+
           a {
             font-size: 15px;
             color: $blue;
@@ -83,7 +98,7 @@
     position: fixed;
     width: $width*1px;
     height: 100%;
-    top: 60px !important;
+    top: 59px !important;
     overflow-y: auto;
     overflow-x: hidden;
     opacity: 0;
@@ -91,9 +106,11 @@
     z-index: 99;
     transition-delay: $duration*1ms;
     transition: all .2s;
+
     &.fixed {
       top: 0 !important;
     }
+
     @if ($position == right) {
       right: 0;
     } @else if ($position == left) {
@@ -199,6 +216,7 @@
   .dropdown-header {
     display: flex;
     flex-direction: column;
+
     nav {
       ul {
         display: flex;
@@ -214,10 +232,23 @@
       padding: 15px 15px 80px 15px;
       overflow-y: scroll;
       height: 100%;
+
       nav {
         ul {
           li {
             margin: 10px 0;
+            &.active {
+              position: relative;
+              &:before {
+                content: '';
+                height: 100%;
+                width: 4px;
+                border-radius: 3px 0 0 3px;
+                background: $blue3;
+                right: -15px;
+                position: absolute;
+              }
+            }
 
             a {
               padding: 5px 0;
@@ -232,6 +263,7 @@
       .buttons {
         display: none !important;
         border-right: none;
+
         .btn-new {
           &:nth-child(2) {
             margin-left: 0;

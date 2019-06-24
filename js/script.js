@@ -252,13 +252,69 @@ function chooseInvest() {
     $('.choose-invest').click(function () {
         $('.choose-invest').toggleClass('active');
         $('.dropdown-invest').slideToggle(300);
-    })
+    });
 
     $('.dropdown-invest .invest').click(function(){
         $('.dropdown-invest .invest').removeClass('active');
         $(this).addClass('active');
         var active = $(this).text();
         $('.invest-show').text(active);
+    })
+}
+
+function selectMassMeasurement() {
+    $('.calculate-select-mass-measurement').click(function(){
+        $('.calculate-select-mass-measurement').toggleClass('active');
+        $('.dropdown-select-mass-measurement').slideToggle(300);
+
+    } );
+    $('.dropdown-select .mass-measurement').click(function(){
+        $('.dropdown-select .mass-measurement').removeClass('active');
+        $(this).addClass('active');
+        var active = $(this).text();
+        $('.select-mass-measurement').text(active);
+    })
+}
+
+function selectLengthMeasurement() {
+    $('.calculate-select-length-measurement').click(function(){
+        $('.calculate-select-length-measurement').toggleClass('active');
+        $('.dropdown-select-length-measurement').slideToggle(300);
+
+    } );
+    $('.dropdown-select .length-measurement').click(function(){
+        $('.dropdown-select .length-measurement').removeClass('active');
+        $(this).addClass('active');
+        var active = $(this).text();
+        $('.select-length-measurement').text(active);
+    })
+}
+
+function selectOriginCountry() {
+    $('.calculate-select-origin-county').click(function(){
+        $('.calculate-select-origin-county').toggleClass('active');
+        $('.dropdown-select-origin-county').slideToggle(300);
+
+    } );
+    $('.dropdown-select .origin-county').click(function(){
+        $('.dropdown-select .origin-county').removeClass('active');
+        $(this).addClass('active');
+        var active = $(this).text();
+        $('.select-origin-county').text(active);
+    })
+}
+
+function selectDestinationCountry() {
+    $('.calculate-select-destination-county').click(function(){
+        $('.calculate-select-destination-county').toggleClass('active');
+        $('.dropdown-select-destination-county').slideToggle(300);
+
+    } );
+    $('.dropdown-select .destination-county').click(function(){
+        $('.dropdown-select .destination-county').removeClass('active');
+        $(this).addClass('active');
+        var active = $(this).text();
+        $('.select-destination-county').text(active);
     })
 }
 
@@ -348,6 +404,10 @@ $(window).on('load', function () {
     dateTomorrow();
     sliderPerson();
     addBlocker();
+    selectMassMeasurement();
+    selectLengthMeasurement();
+    selectDestinationCountry();
+    selectOriginCountry();
     alertNotification();
     chooseInvest();
     sliderPlan();
