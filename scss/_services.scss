@@ -504,14 +504,6 @@
 .future {
   text-align: center;
 
-  h2 {
-    &.line {
-      &:before {
-        left: calc((100% - 60px) / 2);
-      }
-    }
-  }
-
   p {
     margin-top: 35px;
   }
