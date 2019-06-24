@@ -250,6 +250,14 @@ p {
   writing-mode: tb;
 }
 
+.wrapper-bd .block-side.center.left-side {
+  top: 45%;
+}
+
+.wrapper-bd .block-side.center.right-side {
+  top: 45%;
+}
+
 .wrapper-bd .block-side.bottom.small-offset.left-side {
   bottom: 200px;
 }
@@ -6819,6 +6827,18 @@ p {
   }
 }
 
+.blog.blog-page .news-item .news-thumb {
+  height: 370px;
+}
+
+.blog.blog-page .news-item .news-thumb .news-logo {
+  padding: 23px;
+}
+
+.blog.blog-page .news-item .news-thumb .news-logo img {
+  height: 27px;
+}
+
 .blog h2 + p {
   text-align: center;
   font-size: 16px;
@@ -6831,23 +6851,27 @@ p {
   position: relative;
 }
 
-.blog .news-wrap .news-item {
+.blog .news-item {
   padding: 15px;
   background: #fff;
-  position: relative;
 }
 
-.blog .news-wrap .news-item.top-m {
+.blog .news-item.top-m {
   margin-top: 60px;
 }
 
-.blog .news-wrap .news-item .news-thumb {
+.blog .news-item .subheading {
+  margin-bottom: 50px;
+}
+
+.blog .news-item .news-thumb {
   width: 100%;
   height: 270px;
   margin-bottom: 20px;
+  position: relative;
 }
 
-.blog .news-wrap .news-item .news-thumb img {
+.blog .news-item .news-thumb img {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
@@ -6856,35 +6880,74 @@ p {
   object-position: center;
 }
 
-.blog .news-wrap .news-item .news-logo {
+.blog .news-item .news-thumb .news-logo {
   padding: 11px;
   background: #4fa5f7;
   border-radius: 3px;
   position: absolute;
-  top: -7px;
+  top: -22px;
   left: 32px;
 }
 
-.blog .news-wrap .news-item .news-logo img {
+.blog .news-item .news-thumb .news-logo img {
   height: 18px;
   -webkit-filter: brightness(2);
   filter: brightness(2);
+  width: auto;
 }
 
-.blog .news-wrap .news-item .news-tittle {
+.blog .news-item .btn {
+  margin-top: 65px;
+  max-width: 290px;
+}
+
+.blog .news-item .news-inf-item p {
+  font-size: 16px;
+}
+
+.blog .news-item .news-inf-item p:nth-child(n + 2) {
+  margin-top: 45px;
+}
+
+.blog .news-item .news-inf-item p.name-list {
+  font-weight: 500;
+}
+
+.blog .news-item .news-inf-item ul {
+  margin-top: 10px;
+}
+
+.blog .news-item .news-inf-item ul li {
+  margin-top: 10px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.blog .news-item .news-inf-item ul li:before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: #4fa5f7;
+  border-radius: 50%;
+  position: absolute;
+  top: 8px;
+  left: 0;
+}
+
+.blog .news-item .news-tittle {
   font-size: 17px;
   color: #4e5983;
   margin-bottom: 15px;
   text-transform: capitalize;
 }
 
-.blog .news-wrap .news-item .news-text {
+.blog .news-item .news-text {
   font-size: 15px;
   color: #969cb0;
   line-height: 1.3;
 }
 
-.blog .news-wrap .news-item .news-detail {
+.blog .news-item .news-detail {
   margin-top: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6898,11 +6961,16 @@ p {
   font-size: 13px;
 }
 
-.blog .news-wrap .news-item .news-detail .news-date {
+.blog .news-item .news-date {
   color: #4e5983;
 }
 
-.blog .news-wrap .news-item .news-detail .read-more {
+.blog .news-item .news-date.right {
+  margin-bottom: 25px;
+  text-align: right;
+}
+
+.blog .news-item .news-date .read-more {
   color: #4fa5f7;
 }
 
@@ -6918,21 +6986,55 @@ p {
     padding-right: 7px;
   }
 
-  .blog .news-wrap .news-item .news-tittle {
+  .blog .news-item .news-tittle {
     font-size: 16px;
     line-height: 1.3;
   }
 
-  .blog .news-wrap .news-item.top-m {
+  .blog .news-item .subheading {
+    margin-bottom: 25px;
+  }
+
+  .blog .news-item.top-m {
     margin-top: 20px;
   }
 
-  .blog .news-wrap .news-item .news-text {
+  .blog .news-item .news-text {
     font-size: 13px;
   }
 
-  .blog .news-wrap .news-item .news-thumb {
+  .blog .news-item .news-thumb {
     height: 200px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .blog.blog-page .news-item {
+    padding: 15px 0;
+  }
+
+  .blog.blog-page .news-item .news-thumb {
+    height: 270px;
+  }
+
+  .blog.blog-page .news-item .news-thumb .news-logo {
+    padding: 11px;
+  }
+
+  .blog.blog-page .news-item .news-thumb .news-logo img {
+    height: 14px;
+  }
+
+  .blog .news-item .news-inf-item p {
+    font-size: 14px;
+  }
+
+  .blog .news-item .news-inf-item p:nth-child(n + 2) {
+    margin-top: 15px;
+  }
+
+  .blog .news-item .btn {
+    margin-top: 25px;
   }
 }
 

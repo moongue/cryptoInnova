@@ -162,6 +162,16 @@ p {
     box-sizing: border-box;
     writing-mode: tb;
 
+    &.center {
+      &.left-side {
+        top: 45%;
+      }
+
+      &.right-side {
+        top: 45%;
+      }
+    }
+
     &.bottom {
       &.small-offset {
         &.left-side {

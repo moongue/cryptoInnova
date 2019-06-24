@@ -1,4 +1,20 @@
 .blog {
+  &.blog-page {
+    .news-item {
+      .news-thumb {
+        height: 370px;
+
+        .news-logo {
+          padding: 23px;
+
+          img {
+            height: 27px;
+          }
+        }
+      }
+    }
+  }
+
   h2 + p {
     text-align: center;
     font-size: 16px;
@@ -9,27 +25,31 @@
   .news-wrap {
     margin-top: 30px;
     position: relative;
+  }
 
-    .news-item {
-      padding: 15px;
-      background: #fff;
+  .news-item {
+    padding: 15px;
+    background: #fff;
+
+    &.top-m {
+      margin-top: 60px;
+    }
+
+    .subheading {
+      margin-bottom: 50px;
+    }
+
+    .news-thumb {
+      width: 100%;
+      height: 270px;
+      margin-bottom: 20px;
       position: relative;
 
-      &.top-m {
-        margin-top: 60px;
-      }
-
-      .news-thumb {
+      img {
+        height: 100%;
+        object-fit: cover;
         width: 100%;
-        height: 270px;
-        margin-bottom: 20px;
-
-        img {
-          height: 100%;
-          object-fit: cover;
-          width: 100%;
-          object-position: center;
-        }
+        object-position: center;
       }
 
       .news-logo {
@@ -37,45 +57,92 @@
         background: $blue3;
         border-radius: 3px;
         position: absolute;
-        top: -7px;
+        top: -22px;
         left: 32px;
 
         img {
           height: 18px;
           filter: brightness(2);
+          width: auto;
         }
       }
-
-      .news-tittle {
-        font-size: 17px;
-        color: #4e5983;
-        margin-bottom: 15px;
-        text-transform: capitalize;
-      }
-
-      .news-text {
-        font-size: 15px;
-        color: #969cb0;
-        line-height: 1.3;
-      }
-
-      .news-detail {
-        margin-top: 25px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 13px;
-
-        .news-date {
-          color: #4e5983;
-        }
-
-        .read-more {
-          color: #4fa5f7;
-        }
-      }
-
     }
+
+    .btn {
+      margin-top: 65px;
+      max-width: 290px;
+    }
+
+    .news-inf-item {
+      p {
+        font-size: 16px;
+
+        &:nth-child(n + 2) {
+          margin-top: 45px;
+        }
+
+        &.name-list {
+          font-weight: 500;
+        }
+      }
+
+      ul {
+        margin-top: 10px;
+
+        li {
+          margin-top: 10px;
+          padding-left: 25px;
+          position: relative;
+
+          &:before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: $blue3;
+            border-radius: 50%;
+            position: absolute;
+            top: 8px;
+            left: 0;
+          }
+        }
+      }
+    }
+
+    .news-tittle {
+      font-size: 17px;
+      color: #4e5983;
+      margin-bottom: 15px;
+      text-transform: capitalize;
+    }
+
+    .news-text {
+      font-size: 15px;
+      color: #969cb0;
+      line-height: 1.3;
+    }
+
+    .news-detail {
+      margin-top: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+    }
+
+    .news-date {
+      color: #4e5983;
+
+      &.right {
+        margin-bottom: 25px;
+        text-align: right;
+      }
+
+
+      .read-more {
+        color: #4fa5f7;
+      }
+    }
+
   }
 
 
@@ -93,24 +160,60 @@
       padding-right: 7px;
     }
 
-    .news-wrap {
+    .news-item {
+      .news-tittle {
+        font-size: 16px;
+        line-height: 1.3;
+      }
+
+      .subheading {
+        margin-bottom: 25px;
+      }
+
+      &.top-m {
+        margin-top: 20px;
+      }
+
+      .news-text {
+        font-size: 13px;
+      }
+
+      .news-thumb {
+        height: 200px;
+      }
+    }
+  }
+}
+
+@media #{$xs} {
+  .blog {
+    &.blog-page {
       .news-item {
-        .news-tittle {
-          font-size: 16px;
-          line-height: 1.3;
-        }
-
-        &.top-m {
-          margin-top: 20px;
-        }
-
-        .news-text {
-          font-size: 13px;
-        }
-
+        padding: 15px 0;
         .news-thumb {
-          height: 200px;
+          height: 270px;
+
+          .news-logo {
+            padding: 11px;
+
+            img {
+              height: 14px;
+            }
+          }
         }
+      }
+    }
+    .news-item {
+      .news-inf-item {
+        p {
+          font-size: 14px;
+          &:nth-child(n + 2) {
+            margin-top: 15px;
+          }
+        }
+      }
+      .btn {
+        margin-top: 25px;
       }
     }
   }
